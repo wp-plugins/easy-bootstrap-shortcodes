@@ -66,3 +66,9 @@ Now you can see the few new buttons in the TinyMCE Editor in post and pages, use
 
 That's all so easy as name apply.
 
+== Screenshots ==
+
+1. how it looks after installation
+2. different shortcode options this plugin provides
+3. columns shortcode
+4. table shortcode
