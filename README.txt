@@ -16,12 +16,12 @@ Easy Bootstrap Shortcode is bootstrap 3.0 compatible plugin which add icons to w
 
 Features:
 
-    1. simplest bootstrap style plugin ever
-    2. Bootstrap 3.0 compatible
-    3. No need to paste shortcode in editor
-    4. Add icons to editor
-    5. Shortcode added to editor by clicking on icon
-    6. Customize grid size on small, extra-small and medium sized screens
+    * simplest bootstrap style plugin ever
+    * Bootstrap 3.0 compatible
+    * No need to paste shortcode in editor
+    * Add icons to editor
+    * Shortcode added to editor by clicking on icon
+    * Customize grid size on small, extra-small and medium sized screens
 
 Easy Bootstrap Shortcode provides following styles
 
