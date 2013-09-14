@@ -65,7 +65,7 @@ In the admin panel, find Plugins->Plugins,click it, active Easy Bootstrap Shortc
 3.Use:
 Now you can see the few new buttons in the TinyMCE Editor in post and pages, use these buttons to create great responsive pages/posts content.
 
-That's all so easy as name apply.
+It's that simple ... just what the name suggests
 
 == Screenshots ==
 
