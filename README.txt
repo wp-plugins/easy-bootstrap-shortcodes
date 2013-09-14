@@ -52,6 +52,7 @@ Components
 	6. Tooltip
 	7. Panel
 
+If you'd like to contribute to this plugin, you can find it [hosted on GitHub](https://github.com/oscitasthemes/Easy-Bootstrap-Shortcode).
 
 == Installation ==
 
