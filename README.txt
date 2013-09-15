@@ -4,11 +4,11 @@ Link: http://www.osCitasthemes.com
 Tags: Wordpress Shortcodes, Wordpress Bootstrap, Wordpress Bootstrap Shortcode, Bootstrap, Responsive pages, Editor plugin, Bootstrap Shortcode, TinyMCE
 Requires at least: 3.0
 Tested up to: 3.6
-Stable tag: 3.4
+Stable tag: 3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easy Bootstrap Shortcode enable you to add bootstrap styles in your pages, post and custom post in 	    simpliest manner
+Easy Bootstrap Shortcode enable you to add bootstrap 3.0 styles in your pages, post and custom post in simplest manner.
 
 == Description ==
 
@@ -27,10 +27,10 @@ Easy Bootstrap Shortcode provides following styles
 
 Typography
 
-	1. Buttons 
+	1. Buttons
 	2. Icon Heading
 	3. Tables
-	4. Table Header and Body 
+	4. Table Header and Body
 	5. Table Cells
 	6. Different table styles
 	7. Responsive
@@ -73,3 +73,9 @@ It's that simple ... just what the name suggests
 2. different shortcode options this plugin provides
 3. columns shortcode
 4. table shortcode
+
+== Changelog ==
+
+= 1.1 =
+* fixed columns alternate color issue in admin panel
+
