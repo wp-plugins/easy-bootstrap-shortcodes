@@ -77,10 +77,8 @@ function osc_add_admin_shortcode_scripts() {
         wp_enqueue_style('thickbox');
         wp_enqueue_script('media-upload');
         wp_enqueue_script('thickbox');
-        wp_enqueue_script('colorpickerjs', plugins_url('/js/colorpicker.js', __FILE__));
         wp_enqueue_script('jquery.fancybox', plugins_url('/js/jquery.fancybox.js', __FILE__));
         wp_enqueue_style('fancyboxcss', plugins_url('/styles/jquery.fancybox.css', __FILE__));
-        wp_enqueue_style('colorpickercss', plugins_url('/styles/colorpicker.css', __FILE__));
         wp_enqueue_style('bootstrap-icon', plugins_url('/styles/bootstrap-icon.css', __FILE__));
         wp_enqueue_style('bootstrap_admin', plugins_url('/styles/bootstrap_admin.css', __FILE__));
     }
