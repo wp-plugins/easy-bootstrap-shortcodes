@@ -69,7 +69,7 @@ function create_oscitas_tooltip(){
 			</tr >\
   <tr id="oscitas-tooltip-link-tr">\
 				<th><label for="oscitas-tooltip-link">Link:</label></th>\
-				<td><input type="text" name="tooltip-link" id="oscitas-tooltip-link" value="http://www.yoursite.com"/><br />\
+				<td><input type="text" name="tooltip-link" id="oscitas-tooltip-link" value="#"/><br />\
 				</td>\
 			</tr>\
 <tr>\
@@ -95,7 +95,7 @@ function create_oscitas_tooltip(){
     form.find('#oscitas-tooltip-type').change(function(){
         if(jQuery(this).val()=='link'){
             table.find('#oscitas-tooltip-link-tr').show();
-            table.find('#oscitas-tooltip-link').val('http://www.yoursite.com');
+            table.find('#oscitas-tooltip-link').val('#');
         } else{
             table.find('#oscitas-tooltip-link-tr').hide();
             table.find('#oscitas-tooltip-link').val('');
