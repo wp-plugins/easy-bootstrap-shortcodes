@@ -14,6 +14,8 @@ Easy Bootstrap Shortcode enable you to add bootstrap 3.0 styles in your pages, p
 
 Easy Bootstrap Shortcode is bootstrap 3.0 compatible plugin which add icons to wordpress editor (tinyMCE Shortcode Buttons) and one can add bootstrap style to their website just by clicking on tinyMCE  editor icon.
 
+http://www.youtube.com/watch?v=8T0IC1PsdTw
+
 = For best results use with bootstrap 3.0 responsive theme =
 
 = Features: =
