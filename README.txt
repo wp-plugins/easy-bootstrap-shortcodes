@@ -82,6 +82,10 @@ It's that simple ... just what the name suggests
 2. different shortcode options this plugin provides
 3. columns shortcode
 4. table shortcode
+5. You can create this kind of page content very easily.
+6. sample pages.
+7. mobile view.
+
 
 == Changelog ==
 
