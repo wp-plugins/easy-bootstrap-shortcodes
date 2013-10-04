@@ -83,8 +83,8 @@ It's that simple ... just what the name suggests
 3. columns shortcode
 4. table shortcode
 5. You can create this kind of page content very easily.
-7. mobile view
-6. few samples which can be created using this plugin
+6. mobile view
+7. few samples which can be created using this plugin
 8. sample 2
 9. sample 3
 10. sample 4
