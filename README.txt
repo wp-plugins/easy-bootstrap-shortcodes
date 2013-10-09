@@ -94,6 +94,11 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.2.0 =
+
+[Update] now you can set the visibility of columns or full row for different screen such as large, medium, small, ex-small
+
+
 = 2.1.1 =
 
 
