@@ -14,8 +14,8 @@ add_action('init','is_oscitas_theme_exists');
 function is_oscitas_theme_exists(){
     global $oscitaschecktheme;
     if(!function_exists('oscitas_theme_check') || isset($oscitaschecktheme)==false){
-        add_action('admin_enqueue_scripts', 'osc_add_admin_shortcode_scripts');
-        add_action('wp_enqueue_scripts', 'osc_add_frontend_shortcode_scripts');
+        add_action('admin_enqueue_scripts', 'osc_add_admin_ebs_scripts');
+        add_action('wp_enqueue_scripts', 'osc_add_frontend_ebs_scripts');
         add_action('admin_menu', 'ebs_add_admin_menu');
     }
 }
