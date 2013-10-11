@@ -19,6 +19,8 @@ http://www.youtube.com/watch?v=8T0IC1PsdTw
 New column hide functionality
 http://www.youtube.com/watch?v=eSrFVAro8Nc
 
+= Try our new [Easy Wordpress Parallax Slider](http://wordpress.org/plugins/easy-wp-parallax-slider/). =
+
 = For best results use with bootstrap 3.0 responsive theme =
 
 = Features: =
