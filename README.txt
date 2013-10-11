@@ -83,6 +83,8 @@ And to give use the custom css for admin
 
 If you'd like to contribute to this plugin, you can find it [hosted on GitHub](https://github.com/oscitasthemes/Easy-Bootstrap-Shortcode).
 
+Try our new [Easy Wordpress Parallax Slider](http://wordpress.org/plugins/easy-wp-parallax-slider/).
+
 == Installation ==
 
 1.Upload:

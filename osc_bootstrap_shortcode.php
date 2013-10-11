@@ -40,8 +40,11 @@ function osc_ebs_activate_plugin() {
 
 }
 function osc_ebs_settings_link( $links ) {
-    $settings_link = '<a href="admin.php?page=ebs/ebs-settings.php">Settings</a>';
-    array_push( $links, $settings_link );
+    $isSet = get_option('EBS_CUSTOM_OPTION', '');
+    if (!$isSet) {
+        $settings_link = '<a href="admin.php?page=ebs/ebs-settings.php">Settings</a>';
+        array_push( $links, $settings_link );
+    }
     return $links;
 }
 
