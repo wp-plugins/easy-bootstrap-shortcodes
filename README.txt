@@ -64,6 +64,23 @@ Easy Bootstrap Shortcode provides following styles
 17. Button Dropdown
 
 
+= How to embed this plugin to your theme =
+
+We have provided few new settings so that anybody can give inbuilt compatibility with our plugin. Such as if you are creating theme/plugin and want to use our plugin to give your users more flexibility to add responsive content, however you like to use your own custom css/js files. So now you can do this, and don't worry, for this you just have to paste the following code to your init hook or install hook of your plugin/theme and it will start working
+
+<blockquote>After adding this code user will not be able to change the files location for EBS plugin as user can't see the EBS  Settings link of LHS menu in admin panel</blockquote>
+
+`update_option( 'EBS_CUSTOM_OPTION', 1 );
+update_option( 'EBS_BOOTSTRAP_JS_LOCATION', 2 );
+update_option( 'EBS_BOOTSTRAP_CSS_LOCATION', 2 );`
+
+To give use the custom css for icons
+`update_option( 'EBS_CUSTOM_BOOTSTRAP_ICON_CSS', 1 );`
+
+And to give use the custom css for admin
+`update_option( 'EBS_CUSTOM_BOOTSTRAP_ADMIN_CSS', 1 );`
+
+
 If you'd like to contribute to this plugin, you can find it [hosted on GitHub](https://github.com/oscitasthemes/Easy-Bootstrap-Shortcode).
 
 == Installation ==
