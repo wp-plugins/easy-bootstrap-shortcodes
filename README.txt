@@ -16,6 +16,9 @@ Easy Bootstrap Shortcode is bootstrap 3.0 compatible plugin which add icons to w
 
 http://www.youtube.com/watch?v=8T0IC1PsdTw
 
+New column hide functionality
+http://www.youtube.com/watch?v=eSrFVAro8Nc
+
 = For best results use with bootstrap 3.0 responsive theme =
 
 = Features: =
@@ -93,6 +96,10 @@ It's that simple ... just what the name suggests
 
 
 == Changelog ==
+
+= 2.2.1 =
+
+[Update] Removed the extra table dependency to save the plugin settings
 
 = 2.2.0 =
 
