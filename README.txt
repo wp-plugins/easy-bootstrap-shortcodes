@@ -19,8 +19,6 @@ http://www.youtube.com/watch?v=8T0IC1PsdTw
 New column hide functionality
 http://www.youtube.com/watch?v=eSrFVAro8Nc
 
-= Try our new [Easy Wordpress Parallax Slider](http://wordpress.org/plugins/easy-wp-parallax-slider/). =
-
 = For best results use with bootstrap 3.0 responsive theme =
 
 = Features: =
@@ -85,8 +83,6 @@ And to give use the custom css for admin
 
 If you'd like to contribute to this plugin, you can find it [hosted on GitHub](https://github.com/oscitasthemes/Easy-Bootstrap-Shortcode).
 
-Try our new [Easy Wordpress Parallax Slider](http://wordpress.org/plugins/easy-wp-parallax-slider/).
-
 == Installation ==
 
 1.Upload:
@@ -121,6 +117,8 @@ It's that simple ... just what the name suggests
 = 2.2.1 =
 
 [Update] Removed the extra table dependency to save the plugin settings
+[fixed] css file location settings issue.
+
 
 = 2.2.0 =
 
