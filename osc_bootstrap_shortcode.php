@@ -114,12 +114,12 @@ function osc_add_frontend_ebs_scripts() {
         $cdn = get_option( 'EBS_BOOTSTRAP_JS_CDN_PATH', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js' );
         $css = get_option( 'EBS_BOOTSTRAP_CSS_LOCATION', 1 );
 
-        if ($js == 'plugin') {
+        if ($js == 1) {
             wp_enqueue_script('bootstrap', plugins_url('/js/bootstrap.min.js', __FILE__));
-        } elseif ($js == 'cdn') {
+        } elseif ($js == 3) {
             wp_enqueue_script('bootstrap', $cdn);
         }
-        if ($css == 'plugin') {
+        if ($css == 1) {
             wp_enqueue_style('bootstrap', plugins_url('/styles/bootstrap.min.css', __FILE__));
         } else {
             wp_enqueue_style('bootstrap-icon', plugins_url('/styles/bootstrap-icon.min.css', __FILE__));
