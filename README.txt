@@ -19,6 +19,10 @@ http://www.youtube.com/watch?v=8T0IC1PsdTw
 New column hide functionality
 http://www.youtube.com/watch?v=eSrFVAro8Nc
 
+Looking for parallax slider, check this [Easy Wordpress Parallax Slider](http://wordpress.org/plugins/easy-wp-parallax-slider/)
+
+Want to implement responsive tabs to your pages, check this [Easy Responsive Tabs](http://wordpress.org/plugins/easy-responsive-tabs/)
+
 = For best results use with bootstrap 3.0 responsive theme =
 
 = Features: =
