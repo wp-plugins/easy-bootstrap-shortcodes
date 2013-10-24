@@ -118,6 +118,11 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.2.4 =
+
+[fixed] On plugin activation TinyMCE visual editor disappear issue resolved.
+
+
 = 2.2.1 =
 
 [Update] Removed the extra table dependency to save the plugin settings
