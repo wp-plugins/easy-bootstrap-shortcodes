@@ -118,6 +118,13 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.2.5 =
+
+[fixed] bootstrap icon css in frontend issue resolved.
+[fixed] Column col-xx-12 issue resolved, now it will add col-xx-12 to columns
+
+
+
 = 2.2.4 =
 
 [fixed] On plugin activation TinyMCE visual editor disappear issue resolved.
