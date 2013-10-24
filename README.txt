@@ -89,6 +89,9 @@ And to give use the custom css for admin
 
 If you'd like to contribute to this plugin, you can find it [hosted on GitHub](https://github.com/oscitasthemes/Easy-Bootstrap-Shortcode).
 
+
+
+
 == Installation ==
 
 1.Upload:
@@ -119,6 +122,11 @@ It's that simple ... just what the name suggests
 
 
 == Changelog ==
+
+= 2.2.5 =
+
+[fixed] bootstrap icon css in frontend issue resolved.
+[fixed] Column col-xx-12 issue resolved, now it will add col-xx-12 to columns
 
 = 2.2.4 =
 
