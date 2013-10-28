@@ -111,7 +111,7 @@ add_filter( 'ebs_bootstrap_js_url', 'apply_ebs_bootstrap_js_url' );`
 
 Filter for bootstrap.min.js CDN path this filter is only applicable if you selected js inclusion from CDN in EBS Settings
 
-'function apply_ebs_bootstrap_js_cdn( $url ) {
+`function apply_ebs_bootstrap_js_cdn( $url ) {
 	$ebs_cdn_url='';// write your bootstrap.min.js cdn path here
 	return $ebs_cdn_url;
 }
