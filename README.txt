@@ -111,7 +111,7 @@ add_filter( 'ebs_bootstrap_js_url', 'apply_ebs_bootstrap_js_url' );`
 
 Filter for bootstrap.min.js CDN path this filter is only applicable if you selected js inclusion from CDN in EBS Settings
 
-'function apply_ebs_bootstrap_js_cdn( $url ) {
+`function apply_ebs_bootstrap_js_cdn( $url ) {
 	$ebs_cdn_url='';// write your bootstrap.min.js cdn path here
 	return $ebs_cdn_url;
 }
@@ -138,7 +138,7 @@ Filter for bootstrap-icon.min.css url this filter is only applicable if you sele
 add_filter( 'ebs_bootstrap_icon_css_url', 'apply_ebs_bootstrap_icon_css_url' );`
 
 
-We have removed the support of the following options
+We have removed the support of the following options 
 
 
 <blockquote>After adding this code user will not be able to change the files location for EBS plugin as user can't see the EBS  Settings link of LHS menu in admin panel</blockquote>
