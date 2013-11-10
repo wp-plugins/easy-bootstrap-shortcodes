@@ -190,6 +190,11 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.3.2 =
+
+
+* [fixed]  Fixed wpcolumns add class issues.
+
 
 = 2.3.1 =
 
