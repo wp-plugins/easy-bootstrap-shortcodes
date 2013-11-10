@@ -195,8 +195,11 @@ It's that simple ... just what the name suggests
 
 
 [update] Clear left functionality added in responsive columns. Credit goes to Nikoya.
+
 [update] Added class to dialog box. Credit goes to Nikoya.
+
 [update] Bootstrap css and js updated to v3.0.2
+
 [fixed] Undefined index issue in toggles.
 
 
@@ -205,6 +208,7 @@ It's that simple ... just what the name suggests
 
 
 [Update] now supports filters, so that you can easily give inbuilt support to this plugin to create responsive themes (Suggested by Swashata).
+
 [Update] Implemented support of "in" class for toggles
 
 
@@ -212,6 +216,7 @@ It's that simple ... just what the name suggests
 
 
 [fixed] bootstrap icon css in frontend issue resolved.
+
 [fixed] Column col-xx-12 issue resolved, now it will add col-xx-12 to columns
 
 
@@ -225,6 +230,7 @@ It's that simple ... just what the name suggests
 
 
 [Update] Removed the extra table dependency to save the plugin settings
+
 [fixed] css file location settings issue.
 
 
