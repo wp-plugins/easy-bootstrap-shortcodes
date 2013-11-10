@@ -12,7 +12,7 @@ function osc_theme_toggles($params, $content = null) {
                 'id' => count($_oscitas_accordion),
                 'class' => ''
                     ), $params));
-    $_oscitas_accordion[$id] = array();
+    $_oscitas_accordion[$id] = array('details'=>array());
     $scontent = do_shortcode($content);
 
     $output = '';
@@ -30,10 +30,13 @@ function osc_theme_toggle($params, $content = null) {
     global $_oscitas_accordion;
     extract(shortcode_atts(array(
                 'title' => 'title',
-                'class' => '',
+                'class' => ''
                     ), $params));
     $con = do_shortcode($content);
     $index = count($_oscitas_accordion) - 1;
+    if (!isset($_oscitas_accordion[$index])) {
+        $_oscitas_accordion[$index] = array('details'=>array());
+    }
     $id = 'details-' . $index . '-' . count($_oscitas_accordion[$index]['details']);
     $_oscitas_accordion[$index]['details'][] = <<<EOS
         <div class="panel panel-default">
