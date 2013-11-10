@@ -194,50 +194,44 @@ It's that simple ... just what the name suggests
 = 2.3.1 =
 
 
-[update] Clear left functionality added in responsive columns. Credit goes to Nikoya.
-
-[update] Added class to dialog box. Credit goes to Nikoya.
-
-[update] Bootstrap css and js updated to v3.0.2
-
-[fixed] Undefined index issue in toggles.
+* [update] Clear left functionality added in responsive columns. Credit goes to Nikoya.
+* [update] Added class to dialog box. Credit goes to Nikoya.
+* [update] Bootstrap css and js updated to v3.0.2
+* [fixed] Undefined index issue in toggles.
 
 
 
 = 2.3.0 =
 
 
-[Update] now supports filters, so that you can easily give inbuilt support to this plugin to create responsive themes (Suggested by Swashata).
-
-[Update] Implemented support of "in" class for toggles
+* [Update] now supports filters, so that you can easily give inbuilt support to this plugin to create responsive themes (Suggested by Swashata).
+* [Update] Implemented support of "in" class for toggles
 
 
 = 2.2.5 =
 
 
-[fixed] bootstrap icon css in frontend issue resolved.
-
-[fixed] Column col-xx-12 issue resolved, now it will add col-xx-12 to columns
+* [fixed] bootstrap icon css in frontend issue resolved.
+* [fixed] Column col-xx-12 issue resolved, now it will add col-xx-12 to columns
 
 
 = 2.2.4 =
 
 
-[fixed] On plugin activation TinyMCE visual editor disappear issue resolved.
+* [fixed] On plugin activation TinyMCE visual editor disappear issue resolved.
 
 
 = 2.2.1 =
 
 
-[Update] Removed the extra table dependency to save the plugin settings
-
-[fixed] css file location settings issue.
+* [Update] Removed the extra table dependency to save the plugin settings
+* [fixed] css file location settings issue.
 
 
 = 2.2.0 =
 
 
-[Update] now you can set the visibility of columns or full row for different screen such as large, medium, small, ex-small
+* [Update] now you can set the visibility of columns or full row for different screen such as large, medium, small, ex-small
 
 
 = 2.1.1 =
