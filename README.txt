@@ -195,6 +195,12 @@ It's that simple ... just what the name suggests
 == Changelog ==
 
 
+= 2.3.4 =
+
+* [update] Implemented filter to add buttons to tinyMCE, Credit goes to Nikoya.
+* [Fixed] Added class to Columns shortcode popup.
+* [Fixed] Resolved issue 'Gravity Form not validating within plugin column shortcode'
+
 = 2.3.3 =
 
 * [update] Included respond.js to support IE 6,7,8. Of course, you can choose either you want to include it or not from settings page.
