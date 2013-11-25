@@ -23,6 +23,12 @@ http://www.youtube.com/watch?v=eSrFVAro8Nc
 
 [Easy Bootstrap Shortcode Documentation](http://oscitasthemes.com/documentation/easy-bootstrap-shortcodes/)
 
+
+
+[For more exciting shortcodes & many other features check, = Easy Bootstrap Shortcode Pro =](http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/)
+
+
+
 Looking for parallax slider, check this [Easy Wordpress Parallax Slider](http://wordpress.org/plugins/easy-wp-parallax-slider/)
 
 Want to implement responsive tabs to your pages, check this [Easy Responsive Tabs](http://wordpress.org/plugins/easy-responsive-tabs/)
