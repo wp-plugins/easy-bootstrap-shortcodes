@@ -25,7 +25,7 @@ http://www.youtube.com/watch?v=eSrFVAro8Nc
 
 
 
-[For more exciting shortcodes & many other features check, = Easy Bootstrap Shortcode Pro =](http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/)
+= [PRO VERSION with exciting Premium SHORTCODES, Easy Bootstrap Shortcode Pro](http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/) =
 
 
 
