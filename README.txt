@@ -201,6 +201,11 @@ It's that simple ... just what the name suggests
 == Changelog ==
 
 
+= 2.3.5 =
+
+* [update] Banner of Easy Bootstrap Shortcodes PRO Version in settings page.
+
+
 = 2.3.4 =
 
 * [update] Implemented filter to add buttons to tinyMCE, Credit goes to Nikoya.

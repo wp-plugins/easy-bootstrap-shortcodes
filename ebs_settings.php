@@ -49,6 +49,10 @@
 				//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js
 			</li>
 		</ul>
+        <br />
+        <a href="http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/" target="_blank">
+            <img style="border: 0px;" src="<?php echo  plugins_url("images/ebs-pro.jpg", __FILE__); ?>">
+        </a>
 
     </form>
 </div>
