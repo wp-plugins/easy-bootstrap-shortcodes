@@ -40,6 +40,7 @@ Follow us [@Twitter](https://twitter.com/oscitasthemes), [@facebook](https://www
 = Features: =
 
 * simplest bootstrap style plugin ever.
+* IE 6+ compatible
 * Bootstrap 3.0 compatible.
 * No need to paste shortcode in editor.
 * Add icons to editor.
@@ -48,6 +49,7 @@ Follow us [@Twitter](https://twitter.com/oscitasthemes), [@facebook](https://www
 * More control over the css, you can add your own custom class to shortcodes.
 * Now you can use js file from CDN or disable the plugin js.
 * You can use your own css file by disabling the plugin css, which gives you more flexibility over styling.
+
 
 
 Easy Bootstrap Shortcode provides following styles
@@ -68,7 +70,7 @@ Easy Bootstrap Shortcode provides following styles
 5. Popover
 6. Tooltip
 7. Panel
-8. Progress Bars
+8. Progress Bars with labels
 9. Icons
 10. Labels
 11. Buttons
@@ -78,6 +80,9 @@ Easy Bootstrap Shortcode provides following styles
 15. Image Effects (Round, Thumbnail, Square)
 16. Well
 17. Button Dropdown
+18. Button Group
+19. Button Group Toolbar
+20. Description List
 
 
 = How to embed this plugin to your theme =
