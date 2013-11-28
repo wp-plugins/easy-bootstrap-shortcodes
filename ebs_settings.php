@@ -12,7 +12,7 @@
             </p>
         </div>
 		<div class="ebs_details">
-			<label class="ebs_setting_label">respond.js file</label>
+			<label class="ebs_setting_label">respond.js file for IE6+ compatible </label>
 			<p>
 				<input type="radio" name="respond_js" id="respond_js_plugin" class="respond_cdn" value="1" <?php echo ($respond == 1) ? 'checked=checked' : '' ?>>
 				<label for="respond_js_plugin">Use from EBS Plugin</label>

@@ -206,6 +206,10 @@ It's that simple ... just what the name suggests
 == Changelog ==
 
 
+= 2.3.6 =
+
+* [fixed] Button Group, Button Group Toolbar, Description List icon issues fixed.
+
 = 2.3.5 =
 
 * [update] Banner of Easy Bootstrap Shortcodes PRO Version in settings page.
