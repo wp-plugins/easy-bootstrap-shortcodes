@@ -5,7 +5,10 @@ $elements = array(
     'toggles',
     'tabs',
     'lists',
+    'deslist',
     'buttons',
+    'btngrptool',
+    'btngrp',
     'notifications',
     'wpcolumns',
     'tables',
@@ -19,7 +22,8 @@ $elements = array(
     'thumbnail',
     'icon',
     'image',
-    'progressbar'
+    'progressbar',
+     
 );
 
 foreach ($elements as $element) {
