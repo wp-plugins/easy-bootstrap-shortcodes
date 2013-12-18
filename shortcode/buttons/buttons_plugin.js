@@ -295,6 +295,11 @@ function create_oscitas_button(){
 				</td>\
 			</tr>\
 			<tr>\
+				<th><label for="oscitas-button-iconcolor">Icon Color:</label></th>\
+				<td><input type="text" name="label" id="oscitas-button-iconcolor" class="color" value="" /><br />\
+				</td>\
+			</tr>\
+			<tr>\
 				<th><label for="oscitas-table-rows">Make block</label></th>\
 				<td>\
 				    <input type="checkbox" id="oscitas-button-block">\
@@ -332,6 +337,7 @@ function create_oscitas_button(){
     var table = form.find('table');
     jQuery('.glyphicon').css('display','inline');
     form.appendTo('body').hide();
+    form.find('.color').wpColorPicker();
     table.find('#click_icon_list_button').click(function(){
         if(!jQuery(this).hasClass('osc_icon_showing_button')){
             jQuery(this).addClass('osc_icon_showing_button')
@@ -390,6 +396,10 @@ function create_oscitas_button(){
         }
         if(table.find('#osc_icon_class_val_button').val()!=''){
             icon= ' icon="'+table.find('#osc_icon_class_val_button').val()+'" ';
+            icon += ' align="'+table.find('#oscitas-button-iconalign').val()+'" ';
+            if(table.find('#oscitas-button-iconcolor').val()!=''){
+                icon+= ' iconcolor="'+table.find('#oscitas-button-iconcolor').val()+'" ';
+            }
         }
        
         var shortcode = '[button'+cusclass;
@@ -399,7 +409,6 @@ function create_oscitas_button(){
         shortcode += table.find('#oscitas-button-block').prop('checked')? ' btn-block': '';
         shortcode += '" ';
         shortcode += icon;
-        shortcode += ' align="'+table.find('#oscitas-button-iconalign').val()+'" ';
         shortcode += ' type="'+type+'" ';
         if(type!='button'){
             shortcode += ' target="'+(table.find('#oscitas-button-target').prop('checked')? 'true': 'false')+ '" ';

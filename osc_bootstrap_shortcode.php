@@ -4,7 +4,7 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0 styles to your theme by wordpress editor shortcode buttons.
-  Version: 2.3.6
+  Version: 2.4.0
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
@@ -33,7 +33,7 @@ function osc_ebs_activate_plugin() {
 
         // EBS_BOOTSTRAP_JS_LOCATION   '1' - for plugin file, '2' - don't user EBS files but use from other plugin or theme, '3' - to user CDN path
         update_option( 'EBS_BOOTSTRAP_JS_LOCATION', 1 );
-        update_option( 'EBS_BOOTSTRAP_JS_CDN_PATH', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js' );
+        update_option( 'EBS_BOOTSTRAP_JS_CDN_PATH', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js' );
 	    update_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH', 'http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js' );
 	    // EBS_BOOTSTRAP_RESPOND_LOCATION   '1' - for plugin file, '2' - don't user EBS files but use from other plugin or theme, '3' - to user CDN path
 	    update_option('EBS_BOOTSTRAP_RESPOND_LOCATION',2);
@@ -74,23 +74,21 @@ function osc_ebs_add_admin_menu() {
 
 function osc_ebs_setting_page() {
 	if (isset($_POST['ebs_submit'])) {
-		update_option( 'EBS_BOOTSTRAP_JS_LOCATION', $_POST['b_js'] );
-		update_option( 'EBS_BOOTSTRAP_JS_CDN_PATH', $_POST['cdn_path'] );
-		update_option( 'EBS_BOOTSTRAP_CSS_LOCATION', $_POST['b_css'] );
-		update_option( 'EBS_BOOTSTRAP_RESPOND_LOCATION', $_POST['b_js'] );
-		update_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH', $_POST['cdn_path'] );
-
-
-		$js = $_POST['b_js'];
-		$cdn = $_POST['cdn_path'];
-		$css = $_POST['b_css'];
-		$respond = $_POST['respond_js'];
-		$respondcdn = $_POST['respond_cdn_path'];
+        update_option( 'EBS_BOOTSTRAP_JS_LOCATION', isset($_POST['b_js'])?$_POST['b_js']:1 );
+        update_option( 'EBS_BOOTSTRAP_JS_CDN_PATH',isset($_POST['cdn_path'])? $_POST['cdn_path']:'http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js' );
+        update_option( 'EBS_BOOTSTRAP_CSS_LOCATION', isset($_POST['b_css'])?$_POST['b_css']:1 );
+        update_option( 'EBS_BOOTSTRAP_RESPOND_LOCATION', isset($_POST['respond_js'])?$_POST['respond_js']:2 );
+        update_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH', isset($_POST['respond_cdn_path'])?$_POST['respond_cdn_path']:'http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js' );
+        $js = $_POST['b_js'];
+        $cdn = $_POST['cdn_path'];
+        $css = $_POST['b_css'];
+        $respond = $_POST['respond_js'];
+        $respondcdn = $_POST['respond_cdn_path'];
 
 	}
 	else {
 		$js = get_option( 'EBS_BOOTSTRAP_JS_LOCATION', 1 );
-		$cdn = get_option( 'EBS_BOOTSTRAP_JS_CDN_PATH', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js' );
+		$cdn = get_option( 'EBS_BOOTSTRAP_JS_CDN_PATH', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js' );
 		$css = get_option( 'EBS_BOOTSTRAP_CSS_LOCATION', 1 );
 		$respond = get_option( 'EBS_BOOTSTRAP_RESPOND_LOCATION', 2 );
 		$respondcdn = get_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH', 'http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js' );
@@ -137,6 +135,8 @@ function osc_editor_enable_mce(){
     wp_enqueue_style('thickbox');
     wp_enqueue_script('media-upload');
     wp_enqueue_script('thickbox');
+    wp_enqueue_style('wp-color-picker');
+    wp_enqueue_script('wp-color-picker');
     wp_enqueue_script('jquery.fancybox', plugins_url('/js/jquery.fancybox.js', __FILE__));
     wp_enqueue_style('fancyboxcss', plugins_url('/styles/jquery.fancybox.css', __FILE__));
     if (!apply_filters('ebs_bootstrap_icon_css_url',false)) {
@@ -145,7 +145,7 @@ function osc_editor_enable_mce(){
         wp_enqueue_style('bootstrap-icon', apply_filters('ebs_bootstrap_icon_css_url',false));
     }
     if (!apply_filters('ebs_custom_bootstrap_admin_css',false)) {
-        wp_enqueue_style('bootstrap_admin', plugins_url('/styles/bootstrap_admin.min.css', __FILE__));
+        wp_enqueue_style('ebs_bootstrap_admin', plugins_url('/styles/bootstrap_admin.min.css', __FILE__));
     }
 
 }
@@ -157,8 +157,8 @@ function osc_add_frontend_ebs_scripts() {
 	if (!$isSet) {
 		$js = get_option( 'EBS_BOOTSTRAP_JS_LOCATION', 1 );
 		$respond = get_option( 'EBS_BOOTSTRAP_RESPOND_LOCATION', 2 );
-		$cdn = get_option( 'EBS_BOOTSTRAP_JS_CDN_PATH', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js' );
-		$respondcdn = get_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js' );
+		$cdn = get_option( 'EBS_BOOTSTRAP_JS_CDN_PATH', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js' );
+		$respondcdn = get_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH', 'http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js' );
 		$css = get_option( 'EBS_BOOTSTRAP_CSS_LOCATION', 1 );
 
 //			http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js

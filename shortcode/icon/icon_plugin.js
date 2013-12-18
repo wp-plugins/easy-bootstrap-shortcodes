@@ -256,6 +256,16 @@ function create_oscitas_icon(){
         </ul></div>\
 				</td>\
 			</tr>\
+			<tr>\
+				<th><label for="oscitas-icon-iconcolor">Icon Color:</label></th>\
+				<td><input type="text" name="label" id="oscitas-icon-iconcolor" class="color" value="" /><br />\
+				</td>\
+			</tr>\
+			 <tr>\
+				<th><label for="oscitas-icon-fontsize">Icon Font Size:</label></th>\
+				<td><input type="text" name="line" id="oscitas-icon-fontsize" value=""/>px\
+				</td>\
+			</tr>\
                          <tr>\
 				<th><label for="oscitas-icon-class">Custom Class:</label></th>\
 				<td><input type="text" name="line" id="oscitas-icon-class" value=""/><br />\
@@ -270,6 +280,7 @@ function create_oscitas_icon(){
     var table = form.find('table');
     jQuery('.glyphicon').css('display','inline');
     form.appendTo('body').hide();
+    form.find('.color').wpColorPicker();
     var t= table.find('#osc_icon_class_val_icon').val();
     table.find('#osc_show_icon_icon').removeClass().addClass('glyphicon').addClass(t);
     table.find('#click_icon_list_icon').click(function(){
@@ -297,12 +308,14 @@ function create_oscitas_icon(){
 		
     // handles the click event of the submit button
     form.find('#oscitas-icon-submit').click(function(){
-        var cusclass;
-        if(table.find('#oscitas-icon-class').val()!=''){
-            cusclass= ' class="'+table.find('#oscitas-icon-class').val()+'"';
+        var cusclass='';
+        if(table.find('#oscitas-icon-iconcolor').val()!=''){
+            cusclass+= ' color="'+table.find('#oscitas-icon-iconcolor').val()+'"';
+        }if(table.find('#oscitas-icon-fontsize').val()!=''){
+            cusclass+= ' fontsize="'+table.find('#oscitas-icon-fontsize').val()+'"';
         }
-        else{
-            cusclass='';
+        if(table.find('#oscitas-icon-class').val()!=''){
+            cusclass+= ' class="'+table.find('#oscitas-icon-class').val()+'"';
         }
         var icon = table.find('#osc_icon_class_val_icon').val();
         var  shortcode='';

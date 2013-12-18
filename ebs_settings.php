@@ -1,5 +1,5 @@
 <div class="ebs_page_settings">
-    <h1>Easy Bootstrap Shortcodes Settings for js/css files</h1><form name="ebs_setting" id="ebs_setting" method="post" action="">
+    <h1>Easy Bootstrap Shortcode Settings for js/css files</h1><form name="ebs_setting" id="ebs_setting" method="post" action="">
         <div class="ebs_details">
             <label class="ebs_setting_label">bootstrap.js file</label>
             <p>
@@ -36,10 +36,10 @@
         <b>CDN Links for bootstrap.js, you can use any of these</b>
         <ul>
             <li>
-                //netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js
+                //netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js
             </li>
             <li>
-                //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js
+                //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js
             </li>
         </ul>
         <br/>

@@ -43,7 +43,7 @@ function create_oscitas_btngrp(){
     }
     // creates a form to be displayed everytime the button is clicked
     // you should achieve this using AJAX instead of direct html code like this
-    var form = jQuery('<div id="oscitas-form-btngrp">\
+    var form = jQuery('<div id="oscitas-form-btngrp" class="oscitas-container">\
     <table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th class="main_dp_th"><label for="oscitas-btngrp-heading" >Button Group Features</label></th>\
