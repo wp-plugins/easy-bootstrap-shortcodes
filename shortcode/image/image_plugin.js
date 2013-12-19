@@ -1,3 +1,7 @@
+var gImageEffects={
+    title:"Image Effects Shortcode",
+    id :'#oscitas-form-image'
+};
 (function() {
     tinymce.create('tinymce.plugins.oscitasImage', {
         init : function(ed, url) {
@@ -6,18 +10,7 @@
                 image : url+'/icon.png',
                 onclick : function() {
                     create_oscitas_image();
-                    jQuery.fancybox({
-                        'type' : 'inline',
-                        'title' : 'Image Effects Shortcode',
-                        'href' : '#oscitas-form-image',
-                        helpers:  {
-                            title : {
-                                type : 'over',
-                                position:'top'
-                            }
-                        }
-                        
-                    });
+                    open_dialogue(gImageEffects.id);
                 }
             });
         },
@@ -118,7 +111,8 @@ function create_oscitas_image(){
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
 			
         // closes fancybox
-        jQuery.fancybox.close();
+        close_dialogue(gImageEffects.id);
+
     });
 }
 

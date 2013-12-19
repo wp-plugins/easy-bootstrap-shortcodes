@@ -1,3 +1,7 @@
+var gIcon={
+    title:"Icon Shortcode",
+    id :'#oscitas-form-icon'
+};
 (function() {
     tinymce.create('tinymce.plugins.oscitasIcon', {
         init : function(ed, url) {
@@ -6,23 +10,7 @@
                 image : url+'/icon.png',
                 onclick : function() {
                     create_oscitas_icon();
-                    jQuery.fancybox({
-                        'autoSize':false,
-                        'autoWidth':false,
-                        'fitToView':false,
-                        'height':'auto',
-                        'topRatio':0.15,
-                        'width':600,
-                        'type' : 'inline',
-                        'title' : 'Icon Shortcode',
-                        'href' : '#oscitas-form-icon',
-                        helpers:  {
-                            title : {
-                                type : 'over',
-                                position:'top'
-                            }
-                        }
-                    });
+                    open_dialogue(gIcon.id, 600);
                 }
             });
         },
@@ -325,7 +313,7 @@ function create_oscitas_icon(){
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
 			
         // closes fancybox
-        jQuery.fancybox.close();
+        close_dialogue(gIcon.id);
     });
 }
 

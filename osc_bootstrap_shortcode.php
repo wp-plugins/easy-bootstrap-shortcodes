@@ -128,6 +128,8 @@ function osc_add_admin_ebs_scripts() {
     if ($screen->id == 'toplevel_page_ebs/ebs-settings') {
         wp_enqueue_style('ebs-setting', plugins_url('/styles/ebs-setting.min.css', __FILE__));
     }
+    wp_enqueue_script('ebs-main', plugins_url('/js/ebs_main.js', __FILE__));
+
 }
 
 function osc_editor_enable_mce(){
