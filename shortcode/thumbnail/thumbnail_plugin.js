@@ -1,3 +1,7 @@
+var gThumbnail={
+    title:"Responsive Image Shortcode",
+    id :'#oscitas-form-thumbnail'
+};
 (function() {
     tinymce.create('tinymce.plugins.oscitasThumbnail', {
         init : function(ed, url) {
@@ -6,18 +10,7 @@
                 image : url+'/icon.png',
                 onclick : function() {
                     create_oscitas_thumbnail();
-                    jQuery.fancybox({
-                        'type' : 'inline',
-                        'title' : 'Responsive Image Shortcode',
-                        'href' : '#oscitas-form-thumbnail',
-                        helpers:  {
-                            title : {
-                                type : 'over',
-                                position:'top'
-                            }
-                        }
-                        
-                    });
+                    open_dialogue(gThumbnail.id);
                 }
             });
         },
@@ -126,7 +119,7 @@ function create_oscitas_thumbnail(){
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
 			
         // closes fancybox
-        jQuery.fancybox.close();
+        close_dialogue(gThumbnail.id);
     });
 }
 

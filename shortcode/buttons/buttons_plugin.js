@@ -1,28 +1,16 @@
+var gButton={
+    title:"Button Shortcode",
+    id :'#oscitas-form-button'
+};
 (function() {
     tinymce.create('tinymce.plugins.oscitasButtons', {
         init : function(ed, url) {
             ed.addButton('oscitasbuttons', {
-                title : 'Button Shortcode',
+                title : gButton.title,
                 image : url+'/icon.png',
                 onclick : function() {
                     create_oscitas_button();
-                    jQuery.fancybox({
-                        'autoSize':false,
-                        'autoWidth':false,
-                        'fitToView':false,
-                        'height':'auto',
-                        'topRatio':0.1,
-                        'width':800,
-                        'type' : 'inline',
-                        'title' : 'Button Shortcode',
-                        'href' : '#oscitas-form-button',
-                        helpers:  {
-                            title : {
-                                type : 'over',
-                                position:'top'
-                            }
-                        }
-                    });
+                    open_dialogue(gButton.id,800);
                 }
             });
         },
@@ -425,7 +413,7 @@ function create_oscitas_button(){
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
 			
         // closes fancybox
-        jQuery.fancybox.close();
+        close_dialogue(gButton.id);
     });
 }
 

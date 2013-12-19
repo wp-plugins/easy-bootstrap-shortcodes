@@ -1,3 +1,7 @@
+var gIconHeading={
+    title:"Icon Heading Shortcode",
+    id :'#oscitas-form-iconhead'
+};
 (function() {
     tinymce.create('tinymce.plugins.oscitasIconhead', {
         init: function(ed, url) {
@@ -6,23 +10,7 @@
                 image: url + '/icon.png',
                 onclick: function() {
                     create_oscitas_iconhead();
-                    jQuery.fancybox({
-                        'autoSize':false,
-                        'autoWidth':false,
-                        'fitToView':false,
-                        'height':'auto',
-                        'topRatio':0.2,
-                        'type' : 'inline',
-                        'title' : 'Icon Heading Shortcode',
-                        'href' : '#oscitas-form-iconhead',
-                        'width':600,
-                        helpers:  {
-                            title : {
-                                type : 'over',
-                                position:'top'
-                            }
-                        }
-                    });
+                    open_dialogue(gIconHeading.id, 600);
                 }
             });
         },
@@ -335,7 +323,7 @@ function create_oscitas_iconhead(){
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent',0 , shortcode);
 
-        jQuery.fancybox.close();
+        close_dialogue(gIconHeading.id);
     });
 }
 
