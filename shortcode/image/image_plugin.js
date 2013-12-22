@@ -1,4 +1,4 @@
-var gImageEffects={
+var image={
     title:"Image Effects Shortcode",
     id :'#oscitas-form-image'
 };
@@ -10,7 +10,7 @@ var gImageEffects={
                 image : url+'/icon.png',
                 onclick : function() {
                     create_oscitas_image();
-                    open_dialogue(gImageEffects.id);
+                    open_dialogue(image.id,'auto');
                 }
             });
         },
@@ -18,13 +18,8 @@ var gImageEffects={
             return null;
         },
         getInfo : function() {
-            return {
-                longname : "Image Effects Shortcode",
-                author : 'Oscitas Themes',
-                authorurl : 'http://www.oscitasthemes.com/',
-                infourl : 'http://www.oscitasthemes.com/',
-                version : "2.0.0"
-            };
+            plugininfo.longname=image.title;
+            return plugininfo;
         }
     });
     tinymce.PluginManager.add('oscitasimage', tinymce.plugins.oscitasImage);
@@ -36,8 +31,8 @@ function create_oscitas_image(){
     }
     // creates a form to be displayed everytime the button is clicked
     // you should achieve this using AJAX instead of direct html code like this
-    var form = jQuery('<div id="oscitas-form-image" class="oscitas-container"><table id="oscitas-table" class="form-table">\
-				<th><label for="oscitas-label-content">Upload Image:</label></th>\
+    var form = jQuery('<div id="oscitas-form-image" title="'+image.title+'"><table id="oscitas-table" class="form-table">\
+				<tr><th><label for="oscitas-label-content">Upload Image:</label></th>\
 				<td id="osc_image_upload"><input id="oscitas-image-src" type="hidden" name="oscitas-thumbnail-src"  value="" />\
                                 <input id="_btn" class="upload_image_button" type="button" value="Upload Image" />\
 				</td>\
@@ -61,13 +56,13 @@ function create_oscitas_image(){
 			<input type="button" id="oscitas-image-submit" class="button-primary" value="Insert Image" name="submit" />\
 		</p>\
 		</div>');
-    
+
     var table = form.find('table');
     form.appendTo('body').hide();
 
-    
+
     form.find('.upload_image_button').click(function() {
-        jQuery('.fancybox-overlay').css('z-index',100);
+        jQuery('.ui-widget-overlay, .ui-dialog').css('z-index',100);
         jQuery('html').addClass('Image');
         formfield = jQuery(this).prev().attr('id');
         tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
@@ -94,25 +89,24 @@ function create_oscitas_image(){
         }
 
     };
-        
-		
+
+
     // handles the click event of the submit button
     form.find('#oscitas-image-submit').click(function(){
-      var shortcode='';
+        var shortcode='';
         var shape=form.find('#oscitas-image-shape').val();
         var cusclass='';
         if(table.find('#oscitas-image-class').val()!=''){
             cusclass= ' class="'+table.find('#oscitas-image-class').val()+'"';
         }
         if(form.find('#oscitas-image-src').val()!=''){
-             shortcode = '[image'+cusclass+' src="'+form.find('#oscitas-image-src').val()+'" shape="'+shape+'"]';
+            shortcode = '[image'+cusclass+' src="'+form.find('#oscitas-image-src').val()+'" shape="'+shape+'"]';
         }
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
-        // closes fancybox
-        close_dialogue(gImageEffects.id);
 
+        // closes Dialoguebox
+        close_dialogue(image.id);
     });
 }
 
