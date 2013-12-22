@@ -25,7 +25,7 @@ function osc_theme_oscitasthumbnail($params, $content = 'Label') {
     if ($link != '') {
         $out .='<a href="' . $link . '">';
     }
-    $out .= '<img src="' . $src . '" class="'.$imageBorderClass.'">';
+    $out .= '<img src="' . $src . '" '.($imageBorderClass? ' class="'.$imageBorderClass.'"':'').'>';
     if ($link != '') {
         $out .='</a>';
     }
