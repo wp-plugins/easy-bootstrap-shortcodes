@@ -204,6 +204,10 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.4.6 =
+
+* Add Icons for new Dropdown menu in TinyMCE Editor.
+
 = 2.4.5 =
 
 * Add New Dropdown Menu Option in TinyMCE Editor.
