@@ -33,8 +33,6 @@ Looking for parallax slider, check this [Easy Wordpress Parallax Slider](http://
 
 Want to implement responsive tabs to your pages, check this [Easy Responsive Tabs](http://wordpress.org/plugins/easy-responsive-tabs/)
 
-Follow us [@Twitter](https://twitter.com/oscitasthemes), [@facebook](https://www.facebook.com/oscitasthemes), [@google+](https://plus.google.com/109122908951553852347/posts)
-
 = For best results use with bootstrap 3.0.3 responsive theme =
 
 = Features: =
@@ -171,6 +169,7 @@ And to give use the custom css for admin
 
 If you'd like to contribute to this plugin, you can find it [hosted on GitHub](https://github.com/oscitasthemes/Easy-Bootstrap-Shortcode).
 
+Follow us [@Twitter](https://twitter.com/oscitasthemes), [@facebook](https://www.facebook.com/oscitasthemes), [@google+](https://plus.google.com/109122908951553852347/posts)
 
 
 
@@ -204,6 +203,10 @@ It's that simple ... just what the name suggests
 
 
 == Changelog ==
+
+= 2.4.4 =
+
+* [Fixed] css for admin popups.
 
 = 2.4.3 =
 
