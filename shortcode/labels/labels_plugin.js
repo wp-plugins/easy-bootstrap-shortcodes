@@ -1,10 +1,10 @@
-var gLabels={
+var labels={
     title:"Label Shortcode",
     id :'oscitas-form-label',
     pluginName: 'labels'
 };
 (function() {
-    _create_tinyMCE_options(gLabels);
+    _create_tinyMCE_options(labels);
 })();
 
 function create_oscitas_labels(pluginObj){

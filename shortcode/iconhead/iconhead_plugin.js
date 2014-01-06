@@ -1,10 +1,10 @@
-var gIconHeading={
+var iconhead={
     title:"Icon Heading Shortcode",
     id :'oscitas-form-iconhead',
     pluginName: 'iconhead'
 };
 (function() {
-    _create_tinyMCE_options(gIconHeading, 800);
+    _create_tinyMCE_options(iconhead, 800);
 })();
 
 function create_oscitas_iconhead(pluginObj){

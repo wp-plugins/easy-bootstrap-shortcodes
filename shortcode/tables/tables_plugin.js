@@ -1,10 +1,10 @@
-gBtnVar={
+var tables={
     title:"Progressbar Shortcode",
     id :'oscitas-form-table',
     pluginName: 'tables'
 };
 (function() {
-    _create_tinyMCE_options(gBtnVar);
+    _create_tinyMCE_options(tables);
 })();
 
 function create_oscitas_tables(pluginObj){

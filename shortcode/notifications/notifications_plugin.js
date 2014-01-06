@@ -1,10 +1,10 @@
-gBtnVar={
+var notifications={
     title:"Notifications Shortcode",
     id :'oscitas-form-notifications',
     pluginName: 'notifications'
 };
 (function() {
-    _create_tinyMCE_options(gBtnVar);
+    _create_tinyMCE_options(notifications);
 })();
 
 function create_oscitas_notifications(pluginObj){
@@ -64,9 +64,13 @@ function create_oscitas_notifications(pluginObj){
             //if ( value !== options[index] )
             shortcode += ' ' + index + '="' + value + '"';
         }
+
+        var selected_content = tinyMCE.activeEditor.selection.getContent();
+        if(!selected_content)
+            var selected_content = 'Your notification';
         shortcode += ' close="'+(table.find('#oscitas-close').prop('checked')? 'true': 'false')+ '" ';
-			
-        shortcode += cusclass+']Title: Lorem ipsum dolor sit amet...[/notification]';
+
+        shortcode += cusclass+']'+selected_content+'[/notification]';
 			
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);

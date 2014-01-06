@@ -1,10 +1,10 @@
-gBtnVar={
+var thumbnail={
     title:"Responsive Image Shortcode",
     id :'oscitas-form-thumbnail',
     pluginName: 'thumbnail'
 };
 (function() {
-    _create_tinyMCE_options(gBtnVar);
+    _create_tinyMCE_options(thumbnail);
 })();
 
 function create_oscitas_thumbnail(pluginObj){

@@ -1,10 +1,10 @@
-gBtnVar={
+var well={
     title:"Well Shortcode",
     id :'oscitas-form-well',
     pluginName: 'well'
 };
 (function() {
-    _create_tinyMCE_options(gBtnVar);
+    _create_tinyMCE_options(well);
 })();
 
 function create_oscitas_well(pluginObj){

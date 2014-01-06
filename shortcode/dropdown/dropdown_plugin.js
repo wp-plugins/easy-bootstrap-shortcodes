@@ -1,10 +1,10 @@
-var gDropdown={
+var dropdown={
     title:"Button Dropdown Shortcode",
     id :'oscitas-form-dropdown',
     pluginName: 'dropdown'
 };
 (function() {
-    _create_tinyMCE_options(gDropdown);
+    _create_tinyMCE_options(dropdown);
 })();
 
 function create_oscitas_dropdown(pluginObj){

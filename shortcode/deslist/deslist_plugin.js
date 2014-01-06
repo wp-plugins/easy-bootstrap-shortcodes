@@ -1,10 +1,10 @@
-var gDesList={
+var deslist={
     title:"List Group Shortcode",
     id :'oscitas-form-deslists',
     pluginName: 'deslist'
 };
 (function() {
-    _create_tinyMCE_options(gDesList);
+    _create_tinyMCE_options(deslist);
 })();
 
 function create_oscitas_deslist(pluginObj){

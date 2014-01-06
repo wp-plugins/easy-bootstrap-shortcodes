@@ -15,6 +15,7 @@ function open_dialogue(dialogueid,width,height){
     });
 
 }
+
 function close_dialogue(dialogueid){
     jQuery( dialogueid ).dialog('close');
 }
@@ -55,11 +56,20 @@ function _create_tinyMCE_options(pluginObj, width) {
     };
     tinymce.create('tinymce.plugins.'+pluginName, options);
     options = eval('tinymce.plugins.'+pluginName);
-    console.log(pluginName);
     //return options;
     tinymce.PluginManager.add('oscitas'+pluginObj.pluginName, tinymce.plugins[pluginName]);
 }
 
+function _create_tinyMCE_dropdown(pluginObj,width,height) {
+    if(typeof(width)==='undefined') width = 'auto';
+    if(typeof(height)==='undefined') height = 'auto';
+    pluginObj.hashId = '#'+pluginObj.id;
+    eval('create_oscitas_'+pluginObj.pluginName+'(pluginObj);open_dialogue("'+pluginObj.hashId+'","'+width+'","'+height+'")');
+    if (pluginObj.setRowColors) {
+        jQuery(pluginObj.hashId+' table tr:visible:even').css('background', '#F0F0F0');
+        jQuery(pluginObj.hashId+' table tr:visible:odd').css('background', '#DADADD');
+    }
+}
 
 
 //tinymce.PluginManager.add('oscitasdeslist', tinymce.plugins.oscitasDeslist);

@@ -1,11 +1,11 @@
-gBtnVar={
+var progressbar={
     title:"Progressbar Shortcode",
     id :'oscitas-form-progressbar',
     pluginName: 'progressbar',
     setRowColors: true
 };
 (function() {
-    _create_tinyMCE_options(gBtnVar, 800);
+    _create_tinyMCE_options(progressbar, 800);
 })();
 
 function create_oscitas_progressbar(pluginObj){

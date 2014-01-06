@@ -1,10 +1,10 @@
-gBtnVar={
+var tooltip={
     title:"Tooltip Image Shortcode",
     id :'oscitas-form-tooltip',
     pluginName: 'tooltip'
 };
 (function() {
-    _create_tinyMCE_options(gBtnVar);
+    _create_tinyMCE_options(tooltip);
 })();
 
 function create_oscitas_tooltip(pluginObj){

@@ -1,10 +1,10 @@
-gBtnVar={
+var oscpopover={
     title:"Popover Shortcode",
     id :'oscitas-form-popover',
     pluginName: 'oscpopover'
 };
 (function() {
-    _create_tinyMCE_options(gBtnVar);
+    _create_tinyMCE_options(oscpopover);
 })();
 
 function create_oscitas_oscpopover(pluginObj){

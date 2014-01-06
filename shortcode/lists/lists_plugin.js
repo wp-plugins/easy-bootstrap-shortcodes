@@ -1,10 +1,10 @@
-var gLists={
+var lists={
     title:"List Group Shortcode",
     id :'oscitas-form-lists',
     pluginName: 'lists'
 };
 (function() {
-    _create_tinyMCE_options(gLists);
+    _create_tinyMCE_options(lists);
 })();
 
 function create_oscitas_lists(pluginObj){

@@ -1,11 +1,11 @@
-var gButtons={
+var buttons={
     title:"Button Shortcode",
     id :'oscitas-form-button',
     pluginName: 'buttons'
 
 };
 (function() {
-    _create_tinyMCE_options(gButtons, 800);
+    _create_tinyMCE_options(buttons, 800);
 })();
 
 function create_oscitas_buttons(pluginObj){

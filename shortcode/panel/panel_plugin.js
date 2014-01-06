@@ -1,10 +1,10 @@
-gBtnVar={
+var panel={
     title:"Panel Shortcode",
     id :'oscitas-form-panel',
     pluginName: 'panel'
 };
 (function() {
-    _create_tinyMCE_options(gBtnVar);
+    _create_tinyMCE_options(panel);
 })();
 
 function create_oscitas_panel(pluginObj){

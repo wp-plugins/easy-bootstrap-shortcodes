@@ -1,11 +1,11 @@
-var gbtngrp={
+var btngrp={
     title:"Button Group Shortcode",
     id :'oscitas-form-btngrp',
     pluginName: 'btngrp'
 };
 
 (function() {
-    _create_tinyMCE_options(gbtngrp);
+    _create_tinyMCE_options(btngrp);
 })();
 
 function create_oscitas_btngrp(pluginObj){

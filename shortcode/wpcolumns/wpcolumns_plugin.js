@@ -1,10 +1,10 @@
-gBtnVar={
+var wpcolumns={
     title:"Columns Shortcode",
     id :'oscitas-form-wpcolumns',
     pluginName: 'wpcolumns'
 };
 (function() {
-    _create_tinyMCE_options(gBtnVar, 1094);
+    _create_tinyMCE_options(wpcolumns, 1094);
 })();
 
 function create_oscitas_wpcolumns(pluginObj){

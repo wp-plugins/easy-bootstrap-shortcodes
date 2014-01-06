@@ -1,10 +1,10 @@
-var gIcon={
+var icon={
     title:"Icon Shortcode",
     id :'oscitas-form-icon',
     pluginName: 'icon'
 };
 (function() {
-    _create_tinyMCE_options(gIcon, 800);
+    _create_tinyMCE_options(icon, 800);
 })();
 
 function create_oscitas_icon(pluginObj){
