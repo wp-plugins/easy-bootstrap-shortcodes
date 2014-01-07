@@ -204,6 +204,10 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.4.8 =
+
+* [Fixed] CSS file priority order change.
+
 = 2.4.7 =
 
 * [Fixed] Image issue resolved for setting page.
