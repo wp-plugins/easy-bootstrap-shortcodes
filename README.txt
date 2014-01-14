@@ -4,7 +4,7 @@ Link: http://www.osCitasthemes.com
 Tags: Wordpress Shortcodes, Wordpress Bootstrap, Wordpress Bootstrap Shortcode, Bootstrap, Responsive pages, Editor plugin, Bootstrap Shortcode, TinyMCE
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 2.4.0
+Stable tag: 2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -203,6 +203,10 @@ It's that simple ... just what the name suggests
 
 
 == Changelog ==
+
+= 2.5 =
+
+* [New] Custom CSS Option in EBS Setting Page.
 
 = 2.4.8 =
 

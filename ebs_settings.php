@@ -40,13 +40,19 @@
 
             </p>
         </div>
+        <div class="ebs_details">
+            <label class="ebs_setting_label">Custom CSS</label>
+            <p>
+              <textarea  name="ebs_custom_css" id="ebs_custom_css"><?php echo trim($ebs_custom_css) ?></textarea>
+            </p>
+        </div>
         <div class="ebs_btn"><input type="submit" name="ebs_submit" class="button-primary" value="Update Settings"></div>
         <?php  if(!apply_filters('plugin_oscitas_theme_check',false)){ ?><div style="clear: both;"></div>
         <br /><br /><br />
         <b>CDN Links for bootstrap.js, you can use any of these</b>
         <ul>
             <li>
-                //netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js
+                <?php echo str_replace('http:','',EBS_JS_CDN)?>
             </li>
             <li>
                 //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js
@@ -56,7 +62,7 @@
         <b>CDN Links for respond.js, you can use any of these</b>
         <ul>
             <li>
-                //cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js
+                <?php echo str_replace('http:','',EBS_RESPOND_CDN)?>
             </li>
         </ul>
         <?php } ?>
