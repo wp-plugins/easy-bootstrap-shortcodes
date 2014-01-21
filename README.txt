@@ -204,6 +204,11 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.5.1 =
+
+* [New] New Shortcode Service Box.
+* Look modify of EBS Setting Page
+
 = 2.5 =
 
 * [New] Custom CSS Option in EBS Setting Page.
