@@ -4,7 +4,6 @@ if(!session_id())
 session_start();
 $css_ebs=<<<EOF
 .osc_servicebox {
-    color: #777777;
     padding: 1px;
     text-align: center;
     transition: background-color 0.2s linear 0s, color 0.2s linear 0s;
@@ -30,6 +29,7 @@ $css_ebs=<<<EOF
     display: inline-block;
     margin: 15px 0 20px;
     padding: 8px 15px;
+    text-decoration:none;
 }
 .iconcircle{
     margin: 30px auto;

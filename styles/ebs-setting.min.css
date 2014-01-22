@@ -73,3 +73,7 @@ label.ebs_editor_label:hover, .ebs_editor_label.val_selected {
     box-shadow: 0 0 2px #C4C4C4;
     background:  #FFFBEF;
 }
+
+body.toplevel_page_ebs-ebs-settings #wpwrap{
+   background: #fff;
+}
