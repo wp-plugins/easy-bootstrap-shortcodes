@@ -204,6 +204,11 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.5.2 =
+
+* [New] New Shortcode Service Box added in Optional Dropdown Menu in TinyMCE Editor.
+* Remove Default color of Service box.
+
 = 2.5.1 =
 
 * [New] New Shortcode Service Box.
