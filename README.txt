@@ -204,6 +204,13 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.5.3 =
+
+* [Update] Now can add Top and Bottom Margin in Service Box Shortcode Icon Container.
+* [Update] Now can add different size of button in Service Box Shortcode.
+* [Update] Now can different style of Icon background in Service Box Shortcode like Circle, Square box,
+Rounded Corner box.
+
 = 2.5.2 =
 
 * [New] New Shortcode Service Box added in Optional Dropdown Menu in TinyMCE Editor.
