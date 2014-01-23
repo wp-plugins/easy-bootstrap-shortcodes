@@ -29,6 +29,10 @@ function slider_render(ele,val,mini,max){
                 jQuery('#icon_bg_preview').css({
                     'font-size':ui.value+'px'
                 });
+            }else if(ele=='icon_bg_radius'){
+                jQuery('#icon_bg_preview').css({
+                    'border-radius':ui.value+'%'
+                });
             }
         }
     });
@@ -62,6 +66,21 @@ function create_oscitas_servicebox(pluginObj){
 				<div class="slider_render" id="slider_rander_icon_bg"></div>\
 				</td>\
 			</tr>\
+			<tr>\
+				<th><label>Border Radius:</label></th>\
+				<td><input type="text" name="label" class="slider_input" id="oscitas-servicebox-iconbg_radius" value="50"/>\
+				<div class="slider_render" id="slider_rander_icon_bg_radius"></div>\
+				</td>\
+			</tr>\
+			<tr>\
+				<th><label>Margin Top:</label></th>\
+				<td><input type="text" name="label" id="oscitas-servicebox-margin_top" value="30"/> <small>px</small>\
+				</td>\
+			</tr>\<tr>\
+				<th><label>Margin Bottom:</label></th>\
+				<td><input type="text" name="label" id="oscitas-servicebox-margin_bottom" value="30"/> <small>px</small>\
+				</td>\
+			</tr>\
             <tr class="show_boxtype_icon">\
 				<th><label for="oscitas-servicebox-iconcolor">Icon Color:</label></th>\
 				<td><input type="text" name="label" id="oscitas-servicebox-iconcolor" data-type="icon"  data-attr="color" class="color" value="#777777" data-default-color="#777777"/><br />\
@@ -85,6 +104,16 @@ function create_oscitas_servicebox(pluginObj){
                 <tr class="oscitas-servicebox-readmore" style="display:none">\
 				<th><label for="oscitas-servicebox-readmore_text">Text:</label></th>\
 				<td><input type="text" name="label" id="oscitas-servicebox-readmore_text" value="Read More"/><br />\
+				</td>\
+			</tr>\
+                <tr class="oscitas-servicebox-readmore" style="display:none">\
+				<th><label for="oscitas-servicebox-readmore_type">Button Type:</label></th>\
+				<td><select name="label" id="oscitas-servicebox-readmore_type">\
+                    <option value="">Default</option>\
+                    <option value="btn-lg">Large</option>\
+					<option value="btn-sm">Small</option>\
+					<option value="btn-xs">Ex-small</option>\
+				    </select>\
 				</td>\
 			</tr>\
 			<tr class="oscitas-servicebox-readmore" style="display:none">\
@@ -157,7 +186,8 @@ function create_oscitas_servicebox(pluginObj){
     })
     var slider={
         icon:[40,20,140],
-        icon_bg:[100,50,150]
+        icon_bg:[100,50,150],
+        icon_bg_radius:[50,0,50]
     }
     jQuery.each(slider,function(ind,val){
         slider_render(ind,val[0],val[1],val[2])
@@ -170,9 +200,9 @@ function create_oscitas_servicebox(pluginObj){
             console.log(typeof type)
             if(typeof type!='undefined'){
 
-            var attr= jQuery(this).attr('data-attr');
-            var sel_color=ui.color.toString();
-            jQuery(form).find('#icon_bg_preview').css(attr,sel_color);
+                var attr= jQuery(this).attr('data-attr');
+                var sel_color=ui.color.toString();
+                jQuery(form).find('#icon_bg_preview').css(attr,sel_color);
             }
         }
     });
@@ -200,7 +230,8 @@ function create_oscitas_servicebox(pluginObj){
         colorobj={
             'readmore':{
                 'readmore_link':'',
-                'readmore_text':''
+                'readmore_text':'',
+                'readmore_type':''
             },
             'readmorestyle-default':'',
             'readmorestyle-custom':{
@@ -208,7 +239,7 @@ function create_oscitas_servicebox(pluginObj){
                 'readmore_fgcolor':''
             }
         }
-        options= ['icon','icon_size','iconbg_size','iconbgcolor','iconcolor','headingtype','heading','class'];
+        options= ['icon','icon_size','iconbg_size','iconbg_radius','margin_bottom','margin_top','iconbgcolor','iconcolor','headingtype','heading','class'];
 
         var shortcodeattr='';
         jQuery(options).each(function(ind,val){
@@ -224,8 +255,9 @@ function create_oscitas_servicebox(pluginObj){
                 shortcodeattr+=' '+data+'="'+element.val()+'"';
                 if(typeof val=='object'){
                     jQuery.each(val,function(ind1,val1){
-
-                        shortcodeattr+=' '+ind1+'="'+jQuery('#oscitas-servicebox-'+ind1).val()+'"';
+                        if(jQuery('#oscitas-servicebox-'+ind1).val()!=''){
+                            shortcodeattr+=' '+ind1+'="'+jQuery('#oscitas-servicebox-'+ind1).val()+'"';
+                        }
 
                     });
                 }

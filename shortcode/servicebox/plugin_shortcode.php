@@ -18,6 +18,9 @@ function osc_theme_servicebox($params, $content = null) {
         'icontype'=>'glyphicon',
         'icon_size'=>40,
         'iconbg_size'=>100,
+        'iconbg_radius'=>50,
+        'margin_bottom'=>30,
+        'margin_top'=>30,
         'iconbgcolor'=>'#FFFFFF',
         'iconcolor'=>'#777777',
         'headingtype' => 'h3',
@@ -26,12 +29,14 @@ function osc_theme_servicebox($params, $content = null) {
         'readmore'=>'',
         'readmore_link'=>'',
         'readmore_text'=>'',
+        'readmore_type'=>'',
         'readmorestyle'=>'default',
         'readmore_bgcolor'=>'',
         'readmore_fgcolor'=>''
     ), $params));
     $out = '';$style='';
     $_ebsp_servicebox[$id]=array();
+
     $out.='<div id="osc_servicebox_'.$id.'" class="osc_servicebox '.$class.'">';
 
     if($icon!=''){
@@ -45,13 +50,18 @@ function osc_theme_servicebox($params, $content = null) {
     $out.=do_shortcode($content);
     $out.='</div>';
     if($readmore=='true'){
-        $out.='<a href="'.$readmore_link.'" class="osc_servicebox_readmore">'.$readmore_text.'</a>';
+        if($readmore_type!=''){
+            $btnclass=' btn '.$readmore_type;
+        } else{
+            $btnclass=' osc_servicebox_readmore';
+        }
+        $out.='<a href="'.$readmore_link.'" class="osc_servicebox_readmore_css'.$btnclass.'">'.$readmore_text.'</a>';
     }
     $out.='</div>';
 
     if($readmore=='true' && $readmorestyle=='custom' ){
         $style.='
-	#osc_servicebox_'.$id.' .osc_servicebox_readmore{
+	#osc_servicebox_'.$id.' .osc_servicebox_readmore_css{
 	color:'.$readmore_fgcolor.';
 	background-color:'.$readmore_bgcolor.';
 	}';
@@ -68,6 +78,14 @@ function osc_theme_servicebox($params, $content = null) {
 	   background-color:'.$iconbgcolor.';
 	    height:'.$iconbg_size.'px;
 	    width:'.$iconbg_size.'px;
+	    margin-top:'.$margin_top.'px;
+	    margin-bottom:'.$margin_bottom.'px;
+	    border-radius:'.$iconbg_radius.'%;
+        -moz-border-radius: '.$iconbg_radius.'%;
+	    -webkit-border-radius: '.$iconbg_radius.'%;
+	    -ms-border-radius: '.$iconbg_radius.'%;
+        -o-border-radius: '.$iconbg_radius.'%;
+    ;
 	}';
     $_SESSION['ebs_servicebox_css'].=$style;
     wp_enqueue_style('ebs-dstyle',EBS_PLUGIN_URL.'styles/ebs-dstyle.php');
