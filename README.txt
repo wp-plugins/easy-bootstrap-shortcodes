@@ -70,7 +70,7 @@ Easy Bootstrap Shortcode provides following styles
 18. Button Group
 19. Button Group Toolbar
 20. Description List
-
+21. Service Box
 
 = How to embed this plugin to your theme =
 
