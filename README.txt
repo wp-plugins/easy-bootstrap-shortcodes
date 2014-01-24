@@ -19,7 +19,7 @@ http://www.youtube.com/watch?v=8T0IC1PsdTw
 New column hide functionality
 http://www.youtube.com/watch?v=eSrFVAro8Nc
 
-[DEMO](http://demo.oscitasthemes.com/ebs/) | [DOCUMENTATION](http://oscitasthemes
+>[DEMO](http://demo.oscitasthemes.com/ebs/) | [DOCUMENTATION](http://oscitasthemes
 .com/documentation/easy-bootstrap-shortcodes/) | [PRO VERSION](http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/)
 
 Looking for parallax slider, check this [Easy Wordpress Parallax Slider](http://wordpress.org/plugins/easy-wp-parallax-slider/)
