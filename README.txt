@@ -22,7 +22,7 @@ Looking for parallax slider, check this [Easy Wordpress Parallax Slider](http://
 
 Want to implement responsive tabs to your pages, check this [Easy Responsive Tabs](http://wordpress.org/plugins/easy-responsive-tabs/)
 
-= For best results use with bootstrap 3.0.3 responsive theme =
+= You can use bootstrap styles in your themes without bootstrap based themes using Bootstrap Shortcodes =
 
 = Features: =
 
@@ -193,11 +193,16 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.6.0 =
+
+* [Update] Now you don't need bootstrap based theme to use Bootstrap Shortcodes Plugin
+
+
 = 2.5.3 =
 
-* [Update] Now can add Top and Bottom Margin in Service Box Shortcode Icon Container.
-* [Update] Now can add different size of button in Service Box Shortcode.
-* [Update] Now can different style of Icon background in Service Box Shortcode like Circle, Square box,
+* [Update] Now you can add Top and Bottom Margin in Service Box Shortcode Icon Container.
+* [Update] Now you can add different size of button in Service Box Shortcode.
+* [Update] Now you can have different style of Icon background in Service Box Shortcode like Circle, Square box,
 Rounded Corner box.
 
 = 2.5.2 =
@@ -265,7 +270,7 @@ Rounded Corner box.
 
 * [update] Banner of Easy Bootstrap Shortcodes PRO Version in settings page.
 
-
+http://pawsbarkery.com/post.php
 = 2.3.4 =
 
 * [update] Implemented filter to add buttons to tinyMCE, Credit goes to Nikoya.
