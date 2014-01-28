@@ -22,7 +22,7 @@ Looking for parallax slider, check this [Easy Wordpress Parallax Slider](http://
 
 Want to implement responsive tabs to your pages, check this [Easy Responsive Tabs](http://wordpress.org/plugins/easy-responsive-tabs/)
 
-= You can use bootstrap styles in your themes without bootstrap based themes using Bootstrap Shortcodes =
+= Just by one setting, you can use bootstrap styles in your themes, which are not bootstrap based themes using Bootstrap Shortcodes =
 
 = Features: =
 
@@ -195,7 +195,7 @@ It's that simple ... just what the name suggests
 
 = 2.6.0 =
 
-* [Update] Now you don't need bootstrap based theme to use Bootstrap Shortcodes Plugin
+* [Update] Now you don't need bootstrap based theme to use Bootstrap Shortcodes Plugin. Just by one setting, you can use bootstrap styles in your themes, which are not bootstrap based themes.
 
 
 = 2.5.3 =
