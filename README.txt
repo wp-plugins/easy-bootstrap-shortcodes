@@ -193,6 +193,13 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.6.1 =
+
+* [Fixes] Few missing icon issue resolved.
+* [Fixes] Icon Heading not working issue resolved.
+* [Fixes] Custom CSS Classes not working with images shorcode.
+
+
 = 2.6.0 =
 
 * [Update] Now you don't need bootstrap based theme to use Bootstrap Shortcodes Plugin. Just by one setting, you can use bootstrap styles in your themes, which are not bootstrap based themes.
