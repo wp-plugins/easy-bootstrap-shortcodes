@@ -4,7 +4,7 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0.3 styles to your theme by wordpress editor shortcode buttons.
-  Version: 2.6.1
+  Version: 2.7.0
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
@@ -44,6 +44,7 @@ else:
         add_action('admin_menu', 'osc_ebs_add_admin_menu');
         add_action('wp_enqueue_scripts', 'osc_add_dynamic_css',100);
         add_filter('mce_external_plugins', 'osc_editor_enable_mce');
+        add_action('wp_enqueue_scripts', 'osc_add_essential_scripts',-100);
         if(!apply_filters('plugin_oscitas_theme_check',false)){
             add_action('wp_enqueue_scripts', 'osc_add_frontend_ebs_scripts',-100);
         }
@@ -180,6 +181,11 @@ else:
             wp_enqueue_style('ebs_bootstrap_admin', plugins_url('/styles/bootstrap_admin.min.css', __FILE__));
         }
 
+    }
+
+    function osc_add_essential_scripts(){
+        wp_enqueue_script('jquery');
+        wp_enqueue_style('bootstrap-frontend', plugins_url('/styles/ebs-frontend.css', __FILE__));
     }
 
     function osc_add_dynamic_css(){

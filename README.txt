@@ -16,11 +16,7 @@ Easy Bootstrap Shortcode is bootstrap 3.0.3 compatible plugin which add icons to
 
 http://www.youtube.com/watch?v=8T0IC1PsdTw
 
->[DEMO](http://demo.oscitasthemes.com/ebs/) | [DOCUMENTATION](http://oscitasthemes.com/documentation/easy-bootstrap-shortcodes/) | [PRO VERSION](http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/)
-
-Looking for parallax slider, check this [Easy Wordpress Parallax Slider](http://wordpress.org/plugins/easy-wp-parallax-slider/)
-
-Want to implement responsive tabs to your pages, check this [Easy Responsive Tabs](http://wordpress.org/plugins/easy-responsive-tabs/)
+>[DEMO](http://demo.oscitasthemes.com/ebs/) | [DOCUMENTATION](http://oscitasthemes.com/documentation/easy-bootstrap-shortcodes/)
 
 = Just by one setting, you can use bootstrap styles in your themes, which are not bootstrap based themes using Bootstrap Shortcodes =
 
@@ -36,8 +32,6 @@ Want to implement responsive tabs to your pages, check this [Easy Responsive Tab
 * More control over the css, you can add your own custom class to shortcodes.
 * Now you can use js file from CDN or disable the plugin js.
 * You can use your own css file by disabling the plugin css, which gives you more flexibility over styling.
-
-
 
 Easy Bootstrap Shortcode provides following styles
 
@@ -71,6 +65,19 @@ Easy Bootstrap Shortcode provides following styles
 19. Button Group Toolbar
 20. Description List
 21. Service Box
+22. Line Separator
+23. Dropcaps
+24. Youtube & Vimeo video
+25. Boxesframes
+26. Horizontal Rule
+27. Testimonial
+28. Section Heading
+29. Social
+30. Lead
+31. Page Header
+32. Highlights
+
+Many more shortcodes coming soon...
 
 = How to embed this plugin to your theme =
 
@@ -158,9 +165,8 @@ And to give use the custom css for admin
 
 If you'd like to contribute to this plugin, you can find it [hosted on GitHub](https://github.com/oscitasthemes/Easy-Bootstrap-Shortcode).
 
-Follow us [@Twitter](https://twitter.com/oscitasthemes), [@facebook](https://www.facebook.com/oscitasthemes), [@google+](https://plus.google.com/109122908951553852347/posts)
-
-
+= Bande Hai Hum Uske Humpe Kiska Zor Umeedo ke Suraj Nikle Charo Aur =
+= Erade Hai foladi Himmati har kadam Apne hatho kismat likhne aaj chale hai hum. =
 
 == Installation ==
 
@@ -193,11 +199,16 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.7.0 =
+
+* [New] 11 New Shortcodes(Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights).
+
 = 2.6.1 =
 
 * [Fixes] Few missing icon issue resolved.
 * [Fixes] Icon Heading not working issue resolved.
 * [Fixes] Custom CSS Classes not working with images shorcode.
+
 
 
 = 2.6.0 =

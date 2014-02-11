@@ -70,10 +70,6 @@
         </ul>
         <?php } ?>
     </form>
-    <br />
-    <a href="http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/" target="_blank">
-        <img style="border: 0px;" src="<?php echo  plugins_url("images/ebs-pro.jpg", __FILE__); ?>">
-    </a>
 </div>
 <script type="text/javascript">
     function show_cdn(){
