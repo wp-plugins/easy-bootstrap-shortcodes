@@ -1,5 +1,5 @@
 === Easy Bootstrap Shortcode ===
-Contributors: oscitas
+Contributors: oscitas, jqueryrain
 Link: http://www.osCitasthemes.com
 Tags: Wordpress Shortcodes, Wordpress Bootstrap, Wordpress Bootstrap Shortcode, Bootstrap, Responsive pages, Editor plugin, Bootstrap Shortcode, TinyMCE
 Requires at least: 3.0
