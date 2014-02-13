@@ -200,6 +200,10 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.7.2 =
+
+* [Fixes] List Shortcode not working
+
 = 2.7.1 =
 
 * [New] Font Awesome Icons (400+ Icon Fonts : http://fortawesome.github.io/Font-Awesome/icons/ )
