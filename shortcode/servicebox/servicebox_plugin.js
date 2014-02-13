@@ -42,6 +42,11 @@ function create_oscitas_servicebox(pluginObj){
         jQuery(pluginObj.hashId).remove();
     }
 
+    var servicebox_fa='';
+   /* if(ebs.ebs_fa_inclusion==1){
+        servicebox_fa='<h4>Font Awesome</h4><ul name="oscitas-heading-icon_servicebox" class="oscitas-heading-icon_servicebox">'+ebsfaicons+'</ul>';
+    }*/
+    servicebox_fa='<h4>Font Awesome</h4><ul name="oscitas-heading-icon_servicebox" class="oscitas-heading-icon_servicebox">'+ebsfaicons+'</ul>';
     // creates a form to be displayed everytime the servicebox is clicked
     // you should achieve this using AJAX instead of direct html code like this
 
@@ -51,7 +56,7 @@ function create_oscitas_servicebox(pluginObj){
                         <tr class="show_boxtype_icon">\
                         <th><label for="oscitas-heading-icon">Select Icon:</label></th>\
 				<td><div id="click_icon_list_servicebox" class="oscitas-icon-div"><span id="osc_show_icon_servicebox"></span><span class="show-drop"></span></div><input type="hidden" id="oscitas-servicebox-icon" value=""><input type="hidden" id="oscitas-servicebox-icontype" value="">\
-                    <div id="osc_show_iconlist_servicebox" class="oscitas-icon" style="display:none;"><ul name="oscitas-heading-icon_servicebox" class="oscitas-heading-icon_servicebox">'+ebsicons+'</ul></div>\
+                    <div id="osc_show_iconlist_servicebox" class="oscitas-icon" style="display:none;"><h4>Glyphicons</h4><ul name="oscitas-heading-icon_servicebox" class="oscitas-heading-icon_servicebox">'+ebsicons+'</ul>'+servicebox_fa+'</div>\
 				</td>\
 			</tr>\
             <tr>\
@@ -239,7 +244,7 @@ function create_oscitas_servicebox(pluginObj){
                 'readmore_fgcolor':''
             }
         }
-        options= ['icon','icon_size','iconbg_size','iconbg_radius','margin_bottom','margin_top','iconbgcolor','iconcolor','headingtype','heading','class'];
+        options= ['icon','icon_size','icontype','iconbg_size','iconbg_radius','margin_bottom','margin_top','iconbgcolor','iconcolor','headingtype','heading','class'];
 
         var shortcodeattr='';
         jQuery(options).each(function(ind,val){

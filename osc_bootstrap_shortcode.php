@@ -4,7 +4,7 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0.3 styles to your theme by wordpress editor shortcode buttons.
-  Version: 2.7.0
+  Version: 2.7.1
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
@@ -112,6 +112,7 @@ else:
             update_option( 'EBS_BOOTSTRAP_CSS_LOCATION', isset($_POST['b_css'])?$_POST['b_css']:1 );
             update_option( 'EBS_BOOTSTRAP_RESPOND_LOCATION', isset($_POST['respond_js'])?$_POST['respond_js']:2 );
             update_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH', isset($_POST['respond_cdn_path'])?$_POST['respond_cdn_path']:EBS_RESPOND_CDN );
+            update_option( 'EBS_INCLUDE_FA', isset($_POST['fa_icon'])?$_POST['fa_icon']:'' );
             update_option( 'EBS_EDITOR_OPT', isset($_POST['ebsp_editor_opt'])?$_POST['ebsp_editor_opt']:'icon' );
             update_option( 'EBS_CUSTOM_CSS', isset($_POST['ebs_custom_css'])?$_POST['ebs_custom_css']:'' );
 
@@ -123,9 +124,9 @@ else:
             $css = isset($_POST['b_css'])?$_POST['b_css']:1;
             $respond = isset($_POST['respond_js'])?$_POST['respond_js']:2;
             $respondcdn = isset($_POST['respond_cdn_path'])?$_POST['respond_cdn_path']:EBS_RESPOND_CDN;
+            //$fa_icon=isset($_POST['fa_icon'])?$_POST['fa_icon']:'' ;
             $ebsp_editor_opt=isset($_POST['ebsp_editor_opt'])?$_POST['ebsp_editor_opt']:'icon' ;
             $ebs_custom_css=isset($_POST['ebs_custom_css'])?$_POST['ebs_custom_css']:'' ;
-
         }
         else {
             $js = get_option( 'EBS_BOOTSTRAP_JS_LOCATION', 1 );
@@ -133,6 +134,7 @@ else:
             $css = get_option( 'EBS_BOOTSTRAP_CSS_LOCATION', 1 );
             $respond = get_option( 'EBS_BOOTSTRAP_RESPOND_LOCATION', 2 );
             $respondcdn = get_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH', EBS_RESPOND_CDN );
+            $fa_icon=get_option('EBS_INCLUDE_FA',1);
             $ebsp_editor_opt=get_option('EBS_EDITOR_OPT','icon');
             $ebs_custom_css=get_option('EBS_CUSTOM_CSS','');
         }
@@ -159,11 +161,15 @@ else:
         if ($screen->id == 'toplevel_page_ebs/ebs-settings') {
             wp_enqueue_style('ebs-setting', plugins_url('/styles/ebs-setting.min.css', __FILE__));
         }
+        $fa_icon=get_option('EBS_INCLUDE_FA',1);
         wp_enqueue_script('ebs-main', plugins_url('/js/ebs_main.js', __FILE__));
-
+        wp_localize_script( 'ebs_main', 'ebs', array(
+            'ebs_fa_inclusion' => $fa_icon,
+        ));
     }
 
     function osc_editor_enable_mce(){
+        $fa_icon=get_option('EBS_INCLUDE_FA',1);
         wp_enqueue_script('jquery');
         wp_enqueue_style('thickbox');
         wp_enqueue_script('media-upload');
@@ -172,6 +178,14 @@ else:
         wp_enqueue_script('wp-color-picker');
         wp_enqueue_script('jquery-ui-slider');
         wp_enqueue_style('jquery-ui-slider-css', plugins_url('/styles/slider.css', __FILE__));
+       // if($fa_icon==1){
+            if (!apply_filters('ebs_bootstrap_fa_icon_css_url',false)) {
+                wp_enqueue_style('bootstrap-fa-icon', plugins_url('/styles/font-awesome.min.css', __FILE__));
+            } else{
+                wp_enqueue_style('bootstrap-fa-icon', apply_filters('ebs_bootstrap_fa_icon_css_url',false));
+            }
+       // }
+
         if (!apply_filters('ebs_bootstrap_icon_css_url',false)) {
             wp_enqueue_style('bootstrap-icon', plugins_url('/styles/bootstrap-icon.min.css', __FILE__));
         } else{
@@ -180,12 +194,22 @@ else:
         if (!apply_filters('ebs_custom_bootstrap_admin_css',false)) {
             wp_enqueue_style('ebs_bootstrap_admin', plugins_url('/styles/bootstrap_admin.min.css', __FILE__));
         }
-
     }
 
     function osc_add_essential_scripts(){
+        $fa_icon=get_option('EBS_INCLUDE_FA',1);
         wp_enqueue_script('jquery');
         wp_enqueue_style('bootstrap-frontend', plugins_url('/styles/ebs-frontend.css', __FILE__));
+
+       // if($fa_icon==1){
+            if(!apply_filters('ebs_bootstrap_fa_icon_include_from_theme_or_plugin',false)){
+                if (!apply_filters('ebs_bootstrap_fa_icon_frontend_css_url',false)) {
+                    wp_enqueue_style('bootstrap-fa-icon', plugins_url('/styles/font-awesome.min.css', __FILE__));
+                } else{
+                    wp_enqueue_style('bootstrap-fa-icon', apply_filters('ebs_bootstrap_fa_icon_frontend_css_url',false));
+                }
+            }
+       // }
     }
 
     function osc_add_dynamic_css(){
@@ -250,7 +274,6 @@ else:
                 } else {
                     wp_enqueue_style('bootstrap', apply_filters('ebs_no_bootstrap_theme_css_url',false));
                 }
-
             }
             else {
                 if (!apply_filters('ebs_bootstrap_icon_css_url',false)) {

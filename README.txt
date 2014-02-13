@@ -25,6 +25,7 @@ http://www.youtube.com/watch?v=8T0IC1PsdTw
 * simplest bootstrap style plugin ever.
 * IE 6+ compatible
 * Bootstrap 3.0.3 compatible.
+* 500+ Font-Awesome & Glyphicons Icon Fonts
 * No need to paste shortcode in editor.
 * Add icons to editor.
 * Shortcode added to editor by clicking on icon.
@@ -198,6 +199,11 @@ It's that simple ... just what the name suggests
 
 
 == Changelog ==
+
+= 2.7.1 =
+
+* [New] Font Awesome Icons (400+ Icon Fonts : http://fortawesome.github.io/Font-Awesome/icons/)
+* [New] Custom Button Option in "Button Shortcode"(Now can add choice Colours of Button/Link)
 
 = 2.7.0 =
 
