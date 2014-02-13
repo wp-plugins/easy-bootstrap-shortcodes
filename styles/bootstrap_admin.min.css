@@ -187,9 +187,17 @@ input[type="text"].slider_input {
     z-index: 1;
 }
 
-.oscitas-icon li.glyphicon {
-    float: left;
-    margin: 4px;
+.oscitas-icon h4 {
+    background: #E4EFFF;
+    border-top: 2px solid #AFBFD6;
+    display: block;
+    clear: both;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    padding: 5px 0 5px 5px;
+}
+ul.oscitas-heading-icon{
+    overflow: hidden;
 }
 #icon_bg_preview {
     text-align:  center;

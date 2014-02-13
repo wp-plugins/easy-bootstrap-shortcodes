@@ -2,7 +2,8 @@
 header("Content-type: text/css");
 if(!session_id())
 session_start();
-$css_ebs=<<<EOF
+if(isset($_SESSION['ebs_servicebox_css'])){
+    $css_ebs=<<<EOF
 .osc_servicebox {
     padding: 1px;
     text-align: center;
@@ -38,6 +39,10 @@ $css_ebs=<<<EOF
 .iconcircle{ background-color: #FFFFFF; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; -ms-border-radius: 50%;
     -o-border-radius: 50%; height: 100px;   width: 100px; }
 EOF;
-echo $css_ebs;
-echo $_SESSION['ebs_servicebox_css'];
+    echo $css_ebs;
+    echo $_SESSION['ebs_servicebox_css'];
+}
+if(isset($_SESSION['EBS_BUTTON'])){
+    echo  $_SESSION['EBS_BUTTON'];
+}
 ?>

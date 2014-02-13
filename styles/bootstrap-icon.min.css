@@ -443,6 +443,7 @@
     padding: 4px;
     text-align: center;
     width: 20px;
+    margin: 4px;
 }
 .oscitas-icon ul li:hover, .osc_icon_selected, .osc_icon_selected_button {
     background: #f4f4f4;

@@ -90,4 +90,19 @@ function apply_ebs_bootstrap_icon_css_url( $url ) {
 	return $ebs_icon_url;
 }
 add_filter( 'ebs_bootstrap_icon_css_url', 'apply_ebs_bootstrap_icon_css_url' );
+function apply_ebs_bootstrap_fa_icon_css_url( $url ) {
+    $ebs_fa_icon_url='';// write your bootstrap-icon.min.css url here
+    return $ebs_fa_icon_url;
+}
+add_filter( 'ebs_bootstrap_fa_icon_css_url', 'apply_ebs_bootstrap_fa_icon_css_url' );
+
+function apply_ebs_bootstrap_fa_icon_frontend_css_url( $url ) {
+    $ebs_fa_icon_url='';// write your bootstrap-icon.min.css url here
+    return $ebs_fa_icon_url;
+}
+add_filter( 'ebs_bootstrap_fa_icon_frontend_css_url', 'apply_ebs_bootstrap_fa_icon_frontend_css_url' );
+function apply_ebs_bootstrap_fa_icon_include_from_theme_or_plugin( $prevent ) {
+    return true;
+}
+add_filter( 'ebs_bootstrap_fa_icon_include_from_theme_or_plugin', 'apply_ebs_bootstrap_fa_icon_include_from_theme_or_plugin' );
 ?>
