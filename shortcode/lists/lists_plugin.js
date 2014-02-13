@@ -11,10 +11,7 @@ function create_oscitas_lists(pluginObj){
     if(jQuery(pluginObj.hashId).length){
         jQuery(pluginObj.hashId).remove();
     }
-    var icon_fa='';
-    if(ebs.ebs_fa_inclusion==1){
-        icon_fa='<h4>Font Awesome</h4><ul name="oscitas-heading-icon_icon" class="oscitas-heading-icon_icon">'+ebsfaicons+'</ul>';
-    }
+
 
     // creates a form to be displayed everytime the button is clicked
     // you should achieve this using AJAX instead of direct html code like this
