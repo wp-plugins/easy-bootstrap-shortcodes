@@ -202,7 +202,7 @@ It's that simple ... just what the name suggests
 
 = 2.7.1 =
 
-* [New] Font Awesome Icons (400+ Icon Fonts : http://fortawesome.github.io/Font-Awesome/icons/)
+* [New] Font Awesome Icons (400+ Icon Fonts : http://fortawesome.github.io/Font-Awesome/icons/ )
 * [New] Custom Button Option in "Button Shortcode"(Now can add choice Colours of Button/Link)
 
 = 2.7.0 =
