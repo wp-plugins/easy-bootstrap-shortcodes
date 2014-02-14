@@ -200,6 +200,10 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 2.7.3 =
+
+* [New] Icon Font support in Tabs, List Group and Toggle Shortcodes
+
 = 2.7.2 =
 
 * [Fixes] List Shortcode not working
