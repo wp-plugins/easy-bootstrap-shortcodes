@@ -85,6 +85,14 @@ span.dropcap {
     margin: 6px 8px 0 0;
 }
 
+/* --- Toggle Shortcode --- */
+.panel-title i{
+    margin: 0 5px 0 0;
+}
+/* --- Tabs Shortcode --- */
+.tab-content{
+    padding: 10px 0;
+}
 /* --- Testimonial css --- */
 .osc-def_testimonail, .osc_wp_testimonail {
     display: inline-block;
@@ -110,41 +118,6 @@ span.dropcap {
     width: 100%;
 }
 
-/*Recent Work css*/
-.osc-recent-work {
-    display: block;
-}
-.osc-recent-work .osc-prjct-block .thumbnail {
-    border: medium;
-    padding: 0;
-    -webkit-border-radius: inherit;
-    -moz-border-radius: inherit;
-    -ms-border-radius: inherit;
-    -o-border-radius: inherit;
-    border-radius: inherit;
-}
-.osc-recent-work .osc-prjct-block .thumbnail img {
-    border: 1px solid #c9c9c9;
-}
-.osc-recent-work .osc-prjct-block .thumbnail .caption {
-    padding: 0;
-    font-size: 13px;
-    line-height: 22px;
-    color: #656565;
-}
-.osc-recent-work .osc-prjct-block h3 a {
-    color: #333;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 36px;
-    margin: 0;
-    border-bottom: 1px solid #e9e9e9;
-    width: 100%;
-    display: inline-block;
-}
-.osc-recent-work .osc-prjct-block p {
-    margin: inherit;
-}
 
 /* --- separator --- */
 .osc-separator {
@@ -367,53 +340,9 @@ h3.osc-heading span{ background: none repeat scroll 0 0 #FFFFFF; padding: 0 10px
 .iconbox, .iconcircle, .iconstar,  .triangle-down, .triangle-up , .trapezoid, .heart, .diamond, .cut-diamond, .burst-12, .burst-8{
     margin: 30px auto;
 }
-.hexagon{
-    margin: 55px auto 50px;
-}
-.diamond-narrow{
-    margin: 10px auto 30px;
-}
-.pentagon{
-    margin: 66px auto 0;
-}
-.iconbox span{
-    top: 25px;
-}
+
 .iconcircle span{
     top: 27px;
-}
-.heart span{
-    left: -3px;
-    top: 15px;
-}
-.trapezoid span{
-    top: 35px;
-}
-.iconstar span{
-    left: -23px;
-    top: 40px;
-}
-.diamond span{
-    left: -20px;
-    top: 24px;
-}
-.diamond-narrow span{
-    left: -20px;
-    top: 45px;
-}
-.cut-diamond span{
-    top: 10px;
-}
-.triangle-up span{
-    top:50px;
-    left:-20px;
-}
-.triangle-down span{
-    top:-99px;
-    left:-20px;
-}
-.burst-8 span,.burst-12 span{
-    top: 25px;
 }
 
 .iconcircle{ background-color: #FFFFFF; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; -ms-border-radius: 50%;
@@ -421,254 +350,6 @@ h3.osc-heading span{ background: none repeat scroll 0 0 #FFFFFF; padding: 0 10px
 .iconbox{ background-color: #FFFFFF; height: 100px; width: 100px; }
 
 
-
-.triangle-up {
-    border-bottom-width: 100px;
-    border-bottom-style: solid;
-    border-bottom-color: #FFFFFF;
-    border-left: 50px solid rgba(255,255, 255, 0);
-    border-right: 50px solid rgba(255,255, 255, 0);
-    height: 0;
-    width: 0;
-}
-.triangle-down {
-    border-left: 50px solid rgba(255,255, 255, 0);
-    border-right: 50px solid rgba(255,255, 255, 0);
-    border-top: 100px solid #FFFFFF;
-    height: 0;
-    width: 0;
-}
-
-.trapezoid{
-    border-bottom-width: 100px;
-    border-bottom-style: solid;
-    border-bottom-color: #FFFFFF;
-    border-left: 50px solid rgba(255,255, 255, 0);
-    border-right: 50px solid rgba(255,255, 255, 0);
-    height: 0;
-    width: 150px;
-}
-
-.iconstar {
-    border-bottom: 100px solid #FFFFFF;
-    border-left: 50px solid rgba(255,255, 255, 0);
-    border-right: 50px solid rgba(255,255, 255, 0);
-    height: 0;
-    position: relative;
-    width: 0;
-}
-.iconstar:after {
-    border-left: 50px solid rgba(255,255, 255, 0);
-    border-right: 50px solid rgba(255,255, 255, 0);
-    border-top: 100px solid #FFFFFF;
-    content: "";
-    height: 0;
-    left: -50px;
-    position: absolute;
-    top: 30px;
-    width: 0;
-}
-
-.hexagon {
-    background: none repeat scroll 0 0 #FFFFFF;
-    height: 55px;
-    position: relative;
-    width: 100px;
-    padding: 0;
-}
-
-.hexagon:before {
-    border-bottom: 25px solid #FFFFFF;
-    border-left: 50px solid rgba(255,255, 255, 0);
-    border-right: 50px solid rgba(255,255, 255, 0);
-    content: "";
-    height: 0;
-    left: 0;
-    position: absolute;
-    top: -25px;
-    width: 0;
-}
-.hexagon:after {
-    border-left: 50px solid rgba(255,255, 255, 0);
-    border-right: 50px solid rgba(255,255, 255, 0);
-    border-top: 25px solid #FFFFFF;
-    bottom: -25px;
-    content: "";
-    height: 0;
-    left: 0;
-    position: absolute;
-    width: 0;
-}
-.pentagon {
-    position: relative;
-    width: 90px;
-    border-width: 50px 18px 0;
-    border-style: solid;
-    border-color: #fff rgba(255,255, 255, 0);
-}
-.pentagon:before {
-    content: "";
-    position: absolute;
-    height: 0;
-    width: 0;
-    top: -85px;
-    left: -18px;
-    border-width: 0 45px 35px;
-    border-style: solid;
-    border-color: rgba(255,255, 255, 0) rgba(255,255, 255, 0) #fff;
-}
-.pentagon span{
-    top: -60px;
-}
-.heart {
-    height: 100px;
-    position: relative;
-    width: 100px;
-}
-.heart:before, .heart:after {
-    background: none repeat scroll 0 0 #FFFFFF;
-    border-radius: 50px 50px 0 0;
-    content: "";
-    height: 100px;
-    left: 50px;
-    position: absolute;
-    top: 0;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform-origin: 0 100% 0;
-    -webkit-transform-origin: 0 100% 0;
-    -moz-transform-origin: 0 100% 0;
-    -ms-transform-origin: 0 100% 0;
-    -o-transform-origin: 0 100% 0;
-    width:71px;
-}
-.heart:after {
-    left: -21px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform-origin: 100% 100% 0;
-    -webkit-transform-origin: 100% 100% 0;
-    -moz-transform-origin: 100% 100% 0;
-    -ms-transform-origin: 100% 100% 0;
-    -o-transform-origin: 100% 100% 0;
-}
-
-
-
-.diamond {
-    width: 0;
-    height: 0;
-    border: 50px solid rgba(255,255, 255, 0);
-    border-bottom-color: #fff;
-    position: relative;
-    top: -50px;
-}
-.diamond:after {
-    content: '';
-    position: absolute;
-    left: -50px;
-    top: 50px;
-    width: 0;
-    height: 0;
-    border: 50px solid rgba(255,255, 255, 0);
-    border-top-color: #fff;
-
-}
-
-.diamond-narrow {
-    width: 0;
-    height: 0;
-    border: 50px solid rgba(255,255, 255, 0);
-    border-bottom: 70px solid #fff;
-    position: relative; top: -50px;
-}
-.diamond-narrow:after {
-    content: '';
-    position: absolute;
-    left: -50px;
-    top: 70px;
-    width: 0;
-    height: 0;
-    border: 50px solid rgba(255,255, 255, 0);
-    border-top: 70px solid #fff;
-}
-
-.cut-diamond {
-    border-style: solid;
-    border-color: rgba(255,255, 255, 0) rgba(255,255, 255, 0) #fff rgba(255,255, 255, 0);
-    border-width: 0 25px 25px 25px;
-    height: 0;
-    width: 100px;
-    position: relative;
-    margin: 30px auto 105px;
-}
-.cut-diamond:after {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: -25px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: #fff rgba(255,255, 255, 0) rgba(255,255, 255, 0) rgba(255,255, 255, 0);
-    border-width: 70px 50px 0 50px; }
-
-.burst-12 {
-    background: #fff;
-    width: 100px;
-    height: 100px;
-    position: relative;
-    text-align: center;
-}
-.burst-12:before, .burst-12:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100px;
-    width: 100px;
-    background: #fff;
-}
-.burst-12:before {
-    transform: rotate(30deg);
-    -webkit-transform: rotate(30deg);
-    -moz-transform: rotate(30deg);
-    -ms-transform: rotate(30deg);
-    -o-transform: rotate(30deg); }
-.burst-12:after {
-    transform: rotate(60deg);
-    -webkit-transform: rotate(60deg);
-    -moz-transform: rotate(60deg);
-    -ms-transform: rotate(60deg);
-    -o-transform: rotate(60deg); }
-
-.burst-8 {
-    background: #fff;
-    width: 100px;
-    height:100px;
-    position: relative;
-    text-align: center;
-}
-.burst-8:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100px;
-    width: 100px;
-    background: #fff;
-   transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-}
 
 .icon_bg span { z-index: 9999; }
 
@@ -735,13 +416,7 @@ h3.osc-heading span{ background: none repeat scroll 0 0 #FFFFFF; padding: 0 10px
     margin-top: 5px;
 }
 
-/*osc_widget*/
 
-h3.widget-title {
-    font-family: arial;
-    font-size: 16px;
-    line-height: 32px;
-}
 .osc-boxframe{
     padding:1em;
 }
