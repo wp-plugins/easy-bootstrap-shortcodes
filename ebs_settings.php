@@ -34,12 +34,6 @@
             <br/><small class="notered">* Choose this option if you don't have a bootstrap theme</small></p>
         </div>
         <?php } ?>
-        <!--<div class="ebs_details">
-            <label class="ebs_setting_label">Font Awesome Icons</label>
-            <p><input type="checkbox" name="fa_icon" id="fa_icon" value="1" <?php /*echo ($fa_icon == 1) ? 'checked=checked' : '' */?>>
-                <label for="fa_icon" >Include Font Awesome Icons</label>
-            </p>
-        </div>-->
         <div class="ebs_details">
             <label class="ebs_setting_label">Editor Button Style</label>
             <p>
@@ -76,6 +70,10 @@
         </ul>
         <?php } ?>
     </form>
+    <br />
+    <a href="http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/" target="_blank">
+        <img style="border: 0px;" src="<?php echo  plugins_url("images/ebs-pro.jpg", __FILE__); ?>">
+    </a>
 </div>
 <script type="text/javascript">
     function show_cdn(){
