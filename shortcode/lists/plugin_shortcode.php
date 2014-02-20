@@ -14,18 +14,10 @@ add_shortcode('list', 'osc_theme_list');
 
 function osc_theme_li($params, $content = null) {
     extract(shortcode_atts(array(
-                'type' => '',
-        'icon'=>'',
-        'icontype'=>'',
-        'iconcolor'=>''
+                'type' => ''
                     ), $params));
-    if ($type != '' && $type!='custom') {
+    if ($type != '') {
         $osc_class = '<span class="glyphicon ' . $type . '"></span> ';
-    }elseif($type=='custom'){
-        if(trim($iconcolor)!=''){
-            $iconcolor='style="color:'.$iconcolor.'"';
-        }
-        $osc_class='<span class="'.$icontype.' ' . $icon . '" '.$iconcolor.'></span> ';
     } else {
         $osc_class = '';
     }

@@ -66,17 +66,6 @@ Easy Bootstrap Shortcode provides following styles
 19. Button Group Toolbar
 20. Description List
 21. Service Box
-22. Line Separator
-23. Dropcaps
-24. Youtube & Vimeo video
-25. Boxesframes
-26. Horizontal Rule
-27. Testimonial
-28. Section Heading
-29. Social
-30. Lead
-31. Page Header
-32. Highlights
 
 Many more shortcodes coming soon...
 

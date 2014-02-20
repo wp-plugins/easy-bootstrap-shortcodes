@@ -19,7 +19,7 @@ function osc_theme_oscitasthumbnail($params, $content = 'Label') {
 	}
 
 
-	$out = ' <div class="img-thumbnail ' . $class . '">';
+	//$out = ' <div class="img-thumbnail ' . $class . '">';
 	if ($link != '') {
 		$out .='<a href="' . $link . '">';
 	}
@@ -27,7 +27,6 @@ function osc_theme_oscitasthumbnail($params, $content = 'Label') {
 	if ($link != '') {
 		$out .='</a>';
 	}
-    $out .='</div>';
     return $out;
 }
 

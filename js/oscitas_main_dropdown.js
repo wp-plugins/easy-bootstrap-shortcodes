@@ -29,38 +29,26 @@ if(ebs_editor_opt=='dropdown'){
                         current_object.osc_element_call(c, "Popover", prefix+"oscpopover");
                         current_object.osc_element_call(c, "Button Dropdown", prefix+"dropdown");
                         current_object.osc_element_call(c, "Progress Bar", prefix+"progressbar",800);
-                        current_object.osc_element_call(c, "Testimonial", prefix+"testimonial");
                         //Advanced
                         c = b.addMenu({title:"Interactive", icon_src: ebs_url+'images/interaction.png'});
-                        current_object.osc_element_call(c, "Accordion", prefix+"toggles",980);
-                        current_object.osc_element_call(c, "Tabs", prefix+"tabs",1170);
+                        current_object.osc_element_call(c, "Accordion", prefix+"toggles");
+                        current_object.osc_element_call(c, "Tabs", prefix+"tabs");
                         current_object.osc_element_call(c, "Tables", prefix+"tables");
                         current_object.osc_element_call(c, "Panel", prefix+"panel");
-                        current_object.osc_element_call(c, "Video", prefix+"video");
-                        current_object.osc_element_call(c, "Google Map", prefix+"gmaps");
-                        current_object.osc_element_call(c, "Horizontal Rule", prefix+"rule");
                         //Content
                         c = b.addMenu({title:"Content", icon_src: ebs_url+'images/content.png'});
-                        current_object.osc_element_call(c, "List", prefix+"lists",800);
+                        current_object.osc_element_call(c, "List", prefix+"lists");
                         current_object.osc_element_call(c, "Icon Heading", prefix+"iconhead",800);
                         current_object.osc_element_call(c, "Label", prefix+"labels");
                         current_object.osc_element_call(c, "Well", prefix+"well");
-                        current_object.osc_element_call(c, "Description List", prefix+"deslist");
-                        current_object.osc_element_call(c, "Section Heading", prefix+"sectionhead");
-                        current_object.osc_element_call(c, "Dropcap", prefix+"dropcaps");
-                        current_object.osc_element_call(c, "Separator", prefix+"separator");
-                        current_object.osc_element_call(c, "Lead", prefix+"lead");
-                        current_object.osc_element_call(c, "Page Header", prefix+"pageheader");
                         current_object.osc_element_call(c, "Servicebox", prefix+"servicebox",800);
-                        current_object.osc_element_call(c, "Highlights", prefix+"highlights");
+                        current_object.osc_element_call(c, "Description List", prefix+"deslist");
                         c = b.addMenu({title:" Miscellaneous", icon_src: ebs_url+'images/misc.png'});
                         current_object.osc_element_call(c, "Responsive Image", prefix+"thumbnail");
                         current_object.osc_element_call(c, "Icon", prefix+"icon",800);
                         current_object.osc_element_call(c, "Image Effects", prefix+"image");
-                        current_object.osc_element_call(c, "Boxframe", prefix+"boxesframes");
 
                         current_object.osc_element_call(b, "Columns", prefix+"wpcolumns",1094);
-                        current_object.osc_element_call(b, "Social", prefix+"social");
 
                     });
                     return button;
@@ -68,8 +56,7 @@ if(ebs_editor_opt=='dropdown'){
                 return null;
             },
             osc_element_call: function(ed, title, value,width,height){
-               // console.log(ebs_url);
-               var classt = 'osc_ebsp_dropdown_item';
+                var classt = 'osc_ebsp_dropdown_item';
                 if(typeof(width)==='undefined') width = 'auto';
                 if(typeof(height)==='undefined') height = 'auto';
                 var prefix='oscitas';
@@ -78,7 +65,7 @@ if(ebs_editor_opt=='dropdown'){
                     title: title,
                     class:classt,
                     icons: true,
-                    icon_src: ebs_url+'/shortcode/'+func+'/icon.png',
+                    icon_src: ebs_url+'shortcode/'+func+'/icon.png',
                     role: 'presentation',
                     onclick: function (){
 
@@ -92,17 +79,11 @@ if(ebs_editor_opt=='dropdown'){
                             selected_content='Insert Buttons Groups'
                             tinyMCE.activeEditor.selection.setContent('[btngrptoolbar class="yourcustomclass"][/btngrptoolbar]');
                         }
-                        else if(value == prefix+"testimonial"){
-                            tinyMCE.activeEditor.selection.setContent('[testimonial author="Author Name" class="yourcustomclass" designation="Author Designation" ]Your testimonail[/testimonial]');
+                        else if(value == prefix+"toggles"){
+                            tinyMCE.activeEditor.selection.setContent('[toggles class="yourcustomclass"]<br/>[toggle title="Accordion number 1"]Toggle 1 content goes here.[/toggle]<br/>[toggle title="Accordion number 2"]Toggle 2 content goes here.[/toggle]<br/>[toggle title="Accordion number 3"]Toggle 3 content goes here.[/toggle]<br/>[toggle title="Accordion number 4"]Toggle 4 content goes here.[/toggle]<br/>[/toggles]');
                         }
-                        else if(value == prefix+"sectionhead"){
-                            selected_content = tinyMCE.activeEditor.selection.getContent();
-                            if(!selected_content)
-                                var selected_content = 'Section Heading';
-                            tinyMCE.activeEditor.selection.setContent('[sectionheading class="yourcustomclass"]'+selected_content+'[/sectionheading]');
-                        }
-                        else if(value == prefix+"pageheader"){
-                            tinyMCE.activeEditor.selection.setContent('[pageheader class="yourcustomclass"]'+selected_content+'[/pageheader]');
+                        else if(value == prefix+"tabs"){
+                            tinyMCE.activeEditor.selection.setContent('[tabs class="yourcustomclass"]<br/>[tab title="Tab number 1" active="active"]Tab 1 content goes here.[/tab]<br/>[tab title="Tab number 2"]Tab 2 content goes here.[/tab]<br/>[tab title="Tab number 3"]Tab 3 content goes here.[/tab]<br/>[tab title="Tab number 4"]Tab 4 content goes here.[/tab]<br/>[/tabs]');
                         }
                         else{
 
