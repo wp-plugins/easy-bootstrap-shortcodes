@@ -67,7 +67,7 @@ Easy Bootstrap Shortcode provides following styles
 20. Description List
 21. Service Box
 
-Many more shortcodes coming soon...
+Many more shortcodes coming soon......
 
 = How to embed this plugin to your theme =
 
