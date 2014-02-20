@@ -16,7 +16,7 @@ Easy Bootstrap Shortcode is bootstrap 3.0.3 compatible plugin which add icons to
 
 http://www.youtube.com/watch?v=8T0IC1PsdTw
 
->[DEMO](http://demo.oscitasthemes.com/ebs/) | [DOCUMENTATION](http://oscitasthemes.com/documentation/easy-bootstrap-shortcodes/)
+>[DEMO](http://demo.oscitasthemes.com/ebs/) | [PRO VERSION](http://oscitasthemes.com/downloads/easy-bootstrap-shortcodes-pro/) | [DOCUMENTATION](http://oscitasthemes.com/documentation/easy-bootstrap-shortcodes/)
 
 = Just by one setting, you can use bootstrap styles in your themes, which are not bootstrap based themes using Bootstrap Shortcodes =
 
