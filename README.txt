@@ -155,8 +155,6 @@ And to give use the custom css for admin
 
 If you'd like to contribute to this plugin, you can find it [hosted on GitHub](https://github.com/oscitasthemes/Easy-Bootstrap-Shortcode).
 
-= Bande Hai Hum Uske Humpe Kiska Zor Umeedo ke Suraj Nikle Charo Aur =
-= Erade Hai foladi Himmati har kadam Apne hatho kismat likhne aaj chale hai hum. =
 
 == Installation ==
 
