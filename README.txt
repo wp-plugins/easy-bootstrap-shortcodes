@@ -187,6 +187,12 @@ It's that simple ... just what the name suggests
 
 == Changelog ==
 
+= 3.0.0 =
+
+* [Fixes] Allow Html tags in popover.
+* [Fixes] Changed Table button title in wysiwyg editor.
+
+
 = 2.7.3 =
 
 * [New] Icon Font support in Tabs, List Group and Toggle Shortcodes
