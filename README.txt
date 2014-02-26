@@ -67,7 +67,7 @@ Easy Bootstrap Shortcode provides following styles
 20. Description List
 21. Service Box
 
-Many more shortcodes coming soon......
+Many more shortcodes coming soon.....
 
 = How to embed this plugin to your theme =
 
@@ -155,6 +155,7 @@ And to give use the custom css for admin
 
 If you'd like to contribute to this plugin, you can find it [hosted on GitHub](https://github.com/oscitasthemes/Easy-Bootstrap-Shortcode).
 
+
 == Installation ==
 
 1.Upload:
@@ -185,6 +186,12 @@ It's that simple ... just what the name suggests
 
 
 == Changelog ==
+
+= 3.0.0 =
+
+* [Fixes] Allow Html tags in popover.
+* [Fixes] Changed Table button title in wysiwyg editor.
+
 
 = 2.7.3 =
 
