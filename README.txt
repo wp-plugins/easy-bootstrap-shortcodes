@@ -66,6 +66,7 @@ Easy Bootstrap Shortcode provides following styles
 19. Button Group Toolbar
 20. Description List
 21. Service Box
+22. Responsive slider
 
 Many more shortcodes coming soon.....
 
@@ -186,6 +187,12 @@ It's that simple ... just what the name suggests
 
 
 == Changelog ==
+
+= 3.1.0 =
+
+* [update] Added new responsive slider shortcode.
+* [Update] Added fit text effect to make text responsive for slider.
+* [Fixes] Changed Toggle Shortcode caption to Toggl/Accordion Shortcode, as suggested by users
 
 = 3.0.0 =
 
