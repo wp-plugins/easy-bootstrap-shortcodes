@@ -72,7 +72,6 @@ Many more shortcodes coming soon.....
 
 >Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake.
 
-
 = How to embed this plugin to your theme =
 
 We have provided few new settings so that anybody can give inbuilt compatibility with our plugin. Such as if you are creating theme/plugin and want to use our plugin, to give your users more flexibility to add responsive content, however you like to use your own custom css/js files. So now you can do this.
@@ -195,6 +194,10 @@ It's that simple ... just what the name suggests
 
 
 
+
+= 3.2.0 =
+
+* [Fixes] Session issue in Service Box Shortcode is fixed.
 
 = 3.1.0 =
 
