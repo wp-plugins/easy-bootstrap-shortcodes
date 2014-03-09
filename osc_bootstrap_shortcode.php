@@ -4,7 +4,7 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0 styles to your theme by wordpress editor shortcode buttons.
-  Version: 3.1.0
+  Version: 3.2.0
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
@@ -14,6 +14,16 @@ function osc_ebs_plugin_exists( $prevent ) {
 }
 $checkplugin=apply_filters('osc_ebs_pro_plugin_exists',false);
 if(isset($checkplugin) && $checkplugin=='ebsp'):
+
+    function ebs_init_sessions()
+    {
+        if (!session_id()) {
+            session_start();
+        }
+    }
+
+    add_action('init', 'ebs_init_sessions', 1);
+
     add_action('admin_notices', 'ebs_showAdminMessages');
 
     function ebs_showMessage($message, $errormsg = false)
@@ -113,9 +123,7 @@ else:
             update_option( 'EBS_EDITOR_OPT', isset($_POST['ebsp_editor_opt'])?$_POST['ebsp_editor_opt']:'icon' );
             update_option( 'EBS_CUSTOM_CSS', isset($_POST['ebs_custom_css'])?$_POST['ebs_custom_css']:'' );
 
-            if(!session_id())
-                @session_start();
-            $_SESSION['ebs_dynamic_css'] =$_POST['ebs_custom_css'];
+            $_SESSION['ebs_dynamic_css'] = $_POST['ebs_custom_css'];
             $js =isset($_POST['b_js'])?$_POST['b_js']:1;
             $cdn = isset($_POST['cdn_path'])? $_POST['cdn_path']:EBS_JS_CDN;
             $css = isset($_POST['b_css'])?$_POST['b_css']:1;
@@ -252,4 +260,6 @@ else:
 
 // Shortcodes
     include('shortcode/functions.php');
+
+
 endif;

@@ -195,6 +195,10 @@ It's that simple ... just what the name suggests
 
 
 
+= 3.2.0 =
+
+* [Fixes] Session issue in Service Box Shortcode is fixed.
+
 = 3.1.0 =
 
 * [update] Added new responsive slider shortcode.
