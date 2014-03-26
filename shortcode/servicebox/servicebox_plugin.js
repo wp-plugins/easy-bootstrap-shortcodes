@@ -23,7 +23,7 @@ function slider_render(ele,val,mini,max){
                 jQuery('#icon_bg_preview').css({
                     'height':ui.value+'px',
                     'width':ui.value+'px',
-                    'line-height':parseInt(ui.value)-8+'px'
+                    'line-height':parseInt(ui.value)+'px'
                 });
             } else if(ele=='icon'){
                 jQuery('#icon_bg_preview').css({
