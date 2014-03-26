@@ -4,7 +4,7 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0 styles to your theme by wordpress editor shortcode buttons.
-  Version: 3.2.0
+  Version: 3.3.0
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
@@ -14,16 +14,6 @@ function osc_ebs_plugin_exists( $prevent ) {
 }
 $checkplugin=apply_filters('osc_ebs_pro_plugin_exists',false);
 if(isset($checkplugin) && $checkplugin=='ebsp'):
-
-    function ebs_init_sessions()
-    {
-        if (!session_id()) {
-            session_start();
-        }
-    }
-
-    add_action('init', 'ebs_init_sessions', 1);
-
     add_action('admin_notices', 'ebs_showAdminMessages');
 
     function ebs_showMessage($message, $errormsg = false)
@@ -39,14 +29,27 @@ if(isset($checkplugin) && $checkplugin=='ebsp'):
 
     function ebs_showAdminMessages()
     {
-        ebs_showMessage("As you already installed Easy Bootstrap Shortcode Pro plugin, please deactivate Easy Bootstrap Shortcode free version", false);
+        ebsp_showMessage("Easy Bootstrap Shortcode Pro activated, deactivate Easy Bootstrap Shortcode free version", false);
     }
 else:
     add_filter( 'osc_ebs_plugin_exists', 'osc_ebs_plugin_exists' );
     define('EBS_PLUGIN_URL',plugins_url('/',__FILE__));
     define('EBS_JS_CDN','http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js');
     define('EBS_RESPOND_CDN','http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js');
+    add_action('admin_init','check_ebsp_status');
+    function check_ebsp_status(){
+        $file   = basename( __FILE__ );
+        $folder = basename( dirname( __FILE__ ) );
+        $hook = "after_plugin_row_{$folder}/{$file}";
+            add_action( $hook, 'ebsp_register_licence_key');
+    }
+    function ebsp_register_licence_key( $plugin_name )
 
+    {
+        $ebsprefix='ebsp';
+        $plugin_name='easy-bootstrap-shortcode-pro/osc_bootstrap_shortcode.php ';
+        echo '</tr><tr class="plugin-update-tr"><td colspan="3" class="plugin-update"><div class="update-message">'  . __('Easy Bootstrap Shortcode Pro also available, <a href="http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/">click here</a> to purchase one now',$ebsprefix) . '</div></td>';
+    }
 
     add_action('admin_enqueue_scripts', 'osc_add_admin_ebs_scripts');
     add_action('admin_menu', 'osc_ebs_add_admin_menu');
@@ -123,7 +126,9 @@ else:
             update_option( 'EBS_EDITOR_OPT', isset($_POST['ebsp_editor_opt'])?$_POST['ebsp_editor_opt']:'icon' );
             update_option( 'EBS_CUSTOM_CSS', isset($_POST['ebs_custom_css'])?$_POST['ebs_custom_css']:'' );
 
-            $_SESSION['ebs_dynamic_css'] = $_POST['ebs_custom_css'];
+            if(!session_id())
+                @session_start();
+            $_SESSION['ebs_dynamic_css'] =$_POST['ebs_custom_css'];
             $js =isset($_POST['b_js'])?$_POST['b_js']:1;
             $cdn = isset($_POST['cdn_path'])? $_POST['cdn_path']:EBS_JS_CDN;
             $css = isset($_POST['b_css'])?$_POST['b_css']:1;
@@ -260,6 +265,4 @@ else:
 
 // Shortcodes
     include('shortcode/functions.php');
-
-
 endif;
