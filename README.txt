@@ -193,6 +193,11 @@ It's that simple ... just what the name suggests
 >= Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake. =
 
 
+= 3.5.0 =
+
+* [Fixes] Custom css was not working for non bootstrap themes issue resolved.
+* [Fixes] Session warring issue in service box shortcode.
+
 = 3.4.0 =
 
 * [Fixes] Function undefined issue resolved.
