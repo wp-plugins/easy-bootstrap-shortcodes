@@ -171,7 +171,7 @@ else:
 
     }
 
-    function osc_editor_enable_mce(){
+    function osc_editor_enable_mce($plugin_array){
         wp_enqueue_script('jquery');
         wp_enqueue_style('thickbox');
         wp_enqueue_script('media-upload');
@@ -188,7 +188,7 @@ else:
         if (!apply_filters('ebs_custom_bootstrap_admin_css',false)) {
             wp_enqueue_style('ebs_bootstrap_admin', plugins_url('/styles/bootstrap_admin.min.css', __FILE__));
         }
-
+        return $plugin_array;
     }
 
     function osc_add_dynamic_css(){

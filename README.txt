@@ -4,7 +4,7 @@ Link: http://www.osCitasthemes.com
 Tags: Wordpress Shortcodes, Wordpress Bootstrap, Wordpress Bootstrap Shortcode, Bootstrap, Responsive pages, Editor plugin, Bootstrap Shortcode, TinyMCE
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 2.5
+Stable tag: 4.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,7 @@ http://www.youtube.com/watch?v=8T0IC1PsdTw
 * More control over the css, you can add your own custom class to shortcodes.
 * Now you can use js file from CDN or disable the plugin js.
 * You can use your own css file by disabling the plugin css, which gives you more flexibility over styling.
+* New sidebar widget to show shortcodes in sidebars and footer
 
 Easy Bootstrap Shortcode provides following styles
 
@@ -192,6 +193,12 @@ It's that simple ... just what the name suggests
 
 >= Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake. =
 
+
+
+
+= 4.0.0 =
+
+* [fixes] Created new stable tag.
 
 = 3.7.0 =
 
