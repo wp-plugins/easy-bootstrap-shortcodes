@@ -21,4 +21,3 @@ function osc_theme_iconhead($params, $content = null) {
 }
 
 add_shortcode('iconheading', 'osc_theme_iconhead');
-

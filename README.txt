@@ -197,6 +197,10 @@ It's that simple ... just what the name suggests
 
 
 
+= 4.2.0 =
+
+* [fixes] Fixed tinyMCE dropdown for EBS.
+
 = 4.1.0 =
 
 * [fixes] Now ready for Wordpress 3.9 too.

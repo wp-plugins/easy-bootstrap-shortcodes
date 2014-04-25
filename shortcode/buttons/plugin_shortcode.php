@@ -39,4 +39,3 @@ function osc_theme_button($params, $content = null) {
 }
 
 add_shortcode('button', 'osc_theme_button');
-

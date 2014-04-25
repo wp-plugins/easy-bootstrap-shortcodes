@@ -91,4 +91,3 @@ function osc_theme_servicebox($params, $content = null) {
 }
 
 add_shortcode('servicebox', 'osc_theme_servicebox');
-

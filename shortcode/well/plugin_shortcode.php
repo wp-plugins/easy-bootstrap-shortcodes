@@ -18,4 +18,3 @@ function osc_theme_well($params, $content = 'Label') {
 }
 
 add_shortcode('well', 'osc_theme_well');
-
