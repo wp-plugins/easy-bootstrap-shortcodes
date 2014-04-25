@@ -4,7 +4,7 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0.3 styles to your theme by wordpress editor shortcode buttons.
-  Version: 4.1.0
+  Version: 4.2.0
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
@@ -156,6 +156,8 @@ else:
             var ebs_ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
             var ebs_url='<?php echo EBS_PLUGIN_URL;?>';
             var ebs_editor_opt='<?php echo $ebsp_editor_opt; ?>'
+            var ebs_dropdown_obj='<?php echo json_encode(ebs_shortcodes()); ?>';
+            var ebs_dropdown_grp='<?php echo json_encode(ebs_groups()); ?>';
 
         </script>
     <?php
@@ -170,8 +172,20 @@ else:
         wp_enqueue_script('ebs-main', plugins_url('/js/ebs_main.js', __FILE__));
 
     }
+    add_action('admin_print_styles','ebsp_tinymce_button_css');
+    function ebsp_tinymce_button_css() {
+
+        wp_register_style('ebsp_tinymce_button_css', plugins_url('/styles/editor.css', __FILE__), array());
+
+        wp_enqueue_style('ebsp_tinymce_button_css');
+
+
+        wp_enqueue_style('dashicons');
+
+    }
 
     function osc_editor_enable_mce($plugin_array){
+
         wp_enqueue_script('jquery');
         wp_enqueue_style('thickbox');
         wp_enqueue_script('media-upload');
@@ -179,8 +193,8 @@ else:
         wp_enqueue_style('wp-color-picker');
         wp_enqueue_script('wp-color-picker');
         wp_enqueue_script('jquery-ui-slider');
-        wp_enqueue_style("wp-jquery-ui-dialog");
         wp_enqueue_script('jquery-ui-dialog');
+        wp_enqueue_style ( 'wp-jquery-ui-dialog');
         wp_enqueue_style('EBS_jquery-ui-slider-css', plugins_url('/styles/slider.css', __FILE__));
         if (!apply_filters('ebs_bootstrap_icon_css_url',false)) {
             wp_enqueue_style('bootstrap-icon', plugins_url('/styles/bootstrap-icon.min.css', __FILE__));
@@ -209,7 +223,6 @@ else:
             $css = get_option( 'EBS_BOOTSTRAP_CSS_LOCATION', 1 );
 
 //			http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js
-
 
             if ($js == 1) {
                 if (!apply_filters('ebs_bootstrap_js_url',false)) {

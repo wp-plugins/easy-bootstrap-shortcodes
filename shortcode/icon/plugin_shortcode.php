@@ -22,4 +22,3 @@ function osc_theme_icon($params, $content = null) {
 }
 
 add_shortcode('icon', 'osc_theme_icon');
-
