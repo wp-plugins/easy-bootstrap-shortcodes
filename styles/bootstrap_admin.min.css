@@ -244,7 +244,18 @@
     background: none repeat scroll 0 0 #C2C2C2!important;
 }
 
-
+.oscitas-easy-bootstrap-shortcode .oscitas-icon ul {
+    overflow: auto;
+}
+.oscitas-easy-bootstrap-shortcode .oscitas-icon ul li {
+    font-size: 16px;
+}
+.oscitas-easy-bootstrap-shortcode .oscitas-icon h4 {
+    display: block;
+    clear: both;
+    font-size: 18px;
+    margin: 10px 0 0 10px;
+}
 
 #oscitas-form-slider  .image_preview {
     float: right;
