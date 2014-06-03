@@ -7,12 +7,7 @@ var dropdown={
     _create_tinyMCE_options(dropdown);
 })();
 
-function create_oscitas_dropdown(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_dropdown(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th class="main_dp_th"><label for="oscitas-dropdown-heading" >Dropdown Button Features</label></th>\
@@ -76,9 +71,18 @@ function create_oscitas_dropdown(pluginObj){
 			<input type="button" id="oscitas-dropdown-submit" class="button-primary" value="Insert Dropdown" name="submit" />\
 		</p>\
 		</div>');
+    return form;
+}
+function create_oscitas_dropdown(pluginObj){
+
+        var form=jQuery(pluginObj.hashId);
+
+    // creates a form to be displayed everytime the button is clicked
+    // you should achieve this using AJAX instead of direct html code like this
+
 			
     var table = form.find('table');
-    form.appendTo('body').hide();
+
     form.find('#osc_add_new_dditem').click(function(){
         var item='<tr class="osc_dropdown_list_item"><td class="osc_type_change"><select name="dropdown-item-type[]"  class="oscitas-dropdownitem-type"><option value="menuitem">Menu Item</option><option value="divider">Divider</option></select></td><td class="osc_hide"><input type="text" name="dropdown-item-link[]" class="oscitas-dropdownitem-link" value="#"/></td><td class="osc_hide"><input type="text" name="dropdown-item-title[]" class="oscitas-dropdownitem-title" value="Dropdown Item"/></td><td class="osc_hide"><input type="checkbox" name="dropdown-item-disabled[]" class="oscitas-dropdownitem-disabled" value="disabled"/></td><td><a class="osc_remove_dditem" href="javascript:;" style="text-decoration:none;"><i class="glyphicon  glyphicon-remove"></i></a></td></tr>';
         form.find('#oscitas-append-dropdownitem').append(item);
@@ -122,11 +126,11 @@ function create_oscitas_dropdown(pluginObj){
             cusclass='';
         }
         var shortcode='';
-        shortcode ='[dropdown '+dropup+cusclass+']<br/>';
-        shortcode +='[dropdownhead style="'+style+'" size="'+size+'" split="'+split+'"]<br/>';
+        shortcode ='['+$ebs_prefix+'dropdown '+dropup+cusclass+']<br/>';
+        shortcode +='['+$ebs_prefix+'dropdownhead style="'+style+'" size="'+size+'" split="'+split+'"]<br/>';
         shortcode += heading+'<br/>';
-        shortcode +='[/dropdownhead]<br/>';
-        shortcode +='[dropdownbody]<br/>';
+        shortcode +='[/'+$ebs_prefix+'dropdownhead]<br/>';
+        shortcode +='['+$ebs_prefix+'dropdownbody]<br/>';
        
         jQuery('tr.osc_dropdown_list_item').each(function(index){
             
@@ -140,15 +144,15 @@ function create_oscitas_dropdown(pluginObj){
                 disabled='';
             }
             if(type=='divider'){
-                shortcode +='[dropdownitem type="'+type+'"][/dropdownitem]<br/>';
+                shortcode +='['+$ebs_prefix+'dropdownitem type="'+type+'"][/'+$ebs_prefix+'dropdownitem]<br/>';
             } else if(type=='menuitem'){
-                shortcode +='[dropdownitem type="'+type+'" link="'+link+'" '+disabled+']'+title+'[/dropdownitem]<br/>';
+                shortcode +='['+$ebs_prefix+'dropdownitem type="'+type+'" link="'+link+'" '+disabled+']'+title+'[/'+$ebs_prefix+'dropdownitem]<br/>';
             }
             
         });
         
-        shortcode +='[/dropdownbody]<br/>';
-        shortcode +='[/dropdown]';
+        shortcode +='[/'+$ebs_prefix+'dropdownbody]<br/>';
+        shortcode +='[/'+$ebs_prefix+'dropdown]';
         
 			
         // inserts the shortcode into the active editor

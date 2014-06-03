@@ -43,4 +43,4 @@ function osc_theme_tooltip($params, $content = 'Tooltip') {
     return $out;
 }
 
-add_shortcode('tooltip', 'osc_theme_tooltip');
+ebs_backward_compatibility_callback('tooltip', 'osc_theme_tooltip');

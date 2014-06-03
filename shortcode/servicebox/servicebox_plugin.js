@@ -37,14 +37,7 @@ function slider_render(ele,val,mini,max){
         }
     });
 }
-function create_oscitas_servicebox(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-
-    // creates a form to be displayed everytime the servicebox is clicked
-    // you should achieve this using AJAX instead of direct html code like this
-
+function ebs_return_html_servicebox(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'">\
         <span id="icon_bg_preview" class="iconcircle glyphicon glyphicon-cog"></span>\
     <div id="osc-servicebox-scroll"><table id="oscitas-table" class="form-table">\
@@ -158,11 +151,15 @@ function create_oscitas_servicebox(pluginObj){
 			<input type="button" id="oscitas-servicebox-submit" class="button-primary" value="Insert Service Box" name="submit" />\
 		</p>\
 		</div>');
+    return form;
+}
+function create_oscitas_servicebox(pluginObj){
+   var form=jQuery(pluginObj.hashId);
 
     var table = form.find('table');
 
     jQuery('.glyphicon').css('display','inline');
-    form.appendTo('body').hide();
+
     table.find('#click_icon_list_servicebox').click(function(){
         if(!jQuery(this).hasClass('osc_icon_showing_servicebox')){
             jQuery(this).addClass('osc_icon_showing_servicebox')
@@ -219,8 +216,8 @@ function create_oscitas_servicebox(pluginObj){
         } else{
             jQuery('.'+name).hide();
         }
-        jQuery(pluginObj.hashId).find('table tr:visible:even').css('background', '#F0F0F0');
-        jQuery(pluginObj.hashId).find('table tr:visible:odd').css('background', '#DADADD');
+        jQuery(pluginObj.hashId).find('table tr:visible:even').css('background', '#ffffff');
+        jQuery(pluginObj.hashId).find('table tr:visible:odd').css('background', '#efefef');
     })
 
     // handles the click event of the submit servicebox
@@ -266,7 +263,7 @@ function create_oscitas_servicebox(pluginObj){
         var selected_content = tinyMCE.activeEditor.selection.getContent();
         if(!selected_content)
             var selected_content = 'Your Content';
-        var shortcode = '[servicebox '+shortcodeattr+']'+selected_content+'[/servicebox]';
+        var shortcode = '['+$ebs_prefix+'servicebox '+shortcodeattr+']'+selected_content+'[/servicebox]';
 
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.selection.setContent(shortcode);

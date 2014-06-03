@@ -7,12 +7,7 @@ var notifications={
     _create_tinyMCE_options(notifications);
 })();
 
-function create_oscitas_notifications(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_notifications(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th><label for="oscitas-type">Style :</label></th>\
@@ -39,27 +34,30 @@ function create_oscitas_notifications(pluginObj){
 			<input type="button" id="oscitas-submit" class="button-primary" value="Insert Notification" name="submit" />\
 		</p>\
 		</div>');
-		
+    return form;
+}
+function create_oscitas_notifications(pluginObj){
+    var form=jQuery(pluginObj.hashId);
     var table = form.find('table');
-    form.appendTo('body').hide();
-		
+
+
     // handles the click event of the submit button
     form.find('#oscitas-submit').click(function(){
         // defines the options and their default values
         // again, this is not the most elegant way to do this
         // but well, this gets the job done nonetheless
-        var options = { 
+        var options = {
             'type'       : 'error'
         };
         var cusclass='';
         if(table.find('#oscitas-note-class').val()!=''){
             cusclass= ' class="'+table.find('#oscitas-note-class').val()+'"';
         }
-        var shortcode = '[notification';
-			
+        var shortcode = '['+$ebs_prefix+'notification';
+
         for( var index in options) {
             var value = table.find('#oscitas-' + index).val();
-				
+
             // attaches the attribute to the shortcode only if it's different from the default value
             //if ( value !== options[index] )
             shortcode += ' ' + index + '="' + value + '"';
@@ -70,8 +68,8 @@ function create_oscitas_notifications(pluginObj){
             var selected_content = 'Your notification';
         shortcode += ' close="'+(table.find('#oscitas-close').prop('checked')? 'true': 'false')+ '" ';
 
-        shortcode += cusclass+']'+selected_content+'[/notification]';
-			
+        shortcode += cusclass+']'+selected_content+'[/'+$ebs_prefix+'notification]';
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
 

@@ -20,4 +20,4 @@ function osc_theme_iconhead($params, $content = null) {
     return $out;
 }
 
-add_shortcode('iconheading', 'osc_theme_iconhead');
+ebs_backward_compatibility_callback('iconheading', 'osc_theme_iconhead');

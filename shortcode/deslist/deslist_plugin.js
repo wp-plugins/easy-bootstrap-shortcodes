@@ -6,13 +6,7 @@ var deslist={
 (function() {
     _create_tinyMCE_options(deslist);
 })();
-
-function create_oscitas_deslist(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_deslist(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th><label for="oscitas-line">No of List Item</label></th>\
@@ -37,9 +31,18 @@ function create_oscitas_deslist(pluginObj){
 			<input type="button" id="oscitas-deslist-submit" class="button-primary" value="Insert List" name="submit" />\
 		</p>\
 		</div>');
+    return form;
+}
+function create_oscitas_deslist(pluginObj){
+
+      var form=  jQuery(pluginObj.hashId);
+
+    // creates a form to be displayed everytime the button is clicked
+    // you should achieve this using AJAX instead of direct html code like this
+
 		
     var table = form.find('table');
-    form.appendTo('body').hide();
+
 		
     // handles the click event of the submit button
     form.find('#oscitas-deslist-submit').click(function(){
@@ -56,7 +59,7 @@ function create_oscitas_deslist(pluginObj){
         if(table.find('#oscitas-deslist-style').val()!=''){
             style= ' style="'+table.find('#oscitas-deslist-style').val()+'"';
         }
-        var shortcode = '[dl'+cusclass+style;
+        var shortcode = '['+$ebs_prefix+'dl'+cusclass+style;
         var deslist_item=jQuery('#oscitas-deslist-item').val();
         if(isNaN(deslist_item)==false){
             deslist=deslist_item;
@@ -67,9 +70,9 @@ function create_oscitas_deslist(pluginObj){
 
         shortcode += ']<br/>';
         for(var i=1;i<=deslist;i++){
-            shortcode +='[dlitem heading="Heading '+i+'"]Description '+i+'[/dlitem]<br/>'
+            shortcode +='['+$ebs_prefix+'dlitem heading="Heading '+i+'"]Description '+i+'[/'+$ebs_prefix+'dlitem]<br/>'
         }
-        shortcode +='[/dl]';
+        shortcode +='[/'+$ebs_prefix+'dl]';
 			
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);

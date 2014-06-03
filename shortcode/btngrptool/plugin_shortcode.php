@@ -13,5 +13,5 @@ function osc_theme_btngrptoolbar($params, $content = null) {
 	return $out;
 }
 
-add_shortcode('btngrptoolbar', 'osc_theme_btngrptoolbar');
+ebs_backward_compatibility_callback('btngrptoolbar', 'osc_theme_btngrptoolbar');
 

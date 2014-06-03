@@ -10,7 +10,7 @@ function osc_theme_list($params, $content = null) {
     return '<ul class="list-group ' . $class .EBS_CONTAINER_CLASS. '">' . do_shortcode($content) . '</ul>';
 }
 
-add_shortcode('list', 'osc_theme_list');
+ebs_backward_compatibility_callback('list', 'osc_theme_list');
 
 function osc_theme_li($params, $content = null) {
     extract(shortcode_atts(array(
@@ -24,4 +24,4 @@ function osc_theme_li($params, $content = null) {
     return '<li class="list-group-item'.EBS_CONTAINER_CLASS.'">' . $osc_class . do_shortcode($content) . '</li>';
 }
 
-add_shortcode('li', 'osc_theme_li');
+ebs_backward_compatibility_callback('li', 'osc_theme_li');

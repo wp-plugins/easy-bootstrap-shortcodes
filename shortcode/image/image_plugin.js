@@ -7,12 +7,7 @@ var image={
     _create_tinyMCE_options(image);
 })();
 
-function create_oscitas_image(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_image(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 				<tr><th><label for="oscitas-label-content">Upload Image:</label></th>\
 				<td id="osc_image_upload"><input id="oscitas-image-src" type="hidden" name="oscitas-thumbnail-src"  value="" />\
@@ -38,9 +33,14 @@ function create_oscitas_image(pluginObj){
 			<input type="button" id="oscitas-image-submit" class="button-primary" value="Insert Image" name="submit" />\
 		</p>\
 		</div>');
+    return form;
+}
+function create_oscitas_image(pluginObj){
+
+    var form=jQuery(pluginObj.hashId);
 
     var table = form.find('table');
-    form.appendTo('body').hide();
+
 
 
     form.find('.upload_image_button').click(function() {
@@ -82,7 +82,7 @@ function create_oscitas_image(pluginObj){
             cusclass= ' class="'+table.find('#oscitas-image-class').val()+'"';
         }
         if(form.find('#oscitas-image-src').val()!=''){
-            shortcode = '[image'+cusclass+' src="'+form.find('#oscitas-image-src').val()+'" shape="'+shape+'"]';
+            shortcode = '['+$ebs_prefix+'image'+cusclass+' src="'+form.find('#oscitas-image-src').val()+'" shape="'+shape+'"]';
         }
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);

@@ -3,21 +3,45 @@
  */
 
 var gBtnVar={};
-function open_dialogue(dialogueid,width,height){
-    if(typeof(width)==='undefined') width = 'auto';
+function open_dialogue(pluginObj,width,height){
+//    close_dialogue(pluginObj);
+    var $width='';
+
+    if(typeof(width)==='undefined' || width=='auto') {
+       // $width='style="width:800px;"';
+    } else{
+        $width='style="width:'+width+'px;"';
+    }
+
+    var html_content=eval('ebs_return_html_'+pluginObj.pluginName+'(pluginObj)');
+    html_content=jQuery(html_content).get(0).outerHTML;
+    var $template_markup='<div id="oscitas-easy-bootstrap-shortcode-container" '+$width+' class="osc-dialog oscitas-easy-bootstrap-shortcode mfp-ebsp"><h2>'+pluginObj.title+'</h2>'  +html_content+
+        '</div>';
+
     if(typeof(height)==='undefined') height = 'auto';
-    jQuery( dialogueid ).dialog({
-        dialogClass : 'wp-dialog osc-dialog oscitas-easy-bootstrap-shortcode',
-        autoOpen: true,
-        height: height,
-        width: width,
-        modal: true
+
+    jQuery('body').addClass('ebsp-mf-shown');
+    jQuery.magnificPopup.open({
+        items: { src:$template_markup },
+        type: "inline",
+        mainClass:'ebs-inner-popup',
+        callbacks: {
+            open: function () {
+
+                eval('create_oscitas_'+pluginObj.pluginName+'(pluginObj);');
+            },
+            close: function () {
+                jQuery('body').removeClass('ebsp-mf-shown');
+            }
+        }
+
     });
 
 }
-
 function close_dialogue(dialogueid){
-    jQuery( dialogueid ).dialog('close');
+    jQuery.magnificPopup.close();
+    jQuery('body').removeClass('ebsp-mf-shown');
+
 }
 
 var plugininfo={
@@ -38,10 +62,10 @@ function _create_tinyMCE_options(pluginObj, width) {
                 title : pluginObj.title,
                 image : url+'/icon.png',
                 onclick : function() {
-                    eval('create_oscitas_'+pluginObj.pluginName+'(pluginObj);open_dialogue("'+pluginObj.hashId+'","'+width+'")');
+                    eval('open_dialogue(pluginObj,"'+width+'")');
                     if (pluginObj.setRowColors) {
-                        jQuery(pluginObj.hashId+' table tr:visible:even').css('background', '#F0F0F0');
-                        jQuery(pluginObj.hashId+' table tr:visible:odd').css('background', '#DADADD');
+                        jQuery(pluginObj.hashId+' table tr:visible:even').css('background', '#ffffff');
+                        jQuery(pluginObj.hashId+' table tr:visible:odd').css('background', '#efefef');
                     }
                 }
             });
@@ -64,10 +88,10 @@ function _create_tinyMCE_dropdown(pluginObj,width,height) {
     if(typeof(width)==='undefined') width = 'auto';
     if(typeof(height)==='undefined') height = 'auto';
     pluginObj.hashId = '#'+pluginObj.id;
-    eval('create_oscitas_'+pluginObj.pluginName+'(pluginObj);open_dialogue("'+pluginObj.hashId+'","'+width+'","'+height+'")');
+    eval('open_dialogue(pluginObj,"'+width+'","'+height+'")');
     if (pluginObj.setRowColors) {
-        jQuery(pluginObj.hashId+' table tr:visible:even').css('background', '#F0F0F0');
-        jQuery(pluginObj.hashId+' table tr:visible:odd').css('background', '#DADADD');
+        jQuery(pluginObj.hashId+' table tr:visible:even').css('background', '#ffffff');
+        jQuery(pluginObj.hashId+' table tr:visible:odd').css('background', '#efefef');
     }
 }
 
@@ -686,3 +710,4 @@ function font_awesome_include($class){
     }
     return icons;
 }
+var $ebs_prefix=ebs.ebs_prefix;

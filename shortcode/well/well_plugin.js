@@ -7,12 +7,7 @@ var well={
     _create_tinyMCE_options(well);
 })();
 
-function create_oscitas_well(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_well(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th><label for="oscitas-well-type">Well Type:</label></th>\
@@ -38,9 +33,14 @@ function create_oscitas_well(pluginObj){
 			<input type="button" id="oscitas-well-submit" class="button-primary" value="Insert Well" name="submit" />\
 		</p>\
 		</div>');
+
+    return form;
+}
+function create_oscitas_well(pluginObj){
+   var form=jQuery(pluginObj.hashId);
 		
     var table = form.find('table');
-    form.appendTo('body').hide();
+
    
 
         
@@ -51,9 +51,9 @@ function create_oscitas_well(pluginObj){
         if(table.find('#oscitas-well-class').val()!=''){
             cusclass= ' class="'+table.find('#oscitas-well-class').val()+'"';
         }
-        var shortcode = '[well type="'+jQuery('#oscitas-well-type').val()+'"'+cusclass+']<br class="osc"/>';
+        var shortcode = '['+$ebs_prefix+'well type="'+jQuery('#oscitas-well-type').val()+'"'+cusclass+']<br class="osc"/>';
         shortcode += jQuery('#oscitas-well-content').val()+'<br class="osc"/>';
-        shortcode += '[/well]';
+        shortcode += '[/'+$ebs_prefix+'well]';
 
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);

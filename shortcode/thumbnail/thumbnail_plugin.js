@@ -7,12 +7,7 @@ var thumbnail={
     _create_tinyMCE_options(thumbnail);
 })();
 
-function create_oscitas_thumbnail(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_thumbnail(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 				<th><label for="oscitas-label-content">Upload Image:</label></th>\
 				<td id="osc_thumbnail_upload"><input id="oscitas-thumbnail-src" type="hidden" name="oscitas-thumbnail-src"  value="" />\
@@ -39,9 +34,16 @@ function create_oscitas_thumbnail(pluginObj){
 			<input type="button" id="oscitas-thumbnail-submit" class="button-primary" value="Insert Thumbnail" name="submit" />\
 		</p>\
 		</div>');
+
+    return form;
+}
+function create_oscitas_thumbnail(pluginObj){
+   var form=jQuery(pluginObj.hashId);
+
+
     
     var table = form.find('table');
-    form.appendTo('body').hide();
+
 
     
     form.find('.upload_image_button').click(function() {
@@ -90,7 +92,7 @@ function create_oscitas_thumbnail(pluginObj){
         }
 
         if(form.find('#oscitas-thumbnail-src').val()!=''){
-            shortcode = '[thumbnail'+link+cusclass+border+' src="'+form.find('#oscitas-thumbnail-src').val()+'"]';
+            shortcode = '['+$ebs_prefix+'thumbnail'+link+cusclass+border+' src="'+form.find('#oscitas-thumbnail-src').val()+'"]';
         }
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);

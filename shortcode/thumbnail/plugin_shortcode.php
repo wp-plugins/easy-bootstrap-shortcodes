@@ -30,4 +30,4 @@ function osc_theme_oscitasthumbnail($params, $content = 'Label') {
     return $out;
 }
 
-add_shortcode('thumbnail', 'osc_theme_oscitasthumbnail');
+ebs_backward_compatibility_callback('thumbnail', 'osc_theme_oscitasthumbnail');

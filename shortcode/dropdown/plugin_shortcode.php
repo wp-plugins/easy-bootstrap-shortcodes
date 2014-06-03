@@ -22,7 +22,7 @@ function osc_theme_dropdown($params, $content = null) {
     return $out;
 }
 
-add_shortcode('dropdown', 'osc_theme_dropdown');
+ebs_backward_compatibility_callback('dropdown', 'osc_theme_dropdown');
 
 function osc_theme_dropdown_head($params, $content = null) {
     extract(shortcode_atts(array(
@@ -43,7 +43,7 @@ function osc_theme_dropdown_head($params, $content = null) {
     return $out;
 }
 
-add_shortcode('dropdownhead', 'osc_theme_dropdown_head');
+ebs_backward_compatibility_callback('dropdownhead', 'osc_theme_dropdown_head');
 
 function osc_theme_dropdown_body($params, $content = null) {
     $content = str_replace("]<br />", ']', $content);
@@ -53,7 +53,7 @@ function osc_theme_dropdown_body($params, $content = null) {
     return $out;
 }
 
-add_shortcode('dropdownbody', 'osc_theme_dropdown_body');
+ebs_backward_compatibility_callback('dropdownbody', 'osc_theme_dropdown_body');
 
 function osc_theme_dropdown_items($params, $content = null) {
     extract(shortcode_atts(array(
@@ -74,4 +74,4 @@ function osc_theme_dropdown_items($params, $content = null) {
     return $out;
 }
 
-add_shortcode('dropdownitem', 'osc_theme_dropdown_items');
+ebs_backward_compatibility_callback('dropdownitem', 'osc_theme_dropdown_items');

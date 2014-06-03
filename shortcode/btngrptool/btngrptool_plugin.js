@@ -9,7 +9,7 @@ var btngrptool={
                 title : btngrptool.title,
                 image : url+'/icon.png',
                 onclick : function() {
-                    ed.selection.setContent('[btngrptoolbar class="yourcustomclass"][/btngrptoolbar]');
+                    ed.selection.setContent('['+$ebs_prefix+'btngrptoolbar class="yourcustomclass"][/'+$ebs_prefix+'btngrptoolbar]');
                 }
             });
         },

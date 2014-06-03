@@ -38,13 +38,8 @@ function __slider_show_image_upload_icon(parent,ele){
 
     };
 }
-function create_oscitas_slider(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
+function ebs_return_html_slider(pluginObj){
 
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table" style="margin-top: 0px;">\
     <tr>\
 				<th><label for="oscitas-slider-class">Slider Interval</label></th>\
@@ -113,8 +108,14 @@ function create_oscitas_slider(pluginObj){
 			<input type="button" id="oscitas-slider-submit" class="button-primary" value="Insert slider" name="submit" />\
 		</p>\
 		</div>');
+    return form;
+}
+function create_oscitas_slider(pluginObj){
+   var form=jQuery(pluginObj.hashId);
+
+
     var table = form.find('table');
-    form.appendTo('body').hide();
+
     form.find('#osc_add_new_dditem').click(function(){
         var item='<tr class="osc_dropdown_list_item"><td class="enhanced"><input type="text" name="scitas-itemslider-title[]" class="oscitas-itemslider-title" value="Title"/></td><td class="enhanced"><input class="oscitas-itemslider-image" type="hidden" name="oscitas-itemslider-image[]"  value="" /><input id="_btn" class="upload_image_button" type="button" value="Upload Image" /><div class="image_preview"></div></td><td class="enhanced"><textarea name="oscitas-itemslider-caption[]" class="oscitas-itemslider-caption"></textarea></td><td><input type="radio" name="oscitas-itemslider-active" class="oscitas-itemslider-active" value=""/></td><td><a class="osc_remove_dditem" href="javascript:;" style="text-decoration:none;"><i class="glyphicon  glyphicon-remove"></i></a></td></tr>';
         form.find('#oscitas-append-slideritem').append(item);
@@ -149,7 +150,7 @@ function create_oscitas_slider(pluginObj){
             }
         })
 
-        var shortcode = '[slider'+shortattr;
+        var shortcode = '['+$ebs_prefix+'slider'+shortattr;
         shortcode += ']';
         var row_attr={
             title:'',
@@ -170,12 +171,12 @@ function create_oscitas_slider(pluginObj){
                 attr+=' active="active"';
             }
 
-            shortcode+='<br/>[slide'+attr+'/]';
+            shortcode+='<br/>['+$ebs_prefix+'slide'+attr+'/]';
 
 
         });
 
-        shortcode += '<br/>[/slider]';
+        shortcode += '<br/>[/'+$ebs_prefix+'slider]';
 
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);

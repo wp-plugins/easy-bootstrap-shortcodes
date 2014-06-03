@@ -216,3 +216,9 @@ function osc_add_ebs_plugin($plugin_array) {
     return $plugin_array;
 
 }
+function ebs_backward_compatibility_callback($shortcode,$callback){
+
+$val=get_option('EBS_SHORTCODE_PREFIX','');
+    add_shortcode($val.$shortcode, $callback);
+
+}
