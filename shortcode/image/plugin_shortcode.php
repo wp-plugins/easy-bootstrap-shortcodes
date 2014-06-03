@@ -18,4 +18,4 @@ function osc_theme_image($params, $content = 'Label') {
     return $out;
 }
 
-add_shortcode('image', 'osc_theme_image');
+ebs_backward_compatibility_callback('image', 'osc_theme_image');

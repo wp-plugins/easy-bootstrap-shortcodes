@@ -7,12 +7,7 @@ var iconhead={
     _create_tinyMCE_options(iconhead, 800);
 })();
 
-function create_oscitas_iconhead(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_iconhead(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th><label for="oscitas-heading-icon">Select Icon:</label></th>\
@@ -52,10 +47,13 @@ function create_oscitas_iconhead(pluginObj){
 			<input type="button" id="oscitas-iconhead-submit" class="button-primary" value="Insert Icon Heading" name="submit" />\
 		</p>\
 		</div>');
-
+return form;
+}
+function create_oscitas_iconhead(pluginObj){
+   var form=jQuery(pluginObj.hashId);
     var table = form.find('table');
     jQuery('.glyphicon').css('display','inline');
-    form.appendTo('body').hide();
+
     form.find('.color').wpColorPicker();
     table.find('#click_icon_list').click(function(){
         if(!jQuery(this).hasClass('osc_icon_showing')){
@@ -91,11 +89,11 @@ function create_oscitas_iconhead(pluginObj){
         if(table.find('#oscitas-iconhead-class').val()!=''){
             cusclass+= ' class="'+table.find('#oscitas-iconhead-class').val()+'"';
         }
-        var shortcode = '[iconheading type="'+type+'"';
+        var shortcode = '['+$ebs_prefix+'iconheading type="'+type+'"';
         
         shortcode += style+cusclass ;
         
-        shortcode += ']'+table.find('#oscitas-iconhead-heading').val()+'[/iconheading]' ;
+        shortcode += ']'+table.find('#oscitas-iconhead-heading').val()+'[/'+$ebs_prefix+'iconheading]' ;
 
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent',0 , shortcode);

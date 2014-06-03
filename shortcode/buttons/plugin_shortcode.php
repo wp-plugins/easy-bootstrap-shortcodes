@@ -38,4 +38,4 @@ function osc_theme_button($params, $content = null) {
     return $out;
 }
 
-add_shortcode('button', 'osc_theme_button');
+ebs_backward_compatibility_callback('button', 'osc_theme_button');

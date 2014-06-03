@@ -20,4 +20,4 @@ function osc_theme_btngrp($params, $content = null) {
     return $out;
 }
 
-add_shortcode('buttongroup', 'osc_theme_btngrp');
+ebs_backward_compatibility_callback('buttongroup', 'osc_theme_btngrp');

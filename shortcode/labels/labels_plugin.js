@@ -7,12 +7,7 @@ var labels={
     _create_tinyMCE_options(labels);
 })();
 
-function create_oscitas_labels(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_labels(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th><label for="oscitas-label-type">Label Type:</label></th>\
@@ -41,26 +36,27 @@ function create_oscitas_labels(pluginObj){
 			<input type="button" id="oscitas-label-submit" class="button-primary" value="Insert Label" name="submit" />\
 		</p>\
 		</div>');
-		
-    var table = form.find('table');
-    form.appendTo('body').hide();
-   
+    return form;
 
-        
-		
+}
+function create_oscitas_labels(pluginObj){
+    var form=jQuery(pluginObj.hashId);
+
+    var table = form.find('table');
+
     // handles the click event of the submit button
     form.find('#oscitas-label-submit').click(function(){
         var cusclass='';
         if(table.find('#oscitas-label-class').val()!=''){
             cusclass= ' class="'+table.find('#oscitas-label-class').val()+'"';
         }
-        var shortcode = '[label type="'+jQuery('#oscitas-label-type').val()+'"'+cusclass+']<br/>';
+        var shortcode = '['+$ebs_prefix+'label type="'+jQuery('#oscitas-label-type').val()+'"'+cusclass+']<br/>';
         shortcode += jQuery('#oscitas-label-content').val()+'<br/>';
-        shortcode += '[/label]';
+        shortcode += '[/'+$ebs_prefix+'label]';
 
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         // closes fancybox
         close_dialogue(pluginObj.hashId);
     });

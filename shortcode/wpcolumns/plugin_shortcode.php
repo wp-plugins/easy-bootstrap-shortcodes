@@ -18,7 +18,7 @@ function osc_theme_row($params, $content = null) {
     return $result;
 }
 
-add_shortcode('row', 'osc_theme_row');
+ebs_backward_compatibility_callback('row', 'osc_theme_row');
 /* * *********************************************************
  * TWO
  * ********************************************************* */
@@ -91,7 +91,7 @@ function osc_theme_column($params, $content = null) {
     return $result;
 }
 
-add_shortcode('column', 'osc_theme_column');
+ebs_backward_compatibility_callback('column', 'osc_theme_column');
 
 
 function osc_theme_one_half($params, $content = null) {
@@ -123,7 +123,7 @@ function osc_theme_one_half($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_half', 'osc_theme_one_half');
+ebs_backward_compatibility_callback('one_half', 'osc_theme_one_half');
 
 function osc_theme_one_half_last($params, $content = null) {
     extract(shortcode_atts(array(
@@ -154,7 +154,7 @@ function osc_theme_one_half_last($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_half_last', 'osc_theme_one_half_last');
+ebs_backward_compatibility_callback('one_half_last', 'osc_theme_one_half_last');
 
 /* * *********************************************************
  * THIRD
@@ -189,7 +189,7 @@ function osc_theme_one_third($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_third', 'osc_theme_one_third');
+ebs_backward_compatibility_callback('one_third', 'osc_theme_one_third');
 
 function osc_theme_one_third_last($params, $content = null) {
     extract(shortcode_atts(array(
@@ -220,7 +220,7 @@ function osc_theme_one_third_last($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_third_last', 'osc_theme_one_third_last');
+ebs_backward_compatibility_callback('one_third_last', 'osc_theme_one_third_last');
 
 function osc_theme_two_third($params, $content = null) {
     extract(shortcode_atts(array(
@@ -251,7 +251,7 @@ function osc_theme_two_third($params, $content = null) {
     return $result;
 }
 
-add_shortcode('two_third', 'osc_theme_two_third');
+ebs_backward_compatibility_callback('two_third', 'osc_theme_two_third');
 
 function osc_theme_two_third_last($params, $content = null) {
     extract(shortcode_atts(array(
@@ -282,7 +282,7 @@ function osc_theme_two_third_last($params, $content = null) {
     return $result;
 }
 
-add_shortcode('two_third_last', 'osc_theme_two_third_last');
+ebs_backward_compatibility_callback('two_third_last', 'osc_theme_two_third_last');
 
 /* * *********************************************************
  * FOURTH
@@ -317,7 +317,7 @@ function osc_theme_one_fourth($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_fourth', 'osc_theme_one_fourth');
+ebs_backward_compatibility_callback('one_fourth', 'osc_theme_one_fourth');
 
 function osc_theme_one_fourth_last($params, $content = null) {
     extract(shortcode_atts(array(
@@ -348,7 +348,7 @@ function osc_theme_one_fourth_last($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_fourth_last', 'osc_theme_one_fourth_last');
+ebs_backward_compatibility_callback('one_fourth_last', 'osc_theme_one_fourth_last');
 
 function osc_theme_three_fourth($params, $content = null) {
     extract(shortcode_atts(array(
@@ -379,7 +379,7 @@ function osc_theme_three_fourth($params, $content = null) {
     return $result;
 }
 
-add_shortcode('three_fourth', 'osc_theme_three_fourth');
+ebs_backward_compatibility_callback('three_fourth', 'osc_theme_three_fourth');
 
 function osc_theme_three_fourth_last($params, $content = null) {
     extract(shortcode_atts(array(
@@ -410,7 +410,7 @@ function osc_theme_three_fourth_last($params, $content = null) {
     return $result;
 }
 
-add_shortcode('three_fourth_last', 'osc_theme_three_fourth_last');
+ebs_backward_compatibility_callback('three_fourth_last', 'osc_theme_three_fourth_last');
 
 function osc_theme_one_fourth_second($params, $content = null) {
     extract(shortcode_atts(array(
@@ -441,7 +441,7 @@ function osc_theme_one_fourth_second($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_fourth_second', 'osc_theme_one_fourth_second');
+ebs_backward_compatibility_callback('one_fourth_second', 'osc_theme_one_fourth_second');
 
 function osc_theme_one_fourth_third($params, $content = null) {
     extract(shortcode_atts(array(
@@ -473,7 +473,7 @@ function osc_theme_one_fourth_third($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_fourth_third', 'osc_theme_one_fourth_third');
+ebs_backward_compatibility_callback('one_fourth_third', 'osc_theme_one_fourth_third');
 
 function osc_theme_one_half_second($params, $content = null) {
     extract(shortcode_atts(array(
@@ -504,7 +504,7 @@ function osc_theme_one_half_second($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_half_second', 'osc_theme_one_half_second');
+ebs_backward_compatibility_callback('one_half_second', 'osc_theme_one_half_second');
 
 function osc_theme_one_third_second($params, $content = null) {
     extract(shortcode_atts(array(
@@ -535,7 +535,7 @@ function osc_theme_one_third_second($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_third_second', 'osc_theme_one_third_second');
+ebs_backward_compatibility_callback('one_third_second', 'osc_theme_one_third_second');
 
 function osc_theme_one_column($params, $content = null) {
     extract(shortcode_atts(array(
@@ -566,4 +566,4 @@ function osc_theme_one_column($params, $content = null) {
     return $result;
 }
 
-add_shortcode('one_column', 'osc_theme_one_column');
+ebs_backward_compatibility_callback('one_column', 'osc_theme_one_column');

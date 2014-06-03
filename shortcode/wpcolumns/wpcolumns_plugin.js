@@ -7,12 +7,7 @@ var wpcolumns={
     _create_tinyMCE_options(wpcolumns, 1094);
 })();
 
-function create_oscitas_wpcolumns(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_wpcolumns(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th><label for="oscitas-no-of-wpcolumns">Number of columns</label></th>\
@@ -58,8 +53,15 @@ function create_oscitas_wpcolumns(pluginObj){
 			<input type="button" id="oscitas-submit-wp_column" class="button-primary" value="Insert Columns" name="submit" />\
 		</p>\
 		</div>');
+
+    return form;
+}
+function create_oscitas_wpcolumns(pluginObj){
+   var form=jQuery(pluginObj.hashId);
+
+
     var table = form.find('table');
-    form.appendTo('body').hide();
+
 
     function show_table(){
 
@@ -126,8 +128,8 @@ function create_oscitas_wpcolumns(pluginObj){
         });
         ele +='</tbody></table>';
         table.find('#append_column_table').html(ele);
-        jQuery("#oscitas-table tr:not(#appended tr):visible:even").css('background-color', '#DADADD');
-        jQuery("#oscitas-table tr:not(#appended tr):visible:odd").css('background-color', '#F0F0F0');
+        jQuery("#oscitas-table tr:not(#appended tr):visible:even").css('background-color', '#ffffff');
+        jQuery("#oscitas-table tr:not(#appended tr):visible:odd").css('background-color', '#efefef');
     }
     function chnage_col_value(){
 
@@ -145,8 +147,8 @@ function create_oscitas_wpcolumns(pluginObj){
             })
 
         }
-        jQuery("#oscitas-table tr:not(#appended tr):visible:even").css('background-color', '#DADADD');
-        jQuery("#oscitas-table tr:not(#appended tr):visible:odd").css('background-color', '#F0F0F0');
+        jQuery("#oscitas-table tr:not(#appended tr):visible:even").css('background-color', '#FFFFFF');
+        jQuery("#oscitas-table tr:not(#appended tr):visible:odd").css('background-color', '#efefef');
     }
 
     show_table();
@@ -233,7 +235,7 @@ function create_oscitas_wpcolumns(pluginObj){
         if(table.find('#oscitas-column-class').val()!=''){
             cusclass= ' class="'+table.find('#oscitas-column-class').val()+'"';
         }
-        shortcode ='[row'+cusclass+']';
+        shortcode ='['+$ebs_prefix+'row'+cusclass+']';
         for(var i=1;i<=parseInt(noOfColumns);i++){
 
             a_md[i] = jQuery('#md'+i).val();
@@ -335,10 +337,10 @@ function create_oscitas_wpcolumns(pluginObj){
                 lgclear='';
             }
 
-            shortcode += '<br/>[column lg="'+a_lg[i]+'"'+md+sm+xs+mdoff+smoff+xsoff+lgoff+mdhide+smhide+xshide+lghide+mdclear+smclear+xsclear+lgclear+' ]<br/>text<br/>[/column]';
+            shortcode += '<br/>['+$ebs_prefix+'column lg="'+a_lg[i]+'"'+md+sm+xs+mdoff+smoff+xsoff+lgoff+mdhide+smhide+xshide+lghide+mdclear+smclear+xsclear+lgclear+' ]<br/>text<br/>[/'+$ebs_prefix+'column]';
         }
 
-        shortcode += '<br/>[/row]';
+        shortcode += '<br/>[/'+$ebs_prefix+'row]';
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
         // closes Thickbox

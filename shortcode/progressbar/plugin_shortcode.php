@@ -22,4 +22,4 @@ function osc_theme_progressbar($params, $content = null) {
 	return $out;
 }
 
-add_shortcode('progressbar', 'osc_theme_progressbar');
+ebs_backward_compatibility_callback('progressbar', 'osc_theme_progressbar');

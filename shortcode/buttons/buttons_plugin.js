@@ -8,12 +8,8 @@ var buttons={
     _create_tinyMCE_options(buttons, 800);
 })();
 
-function create_oscitas_buttons(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_buttons(pluginObj){
+
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th><label for="oscitas-button-style">Style:</label></th>\
@@ -98,10 +94,13 @@ function create_oscitas_buttons(pluginObj){
 			<input type="button" id="oscitas-button-submit" class="button-primary" value="Insert Button" name="submit" />\
 		</p>\
 		</div>');
-		
+    return form;
+}
+function create_oscitas_buttons(pluginObj){
+    var form= jQuery(pluginObj.hashId)
     var table = form.find('table');
     jQuery('.glyphicon').css('display','inline');
-    form.appendTo('body').hide();
+
     form.find('.color').wpColorPicker();
     table.find('#click_icon_list_button').click(function(){
         if(!jQuery(this).hasClass('osc_icon_showing_button')){
@@ -131,13 +130,13 @@ function create_oscitas_buttons(pluginObj){
             jQuery("#tr-button-link").hide();
             jQuery("#tr-button-newwindow").hide();
         }
-        jQuery('#oscitas-form-button table tr:visible:even').css('background', '#F0F0F0');
-        jQuery('#oscitas-form-button table tr:visible:odd').css('background', '#DADADD');
+        jQuery('#oscitas-form-button table tr:visible:even').css('background', '#ffffff');
+        jQuery('#oscitas-form-button table tr:visible:odd').css('background', '#efefef');
     });
-        
 
-        
-		
+
+
+
     // handles the click event of the submit button
     form.find('#oscitas-button-submit').click(function(){
         // defines the options and their default values
@@ -146,12 +145,12 @@ function create_oscitas_buttons(pluginObj){
         var options;
         var type = table.find('#oscitas-button-type').val();
         if(type=='button'){
-            options = { 
+            options = {
                 'title'       : 'osCitas'
             };
         }
         else{
-            options = { 
+            options = {
                 'title'       : 'osCitas',
                 'link'        : ''
             };
@@ -167,9 +166,9 @@ function create_oscitas_buttons(pluginObj){
                 icon+= ' iconcolor="'+table.find('#oscitas-button-iconcolor').val()+'" ';
             }
         }
-       
-        var shortcode = '[button'+cusclass;
-        
+
+        var shortcode = '['+$ebs_prefix+'button'+cusclass;
+
         shortcode += ' style="'+table.find('#oscitas-button-style').val();
         shortcode += ' '+table.find('#oscitas-button-size').val();
         shortcode += table.find('#oscitas-button-block').prop('checked')? ' btn-block': '';
@@ -184,12 +183,12 @@ function create_oscitas_buttons(pluginObj){
             //            var value = table.find('#oscitas-button-' + index).val();
             shortcode += ' ' + index + '="' + value + '"';
         }
-			
+
         shortcode += ']';
-			
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         // closes fancybox
         close_dialogue(pluginObj.hashId);
     });

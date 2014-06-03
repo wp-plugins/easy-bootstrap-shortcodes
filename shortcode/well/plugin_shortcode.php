@@ -17,4 +17,4 @@ function osc_theme_well($params, $content = 'Label') {
     return $out;
 }
 
-add_shortcode('well', 'osc_theme_well');
+ebs_backward_compatibility_callback('well', 'osc_theme_well');

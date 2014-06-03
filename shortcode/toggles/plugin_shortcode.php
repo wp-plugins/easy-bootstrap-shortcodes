@@ -24,7 +24,7 @@ function osc_theme_toggles($params, $content = null) {
     return $output;
 }
 
-add_shortcode('toggles', 'osc_theme_toggles');
+ebs_backward_compatibility_callback('toggles', 'osc_theme_toggles');
 
 function osc_theme_toggle($params, $content = null) {
     global $_oscitas_accordion;
@@ -54,4 +54,4 @@ function osc_theme_toggle($params, $content = null) {
 EOS;
 }
 
-add_shortcode('toggle', 'osc_theme_toggle');
+ebs_backward_compatibility_callback('toggle', 'osc_theme_toggle');

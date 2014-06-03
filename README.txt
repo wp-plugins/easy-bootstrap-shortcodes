@@ -35,6 +35,9 @@ http://www.youtube.com/watch?v=8T0IC1PsdTw
 * Now you can use js file from CDN or disable the plugin js.
 * You can use your own css file by disabling the plugin css, which gives you more flexibility over styling.
 * New sidebar widget to show shortcodes in sidebars and footer
+* New option to give custom shortcode prefix.
+
+>Note : This settings is provided to remove the shortcode confliction with any other existing shortcode, but be careful while changing the Shortcode Prefix, as existing shortcodes (created with EBS Plugin) will not work if changed the existing prefix. So we advice to change it when you install the plugin.
 
 Easy Bootstrap Shortcode provides following styles
 
@@ -77,6 +80,21 @@ Many more shortcodes coming soon.....
 = How to embed this plugin to your theme =
 
 We have provided few new settings so that anybody can give inbuilt compatibility with our plugin. Such as if you are creating theme/plugin and want to use our plugin, to give your users more flexibility to add responsive content, however you like to use your own custom css/js files. So now you can do this.
+
+
+= People's view =
+
+* [10+ Amazing WordPress Bootstrap Plugins] (http://www.indexwp.com/wordpress-bootstrap-plugins/)
+* [10+ Best WordPress Bootstrap Plugins | WP Template] (http://www.wptemplate.com/plugins/wordpress-bootstrap-plugins.html)
+* [18 New Free Bootstrap WordPress Widgets] (http://inspirationkeys.com/wordpress/bootstrap-wordpress-widgets/)
+* [Top 30 Free Wordpress Shortcode Plugins] (http://www.qasimbaig.com/2014/03/free-wp-shortcode-plugins.html)
+* [45+ Free WordPress Shortcode plugins/widgets] (http://www.nextdesignweb.com/2014/04/free-wordpress-shortcode-plugins.html)
+* [75+ Best WordPress Shortcodes Plugins] (http://www.designrazzi.net/2014/wordpress-shortcodes-plugins/)
+* [Easy Bootstrap Shortcode Recommended Plugins] (http://www.designwall.com/question/looking-for-documentation-on-dw-shortcodes-bootstrap/)
+* [Easy Bootstrap Shortcode Recommended Plugins] (http://ipanelthemes.com/kb/wp-knowledge-base-theme/kb-plugins/easy-bootstrap-shortcode/)
+* [Paid themes using EBS] (http://www.themeguider.com/portfolio/dagoiday/)
+
+
 
 Now we are supporting filters so that you can easily give inbuilt support of this plugin in your themes/plugins
 
@@ -195,6 +213,11 @@ It's that simple ... just what the name suggests
 
 >= Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake. =
 
+
+= 4.3.0 =
+
+* [Update] New option to give custom shortcode prefix.
+* [Update] New design.
 
 = 4.2.3 =
 
@@ -442,5 +465,3 @@ http://pawsbarkery.com/post.php
 
 = 1.1 =
 * fixed columns alternate color issue in admin panel
-
-

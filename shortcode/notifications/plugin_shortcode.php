@@ -20,7 +20,7 @@ function osc_theme_notification($atts, $content = null) {
     return $result;
 }
 
-add_shortcode('notification', 'osc_theme_notification');
+ebs_backward_compatibility_callback('notification', 'osc_theme_notification');
 
 
 

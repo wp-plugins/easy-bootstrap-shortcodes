@@ -51,6 +51,11 @@
 
             </p>
         </div>
+        <div class="ebs_details" ><label class="ebs_setting_label">Shortcode Prefix</label>
+            <p><input type="text" name="shortcode_prefix" value="<?php echo $shortcode_prefix; ?>">
+                <br ><small style="color: red">This settings is provided to remove the shortcode confliction with any other existing shortcode, but be careful while changing the Shortcode Prefix, as existing shortcodes(created with EBS Plugin) will not<br> work if changed the existing prefix. So we advice to change it when you install the plugin.</small>
+            </p>
+        </div>
         <div class="ebs_details">
             <label class="ebs_setting_label">Custom CSS Editor</label>
             <p>
@@ -78,10 +83,12 @@
         </ul>
         <?php } ?>
     </form>
-    <br />
-    <a href="http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/" target="_blank">
-        <img style="border: 0px;" src="<?php echo  plugins_url("images/ebs-pro.jpg", __FILE__); ?>">
-    </a>
+    <div class="ebspro-add">
+
+        <a href="http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/" target="_blank">
+            <img style="border: 0px;" src="<?php echo  plugins_url("images/ebs-pro.jpg", __FILE__); ?>">
+        </a>
+    </div>
 </div>
 <script type="text/javascript">
     function show_cdn(){

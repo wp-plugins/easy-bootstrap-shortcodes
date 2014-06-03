@@ -24,7 +24,7 @@ function osc_theme_tabs($params, $content = null) {
         return "";
     }
 }
-add_shortcode('tabs', 'osc_theme_tabs');
+ebs_backward_compatibility_callback('tabs', 'osc_theme_tabs');
 
 function osc_theme_tab($params, $content = null) {
     global $_oscitas_tabs;
@@ -45,4 +45,4 @@ function osc_theme_tab($params, $content = null) {
             . do_shortcode
                     (trim($content)) . '</div>';
 }
-add_shortcode('tab', 'osc_theme_tab');
+ebs_backward_compatibility_callback('tab', 'osc_theme_tab');

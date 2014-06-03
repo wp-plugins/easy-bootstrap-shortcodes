@@ -90,4 +90,4 @@ function osc_theme_servicebox($params, $content = null) {
     return $out;
 }
 
-add_shortcode('servicebox', 'osc_theme_servicebox');
+ebs_backward_compatibility_callback('servicebox', 'osc_theme_servicebox');

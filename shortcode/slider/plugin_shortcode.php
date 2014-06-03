@@ -94,7 +94,7 @@ function osc_theme_sliders($params, $content = null) {
     return $output;
 }
 
-add_shortcode('slider', 'osc_theme_sliders');
+ebs_backward_compatibility_callback('slider', 'osc_theme_sliders');
 
 function osc_theme_slider($params, $content = null) {
 
@@ -128,4 +128,4 @@ EOS;
     }
 }
 
-add_shortcode('slide', 'osc_theme_slider');
+ebs_backward_compatibility_callback('slide', 'osc_theme_slider');

@@ -21,4 +21,4 @@ function osc_theme_icon($params, $content = null) {
     return $out;
 }
 
-add_shortcode('icon', 'osc_theme_icon');
+ebs_backward_compatibility_callback('icon', 'osc_theme_icon');

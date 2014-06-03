@@ -7,12 +7,7 @@ var tooltip={
     _create_tinyMCE_options(tooltip);
 })();
 
-function create_oscitas_tooltip(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_tooltip(pluginObj){
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
 			<tr>\
 				<th><label for="oscitas-tooltip-style">Tooltip Style:</label></th>\
@@ -59,8 +54,13 @@ function create_oscitas_tooltip(pluginObj){
 		</p>\
 		</div>');
 
+    return form;
+}
+function create_oscitas_tooltip(pluginObj){
+    var form=jQuery(pluginObj.hashId);
+
     var table = form.find('table');
-    form.appendTo('body').hide();
+
     var colors = ['color', 'bgcolor'];
 
     form.find('#oscitas-tooltip-type').change(function(){
@@ -71,8 +71,8 @@ function create_oscitas_tooltip(pluginObj){
             table.find('#oscitas-tooltip-link-tr').hide();
             table.find('#oscitas-tooltip-link').val('');
         }
-        jQuery(this).parents('#oscitas-table').find('tr:visible:even').css('background', '#F0F0F0');
-        jQuery(this).parents('#oscitas-table').find('tr:visible:odd').css('background', '#DADADD');
+        jQuery(this).parents('#oscitas-table').find('tr:visible:even').css('background', '#ffffff');
+        jQuery(this).parents('#oscitas-table').find('tr:visible:odd').css('background', '#efefef');
     })
 
     // handles the click event of the submit button
@@ -84,11 +84,11 @@ function create_oscitas_tooltip(pluginObj){
         if(table.find('#oscitas-tooltip-class').val()!=''){
             cusclass= ' class="'+table.find('#oscitas-tooltip-class').val()+'"';
         }
-        var shortcode = '[tooltip';
+        var shortcode = '['+$ebs_prefix+'tooltip';
         shortcode += ' type="' + table.find('#oscitas-tooltip-type').val();
 
         shortcode += '" ';
-        
+
         shortcode += ' link="' + table.find('#oscitas-tooltip-link').val();
 
         shortcode += '" ';
@@ -96,14 +96,14 @@ function create_oscitas_tooltip(pluginObj){
 
         shortcode += '" ';
         shortcode += ' style="' + table.find('#oscitas-tooltip-style').val();
-        
+
         shortcode += '" ';
 
         shortcode += cusclass;
-      
+
         shortcode += ']';
         shortcode+= table.find('#oscitas-tooltip-link-text').val();
-        shortcode+='[/tooltip]';
+        shortcode+='[/'+$ebs_prefix+'tooltip]';
 
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);

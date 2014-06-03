@@ -35,4 +35,4 @@ if(EBS_POPOVER_TEMPLATE==''){
     return $out;
 }
 
-add_shortcode('popover', 'osc_theme_popover');
+ebs_backward_compatibility_callback('popover', 'osc_theme_popover');

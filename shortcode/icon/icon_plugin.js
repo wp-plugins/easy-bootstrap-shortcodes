@@ -7,12 +7,8 @@ var icon={
     _create_tinyMCE_options(icon, 800);
 })();
 
-function create_oscitas_icon(pluginObj){
-    if(jQuery(pluginObj.hashId).length){
-        jQuery(pluginObj.hashId).remove();
-    }
-    // creates a form to be displayed everytime the button is clicked
-    // you should achieve this using AJAX instead of direct html code like this
+function ebs_return_html_icon(pluginObj){
+
     var form = jQuery('<div id="'+pluginObj.id+'" class="oscitas-container" title="'+pluginObj.title+'"><table id="oscitas-table" class="form-table">\
                         <tr>\
                         <th><label for="oscitas-heading-icon">Select Icon:</label></th>\
@@ -40,10 +36,15 @@ function create_oscitas_icon(pluginObj){
 			<input type="button" id="oscitas-icon-submit" class="button-primary" value="Insert icon" name="submit" />\
 		</p>\
 		</div>');
-		
+
+    return form;
+
+}
+function create_oscitas_icon(pluginObj){
+    var form=jQuery(pluginObj.hashId);
     var table = form.find('table');
     jQuery('.glyphicon').css('display','inline');
-    form.appendTo('body').hide();
+
     form.find('.color').wpColorPicker();
     var t= table.find('#osc_icon_class_val_icon').val();
     table.find('#osc_show_icon_icon').removeClass().addClass('glyphicon').addClass(t);
@@ -66,11 +67,11 @@ function create_oscitas_icon(pluginObj){
         table.find('#osc_icon_class_val_icon').val(type+' '+val);
     })
 
-   
-        
 
-        
-		
+
+
+
+
     // handles the click event of the submit button
     form.find('#oscitas-icon-submit').click(function(){
         var cusclass='';
@@ -84,11 +85,11 @@ function create_oscitas_icon(pluginObj){
         }
         var icon = table.find('#osc_icon_class_val_icon').val();
         var  shortcode='';
-        shortcode='[icon type="'+icon+'"'+cusclass+']'
-			
+        shortcode='['+$ebs_prefix+'icon type="'+icon+'"'+cusclass+']'
+
         // inserts the shortcode into the active editor
         tinyMCE.activeEditor.execCommand('mceInsertContent', 0, shortcode);
-			
+
         // closes fancybox
         close_dialogue(pluginObj.hashId);
     });
