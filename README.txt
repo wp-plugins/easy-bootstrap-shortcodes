@@ -84,15 +84,15 @@ We have provided few new settings so that anybody can give inbuilt compatibility
 
 = People's view =
 
-* [10+ Amazing WordPress Bootstrap Plugins] (http://www.indexwp.com/wordpress-bootstrap-plugins/)
-* [10+ Best WordPress Bootstrap Plugins | WP Template] (http://www.wptemplate.com/plugins/wordpress-bootstrap-plugins.html)
-* [18 New Free Bootstrap WordPress Widgets] (http://inspirationkeys.com/wordpress/bootstrap-wordpress-widgets/)
-* [Top 30 Free Wordpress Shortcode Plugins] (http://www.qasimbaig.com/2014/03/free-wp-shortcode-plugins.html)
-* [45+ Free WordPress Shortcode plugins/widgets] (http://www.nextdesignweb.com/2014/04/free-wordpress-shortcode-plugins.html)
-* [75+ Best WordPress Shortcodes Plugins] (http://www.designrazzi.net/2014/wordpress-shortcodes-plugins/)
-* [Easy Bootstrap Shortcode Recommended Plugins] (http://www.designwall.com/question/looking-for-documentation-on-dw-shortcodes-bootstrap/)
-* [Easy Bootstrap Shortcode Recommended Plugins] (http://ipanelthemes.com/kb/wp-knowledge-base-theme/kb-plugins/easy-bootstrap-shortcode/)
-* [Paid themes using EBS] (http://www.themeguider.com/portfolio/dagoiday/)
+* [10+ Amazing WordPress Bootstrap Plugins](http://www.indexwp.com/wordpress-bootstrap-plugins/)
+* [10+ Best WordPress Bootstrap Plugins | WP Template](http://www.wptemplate.com/plugins/wordpress-bootstrap-plugins.html)
+* [18 New Free Bootstrap WordPress Widgets](http://inspirationkeys.com/wordpress/bootstrap-wordpress-widgets/)
+* [Top 30 Free Wordpress Shortcode Plugins](http://www.qasimbaig.com/2014/03/free-wp-shortcode-plugins.html)
+* [45+ Free WordPress Shortcode plugins/widgets](http://www.nextdesignweb.com/2014/04/free-wordpress-shortcode-plugins.html)
+* [75+ Best WordPress Shortcodes Plugins](http://www.designrazzi.net/2014/wordpress-shortcodes-plugins/)
+* [Easy Bootstrap Shortcode Recommended Plugins](http://www.designwall.com/question/looking-for-documentation-on-dw-shortcodes-bootstrap/)
+* [Easy Bootstrap Shortcode Recommended Plugins](http://ipanelthemes.com/kb/wp-knowledge-base-theme/kb-plugins/easy-bootstrap-shortcode/)
+* [Paid themes using EBS](http://www.themeguider.com/portfolio/dagoiday/)
 
 
 
