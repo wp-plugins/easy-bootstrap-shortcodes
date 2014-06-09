@@ -17,6 +17,11 @@ function osc_theme_icon($params, $content = null) {
     if($fontsize!=''){
         $fontsize=' font-size:'.$fontsize.'px;';
     }
+    $iconcount=explode(' ',$type);
+    array_filter($iconcount);
+    if(count($iconcount)==1){
+        $type= 'glyphicon '.$type;
+    }
     $out = '<i class=" ' . $type . ' ' . $class . '" style="'.$color.$fontsize.'"></i>';
     return $out;
 }

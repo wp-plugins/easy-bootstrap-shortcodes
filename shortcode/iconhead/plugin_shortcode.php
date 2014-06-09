@@ -12,6 +12,11 @@ function osc_theme_iconhead($params, $content = null) {
         $color='style="color:'.$color.';"';
     }
     if ($style != '') {
+        $iconcount=explode(' ',$style);
+        array_filter($iconcount);
+        if(count($iconcount)==1){
+            $style= 'glyphicon '.$style;
+        }
         $style = ' <span class=" ' . $style . '" '.$color.'></span> ';
     }
 
