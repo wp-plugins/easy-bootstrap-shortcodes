@@ -15,9 +15,14 @@ Easy Bootstrap Shortcode enable you to add bootstrap 3.0.3 styles in your pages,
 
 Easy Bootstrap Shortcode is bootstrap 3.0.3 compatible plugin which add icons to wordpress editor (tinyMCE Shortcode Buttons) and one can add bootstrap style to their website just by clicking on tinyMCE  editor icon.
 
+= New improved EBS-Pro Version=
+
+https://www.youtube.com/watch?v=5E8858NiXVA
+
 http://www.youtube.com/watch?v=8T0IC1PsdTw
 
->[DEMO](http://demo.oscitasthemes.com/ebs/) | [PRO VERSION](http://oscitasthemes.com/downloads/easy-bootstrap-shortcodes-pro/) | [DOCUMENTATION](http://oscitasthemes.com/documentation/easy-bootstrap-shortcodes/)
+
+>[DEMO](http://demo.oscitasthemes.com/osc_ebsp_demo/) | [PRO VERSION](http://oscitasthemes.com/downloads/easy-bootstrap-shortcodes-pro/) | [DOCUMENTATION](http://oscitasthemes.com/documentation/easy-bootstrap-shortcodes/)
 
 = Just by one setting, you can use bootstrap styles in your themes, which are not bootstrap based themes using Bootstrap Shortcodes =
 
@@ -197,16 +202,11 @@ It's that simple ... just what the name suggests
 
 1. how it looks after installation
 2. different shortcode options this plugin provides
-3. columns shortcode
-4. table shortcode
-5. You can create this kind of page content very easily.
+3. Easy Bootstrap Shortcode Pro
+4. You can create this kind of page content very easily.
 6. mobile view
 7. few samples which can be created using this plugin
-8. sample 2 I
-9. sample 2 II
-10. sample 3
-11. sample 4 I
-12. sample 4 II
+
 
 
 == Changelog ==
