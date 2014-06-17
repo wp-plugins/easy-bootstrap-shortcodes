@@ -11,6 +11,7 @@ var slider={
 
 function __slider_show_image_upload_icon(parent,ele){
     parent.find(ele).on('click',function(){
+        jQuery('body').addClass('ebs_plugin_shown_now');
         jQuery('.ui-widget-overlay, .ui-dialog').css('z-index',100);
         jQuery('html').addClass('Image');
         formfield = jQuery(this).prev();
@@ -31,8 +32,10 @@ function __slider_show_image_upload_icon(parent,ele){
             tb_remove();
             imgparent.find('.image_preview').html('<img src="'+fileurl+'">')
             jQuery('html').removeClass('Image');
+            jQuery('body').removeClass('ebs_plugin_shown_now');
 
         } else {
+            jQuery('body').removeClass('ebs_plugin_shown_now');
             window.original_send_to_editor(html);
         }
 

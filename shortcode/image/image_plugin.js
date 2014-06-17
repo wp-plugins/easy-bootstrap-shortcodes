@@ -44,6 +44,7 @@ function create_oscitas_image(pluginObj){
 
 
     form.find('.upload_image_button').click(function() {
+        jQuery('body').addClass('ebs_plugin_shown_now');
         jQuery('.ui-widget-overlay, .ui-dialog').css('z-index',100);
         jQuery('html').addClass('Image');
         formfield = jQuery(this).prev().attr('id');
@@ -64,10 +65,12 @@ function create_oscitas_image(pluginObj){
             tb_remove();
             form.find('#osc_image_upload img').remove();
             form.find('#osc_image_upload').append('<img src="'+fileurl+'">')
+            jQuery('body').removeClass('ebs_plugin_shown_now');
             jQuery('html').removeClass('Image');
 
         } else {
             window.original_send_to_editor(html);
+            jQuery('body').removeClass('ebs_plugin_shown_now');
         }
 
     };

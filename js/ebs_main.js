@@ -32,6 +32,7 @@ function open_dialogue(pluginObj,width,height){
             },
             close: function () {
                 jQuery('body').removeClass('ebsp-mf-shown');
+                jQuery('body').removeClass('ebs_plugin_shown_now');
             }
         }
 
@@ -41,6 +42,7 @@ function open_dialogue(pluginObj,width,height){
 function close_dialogue(dialogueid){
     jQuery.magnificPopup.close();
     jQuery('body').removeClass('ebsp-mf-shown');
+    jQuery('body').removeClass('ebs_plugin_shown_now');
 
 }
 
