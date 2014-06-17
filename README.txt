@@ -213,6 +213,10 @@ It's that simple ... just what the name suggests
 
 >= Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake. =
 
+= 4.3.2 =
+
+* [fixes] Image upload issue fixed.
+
 = 4.3.1 =
 
 * [fixes] Icon disappear issue resolved.
