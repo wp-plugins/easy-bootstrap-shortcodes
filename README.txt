@@ -11,11 +11,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Easy Bootstrap Shortcode enable you to add bootstrap 3.0.3 styles in your pages, post and custom post in simplest manner.
 
 == Description ==
+
+>For plugin support go to [http://support.oscitasthemes.com](http://support.oscitasthemes.com)
+
 >Ready for Wordpress 3.9
 
 Easy Bootstrap Shortcode is bootstrap 3.0.3 compatible plugin which add icons to wordpress editor (tinyMCE Shortcode Buttons) and one can add bootstrap style to their website just by clicking on tinyMCE  editor icon.
 
-= New improved EBS-Pro Version=
+= New improved EBS-Pro Version =
 
 https://www.youtube.com/watch?v=5E8858NiXVA
 
