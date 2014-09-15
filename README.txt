@@ -81,6 +81,7 @@ Easy Bootstrap Shortcode provides following styles
 21. Service Box
 22. Responsive slider
 23. Badges
+24. Jumbotron
 
 Many more shortcodes coming soon.....
 
@@ -145,6 +146,10 @@ It's that simple ... just what the name suggests
 == Changelog ==
 
 >= Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake. =
+
+= 4.3.4 =
+
+* [New] New shortcode for jumbotron
 
 = 4.3.3 =
 
