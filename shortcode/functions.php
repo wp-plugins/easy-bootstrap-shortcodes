@@ -36,6 +36,7 @@ $elements = array(
     'servicebox',
     'slider',
     'badge',
+    'jumbotron',
 
 );
 function ebs_groups($grps=array()){
