@@ -1,4 +1,7 @@
 <?php
+/*
+ * Create EBS widgets to to parse EBS shortcodes in sidebar
+ */
 add_action('widgets_init', 'osc_ebsp_content_widget');
 
 function osc_ebsp_content_widget() {

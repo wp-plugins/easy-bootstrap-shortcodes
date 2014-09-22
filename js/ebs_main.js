@@ -3,6 +3,10 @@
  */
 
 var gBtnVar={};
+
+/*
+Open magnific popup
+ */
 function open_dialogue(pluginObj,width,height){
 //    close_dialogue(pluginObj);
     var $width='';
@@ -39,6 +43,10 @@ function open_dialogue(pluginObj,width,height){
     });
 
 }
+
+/*
+Close magnific popup
+ */
 function close_dialogue(dialogueid){
     jQuery.magnificPopup.close();
     jQuery('body').removeClass('ebsp-mf-shown');
@@ -53,6 +61,10 @@ var plugininfo={
     infourl : 'http://www.oscitasthemes.com/',
     version : "1.0.0"
 }
+
+/*
+Create tinymce icon
+ */
 
 function _create_tinyMCE_options(pluginObj, width) {
     if(typeof(width)==='undefined') width = 'auto';
@@ -85,6 +97,9 @@ function _create_tinyMCE_options(pluginObj, width) {
     //return options;
     tinymce.PluginManager.add('oscitas'+pluginObj.pluginName, tinymce.plugins[pluginName]);
 }
+/*
+Create tinymce dropdown
+ */
 
 function _create_tinyMCE_dropdown(pluginObj,width,height) {
     if(typeof(width)==='undefined') width = 'auto';
@@ -862,6 +877,10 @@ function font_awesome_include($class){
     }
     return icons;
 }
+
+/*
+Add Color picker
+ */
 
 function ebs_color_picker($ele){
     jQuery($ele).wpColorPicker({
