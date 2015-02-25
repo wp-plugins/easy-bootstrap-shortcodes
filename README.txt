@@ -7,6 +7,7 @@ Tested up to: 4.0
 Stable tag: 4.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Donate link: http://oscitasthemes.com/support-our-free-plugins/
 
 Easy Bootstrap Shortcode enable you to add bootstrap 3.0.3 styles in your pages, post and custom post in simplest manner.
 
