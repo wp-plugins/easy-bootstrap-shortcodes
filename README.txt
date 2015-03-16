@@ -25,6 +25,7 @@ https://www.youtube.com/watch?v=5E8858NiXVA
 
 http://www.youtube.com/watch?v=8T0IC1PsdTw
 
+https://www.youtube.com/watch?v=cuGVnOCMwJI
 
 >[DEMO](http://demo.oscitasthemes.com/osc_ebsp_demo/) | [PRO VERSION](http://oscitasthemes.com/downloads/easy-bootstrap-shortcodes-pro/) | [DOCUMENTATION](http://oscitasthemes.com/documentation/easy-bootstrap-shortcodes/)
 
