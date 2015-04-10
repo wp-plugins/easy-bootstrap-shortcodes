@@ -68,7 +68,7 @@ Easy Bootstrap Shortcode provides following styles
 6. Tooltip
 7. Panel
 8. Progress Bars with labels
-9. Icons
+9. Icons (250 Glyphicons & also support Fontawesome Icons)
 10. Labels
 11. Buttons
 12. Icon Heading
@@ -148,6 +148,10 @@ It's that simple ... just what the name suggests
 == Changelog ==
 
 >= Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake. =
+
+= 4.3.8 =
+
+* [Update] Updated to latest Glyphicons.
 
 = 4.3.7 =
 
