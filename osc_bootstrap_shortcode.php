@@ -4,7 +4,7 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0.3 styles to your theme by wordpress editor shortcode buttons.
-  Version: 4.3.9
+  Version: 4.4.0
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
@@ -173,7 +173,9 @@ else:
             update_option( 'EBS_EDITOR_OPT', isset($_POST['ebsp_editor_opt'])?$_POST['ebsp_editor_opt']:'icon' );
             update_option( 'EBS_CUSTOM_CSS', isset($_POST['ebs_custom_css'])?$_POST['ebs_custom_css']:'' );
             update_option( 'EBS_INCLUDE_FA', isset($_POST['fa_icon'])?$_POST['fa_icon']:'' );
+            ebs_session_start();
             $_SESSION['ebs_dynamic_css'] =$_POST['ebs_custom_css'];
+            session_write_close();
             update_option( 'EBS_SHORTCODE_PREFIX', isset($_POST['shortcode_prefix'])?$_POST['shortcode_prefix']:'' );
 
             $fa_icon=isset($_POST['fa_icon'])?$_POST['fa_icon']:'' ;
@@ -285,7 +287,9 @@ else:
      * Add dynamic css to ebs frontend
      */
     function osc_add_dynamic_css(){
+        ebs_session_start();
         $_SESSION['ebs_dynamic_css'] = get_option('EBS_CUSTOM_CSS','');
+        session_write_close();
         wp_enqueue_style('ebs_dynamic_css', plugins_url('/styles/ebs_dynamic_css.php', __FILE__));
 
     }
