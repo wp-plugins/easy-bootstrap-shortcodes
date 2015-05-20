@@ -1,7 +1,7 @@
 <?php
 header("Content-type: text/css");
-if(!session_id())
-    ebs_session_start();
+if(!session_id()) @session_start();
+
 $css_ebs=<<<EOF
 .osc_servicebox {
     padding: 1px;
