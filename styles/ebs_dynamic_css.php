@@ -12,4 +12,4 @@ if(isset($_SESSION['ebs_slider_css'])){
     }
 }
 
-session_write_close();
+//session_write_close();

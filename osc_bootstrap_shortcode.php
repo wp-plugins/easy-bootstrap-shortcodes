@@ -4,7 +4,7 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0.3 styles to your theme by wordpress editor shortcode buttons.
-  Version: 4.4.1
+  Version: 4.4.2
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
@@ -13,6 +13,7 @@
 /*
  * function used to check whether ebs activated this check included in EBS Pro
  */
+$_EBS_SESSION_STARTED = false;
 function osc_ebs_plugin_exists( $prevent ) {
     return 'ebs';
 }
@@ -175,7 +176,7 @@ else:
             update_option( 'EBS_INCLUDE_FA', isset($_POST['fa_icon'])?$_POST['fa_icon']:'' );
             ebs_session_start();
             $_SESSION['ebs_dynamic_css'] =$_POST['ebs_custom_css'];
-            session_write_close();
+            ebs_session_end();
             update_option( 'EBS_SHORTCODE_PREFIX', isset($_POST['shortcode_prefix'])?$_POST['shortcode_prefix']:'' );
 
             $fa_icon=isset($_POST['fa_icon'])?$_POST['fa_icon']:'' ;
@@ -289,7 +290,7 @@ else:
     function osc_add_dynamic_css(){
         ebs_session_start();
         $_SESSION['ebs_dynamic_css'] = get_option('EBS_CUSTOM_CSS','');
-        session_write_close();
+        ebs_session_end();
         wp_enqueue_style('ebs_dynamic_css', plugins_url('/styles/ebs_dynamic_css.php', __FILE__));
 
     }
@@ -375,8 +376,18 @@ else:
 
     add_action('init','ebs_session_start');
     function ebs_session_start() {
+        global $_EBS_SESSION_STARTED;
         if(!session_id()){
             @session_start();
+            $_EBS_SESSION_STARTED = true;
+        }
+    }
+
+    function ebs_session_end() {
+        global $_EBS_SESSION_STARTED;
+        if ($_EBS_SESSION_STARTED) {
+            @session_write_close();
+            $_EBS_SESSION_STARTED = false;
         }
     }
 

@@ -16,7 +16,7 @@ function osc_theme_sliders($params, $content = null) {
     if(!isset($_SESSION['ebs_slider_css'])){
         $_SESSION['ebs_slider_css']=array();
     }
-    session_write_close();
+    ebs_session_end();
     extract(shortcode_atts(array(
         'id' => count($_oscitas_slider),
         'class' => '',
@@ -88,7 +88,7 @@ function osc_theme_sliders($params, $content = null) {
     width:100%;
 }
         ";
-session_write_close();
+        ebs_session_end();
     }
     $_oscitas_slider['current_id'] -= 1;
     return $output;
