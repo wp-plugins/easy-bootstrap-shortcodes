@@ -150,6 +150,12 @@ It's that simple ... just what the name suggests
 >= Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake. =
 
 
+= 4.4.3 =
+
+* [Update] Implemented the EBS Session setting to set either you want to use the EBS Session management functionality
+ or not. It will help you in case EBS Session create any issue as few users facing this issue.
+
+
 = 4.4.2 =
 
 * [Fixes] Now close session only if session is started by EBS plugin, to remove conflict with other plugins session.
