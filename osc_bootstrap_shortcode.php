@@ -4,7 +4,7 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0.3 styles to your theme by wordpress editor shortcode buttons.
-  Version: 4.4.2
+  Version: 4.4.3
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
@@ -100,6 +100,7 @@ else:
                 update_option( 'EBS_SHORTCODE_PREFIX', '' );
             }
             update_option( 'EBS_INCLUDE_FA',1);
+            update_option( 'EBS_SESSION_CLOSE',0);
             if(get_option('EBS_CUSTOM_CSS')==''){
                 update_option( 'EBS_CUSTOM_CSS','');
             }
@@ -120,6 +121,7 @@ else:
             delete_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH' );
             delete_option('EBS_EDITOR_OPT');
             delete_option('EBS_INCLUDE_FA');
+            delete_option('EBS_SESSION_CLOSE');
         }
     }
 
@@ -174,6 +176,8 @@ else:
             update_option( 'EBS_EDITOR_OPT', isset($_POST['ebsp_editor_opt'])?$_POST['ebsp_editor_opt']:'icon' );
             update_option( 'EBS_CUSTOM_CSS', isset($_POST['ebs_custom_css'])?$_POST['ebs_custom_css']:'' );
             update_option( 'EBS_INCLUDE_FA', isset($_POST['fa_icon'])?$_POST['fa_icon']:'' );
+            update_option( 'EBS_SESSION_CLOSE', isset($_POST['use_ebs_session_close'])
+                ?$_POST['use_ebs_session_close']:'0' );
             ebs_session_start();
             $_SESSION['ebs_dynamic_css'] =$_POST['ebs_custom_css'];
             ebs_session_end();
@@ -198,6 +202,7 @@ else:
             $ebs_custom_css=get_option('EBS_CUSTOM_CSS','');
             $shortcode_prefix=get_option('EBS_SHORTCODE_PREFIX','');
             $fa_icon=get_option('EBS_INCLUDE_FA',1);
+            $use_ebs_session_close=get_option('EBS_SESSION_CLOSE',0);
         }
         include 'ebs_settings.php';
     }
@@ -227,6 +232,7 @@ else:
     function osc_add_admin_ebs_scripts() {
         global $pagenow;
         $fa_icon=get_option('EBS_INCLUDE_FA',1);
+        $use_ebs_session_close=get_option('EBS_SESSION_CLOSE',0);
         $screen = get_current_screen();
         if ($screen->id == 'toplevel_page_ebs/ebs-settings') {
             wp_enqueue_style('ebs-setting', plugins_url('/styles/ebs-setting.min.css', __FILE__));
@@ -259,6 +265,7 @@ else:
  */
     function osc_editor_enable_mce($plugin_array){
         $fa_icon=get_option('EBS_INCLUDE_FA',1);
+        $use_ebs_session_close=get_option('EBS_SESSION_CLOSE',0);
         wp_enqueue_script('jquery');
         wp_enqueue_style('thickbox');
         wp_enqueue_script('media-upload');
@@ -308,6 +315,7 @@ else:
             $respondcdn = get_option( 'EBS_BOOTSTRAP_RESPOND_CDN_PATH', EBS_RESPOND_CDN );
             $css = get_option( 'EBS_BOOTSTRAP_CSS_LOCATION', 1 );
             $fa_icon=get_option('EBS_INCLUDE_FA',1);
+            $use_ebs_session_close=get_option('EBS_SESSION_CLOSE',0);
 //			http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.min.js
 
             if ($js == 1) {
@@ -385,7 +393,7 @@ else:
 
     function ebs_session_end() {
         global $_EBS_SESSION_STARTED;
-        if ($_EBS_SESSION_STARTED) {
+        if ($_EBS_SESSION_STARTED && get_option('EBS_SESSION_CLOSE',0)) {
             @session_write_close();
             $_EBS_SESSION_STARTED = false;
         }
