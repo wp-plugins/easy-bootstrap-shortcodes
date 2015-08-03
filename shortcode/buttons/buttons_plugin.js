@@ -72,9 +72,14 @@ function ebs_return_html_buttons(pluginObj){
 				<td><input type="text" name="title" id="oscitas-button-title" value="Button"/><br />\
 				</td>\
 			</tr>\
-			<tr id="tr-button-link">\
+			<tr class="tr-button-link">\
 				<th><label for="oscitas-button-link">Link</label></th>\
 				<td><input type="text" name="link" id="oscitas-button-link" value="#" /><br />\
+				</td>\
+			</tr>\
+			<tr class="tr-button-link">\
+				<th><label for="oscitas-button-link">Rel</label></th>\
+				<td><input type="text" name="rel" id="oscitas-button-linkrel" value="" /><br />\
 				</td>\
 			</tr>\
 			<tr id="tr-button-newwindow">\
@@ -124,10 +129,10 @@ function create_oscitas_buttons(pluginObj){
     table.find('#oscitas-button-type').change(function(){
         var abc = jQuery(this).val();
         if('link' == abc){
-            jQuery("#tr-button-link").show();
+            jQuery(".tr-button-link").show();
             jQuery("#tr-button-newwindow").show();
         }else{
-            jQuery("#tr-button-link").hide();
+            jQuery(".tr-button-link").hide();
             jQuery("#tr-button-newwindow").hide();
         }
         jQuery('#oscitas-form-button table tr:visible:even').css('background', '#ffffff');
@@ -152,7 +157,8 @@ function create_oscitas_buttons(pluginObj){
         else{
             options = {
                 'title'       : 'osCitas',
-                'link'        : ''
+                'link'        : '',
+                'linkrel'        : ''
             };
         }
         var cusclass='',icon='';
