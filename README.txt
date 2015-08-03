@@ -150,6 +150,11 @@ It's that simple ... just what the name suggests
 >= Note : we have removed the Line Separator, Dropcaps, Youtube & Vimeo video, Boxesframes, Horizontal Rule, Testimonial, Section Heading, Social, Lead,Page Header, Highlights shortcodes as these are PRO version features, which were committed to free version by mistake. =
 
 
+= 4.4.4 =
+
+* [Update] Option to add the "rel" attribute for links in button.
+
+
 = 4.4.3 =
 
 * [Update] Implemented the EBS Session setting to set either you want to use the EBS Session management functionality
